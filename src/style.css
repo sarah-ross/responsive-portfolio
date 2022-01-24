@@ -34,22 +34,27 @@ p {
 	background: var(--secondary-color);
 	padding: 20px;
 	border-radius: 4px;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 1.5;
 }
 
-.navigation-links {
+img {
+	border-radius: 6px;
+}
+
+.button-links {
 	display: flex;
 	margin-top: 40px;
 	justify-content: center;
 }
 
-.navigation-links a {
+.button-links a {
 	margin: 20px;
 	border-radius: 4px;
 	padding: 20px 15px;
 	text-decoration: none;
 	text-transform: capitalize;
+	margin-bottom: 60px;
 }
 
 .contact-link {
@@ -69,10 +74,14 @@ p {
 	display: block;
 }
 
-.wrapper {
+.container {
 	display: block;
 	margin: 0 auto;
 	padding: 30px;
+}
+
+.row {
+	padding-bottom: 75px;
 }
 
 .about-paragraphs {
