@@ -1,12 +1,14 @@
 :root {
 	--primary-color: #6c63ff;
 	--secondary-color: #f5f2fe;
+	--accent-color: #dadbdc;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	--body-font: "Montserrat", sans-serif;
+	--background-image: "/images/bangkok.png";
 }
 
 body {
-	margin: 60px auto;
-	max-width: 800px;
+	max-width: 100%;
 }
 
 h1,
@@ -16,8 +18,17 @@ h3 {
 	margin: 0;
 }
 
+h1,
+h2,
+h3,
+p {
+	font-family: var(--body-font);
+}
+
 h1 {
-	font-size: 96px;
+	font-size: 20px;
+	font-weight: lighter;
+	padding-top: 100px;
 }
 
 h2 {
@@ -38,8 +49,42 @@ p {
 	line-height: 1.5;
 }
 
-img {
-	border-radius: 6px;
+.nav-item .nav-link {
+	color: #dadbdc;
+}
+
+.navbar-toggler-icon {
+	color: var(--accent-color);
+}
+
+.container, .homepage-button,
+#hero-img img {
+	margin: 0 auto;
+}
+
+.homepage-button {
+	display: block;
+	width: 350px;
+	margin-top: 54px;
+	margin-bottom: 160px;
+	padding: 20px 40px;
+	background-color: black;
+	border-radius: 5px;
+	box-shadow: var(--box-shadow);
+	transition: all 500ms ease-out;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-family: var(--body-font);
+	font-size: 24px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.homepage-button:hover {
+	background: white;
+	border: 2px solid black;
+	color: black;
 }
 
 .button-links {
@@ -76,8 +121,6 @@ img {
 
 .container {
 	display: block;
-	margin: 0 auto;
-	padding: 30px;
 }
 
 .row {
@@ -103,4 +146,13 @@ img {
 
 .email-link:hover {
 	text-decoration: underline;
+}
+
+#hero-img {
+	transition: all 400ms ease-in-out;
+	margin-top: 30px;
+}
+
+#hero-img:hover {
+	transform: scale(1.07) translate(-0.5%, +0.5%);
 }
