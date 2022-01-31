@@ -15,30 +15,32 @@ h1,
 h2,
 h3 {
 	text-align: center;
-	margin: 0;
 }
 
-h1,
-h2,
-h3,
 p {
 	font-family: var(--body-font);
 }
 
 h1 {
-	font-size: 20px;
-	font-weight: lighter;
-	padding-top: 100px;
+	font-family: lust, serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 60px;
+}
+
+h2,
+h3 {
+	font-family: verveine, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 h2 {
-	font-size: 48px;
-	margin-top: 20px;
+	font-size: 42px;
 }
 
 h3 {
-	font-size: 24px;
-	opacity: 0.7;
+	font-size: 36px;
 }
 
 p {
@@ -57,17 +59,18 @@ p {
 	color: var(--accent-color);
 }
 
-.container, .homepage-button,
-#hero-img img {
+.container,
+.homepage-button,
+img {
 	margin: 0 auto;
 }
 
 .homepage-button {
 	display: block;
-	width: 350px;
+	width: 270px;
 	margin-top: 54px;
 	margin-bottom: 160px;
-	padding: 20px 40px;
+	padding: 20px 25px;
 	background-color: black;
 	border-radius: 5px;
 	box-shadow: var(--box-shadow);
@@ -76,8 +79,8 @@ p {
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
-	font-size: 24px;
-	font-weight: bolder;
+	font-size: 18px;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -120,7 +123,7 @@ p {
 }
 
 .container {
-	display: block;
+	padding-top: 160px;
 }
 
 .row {
