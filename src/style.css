@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #6c63ff;
-	--secondary-color: #f5f2fe;
+	--secondary-color: rgb(119, 119, 119);
 	--accent-color: #dadbdc;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	--body-font: "Montserrat", sans-serif;
@@ -23,6 +23,8 @@ h3,
 .container {
 	text-align: center;
 	background-color: transparent;
+	margin: 0;
+	padding: 0;
 }
 
 h2,
@@ -41,15 +43,18 @@ h1 {
 	font-family: lust, serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 64px;
+	font-size: 84px;
 }
 
 h2 {
-	font-size: 44px;
+	font-size: 57px;
 }
 
 h3 {
-	font-size: 30px;
+	position: relative;
+	top: -23px;
+	font-size: 39px;
+	color: black;
 }
 
 p {
