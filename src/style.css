@@ -25,6 +25,13 @@ h3,
 	background-color: transparent;
 }
 
+h2,
+h3 {
+	font-family: verveine, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 p,
 .nav-item .nav-link {
 	font-family: var(--body-font);
@@ -35,13 +42,6 @@ h1 {
 	font-weight: 700;
 	font-style: normal;
 	font-size: 64px;
-}
-
-h2,
-h3 {
-	font-family: verveine, sans-serif;
-	font-weight: 400;
-	font-style: normal;
 }
 
 h2 {
@@ -96,7 +96,7 @@ p {
 }
 
 .homepage-button:hover {
-	background: white;
+	background: transparent;
 	border: 2px solid black;
 	color: black;
 }
