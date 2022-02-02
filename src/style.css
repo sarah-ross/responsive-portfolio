@@ -46,7 +46,7 @@ h1 {
 	font-size: 101px;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
 	h1 {
 		font-size: 48px;
 	}
