@@ -46,15 +46,19 @@ h1 {
 	font-size: 101px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 766px) {
 	h1 {
 		font-size: 48px;
 	}
+}
 
+@media (max-width: 766px) {
 	h2 {
 		font-size: 28px;
 	}
+}
 
+@media (max-widthl 766px) {
 	h3 {
 		font-size: 18px;
 	}
