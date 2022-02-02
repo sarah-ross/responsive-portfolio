@@ -46,17 +46,17 @@ h1 {
 	font-size: 101px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 600px) {
 	h1 {
-		font-size: 60px;
+		font-size: 48px;
 	}
 
 	h2 {
-		font-size: 38px;
+		font-size: 28px;
 	}
 
 	h3 {
-		font-size: 26px;
+		font-size: 18px;
 	}
 }
 
