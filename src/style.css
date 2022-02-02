@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #6c63ff;
-	--secondary-color: rgb(119, 119, 119);
+	--secondary-color: rgb(91, 91, 91);
 	--accent-color: #dadbdc;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	--body-font: "Montserrat", sans-serif;
@@ -43,18 +43,32 @@ h1 {
 	font-family: lust, serif;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 83px;
+	font-size: 101px;
+}
+
+@media (min-width: 576px) {
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		font-size: 38px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
 }
 
 h2 {
-	font-size: 57px;
+	font-size: 72px;
 }
 
 h3 {
 	position: relative;
-	top: -23px;
-	font-size: 39px;
-	color: black;
+	top: -30px;
+	font-size: 47px;
+	color: var(--secondary-color);
 }
 
 p {
@@ -78,24 +92,25 @@ p {
 	margin: 0 auto;
 }
 
-.homepage-button {
-	display: block;
+.emoji {
+	font-size: 52px;
 }
 
 .homepage-button {
-	width: 270px;
-	margin-top: 54px;
+	display: block;
+	width: 310px;
+	margin-top: 40px;
 	margin-bottom: 30px;
-	padding: 20px 25px;
+	padding: 20px 30px;
 	background-color: black;
-	border-radius: 5px;
+	border-radius: 6px;
 	box-shadow: var(--box-shadow);
 	transition: all 500ms ease-out;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
