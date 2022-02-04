@@ -161,8 +161,12 @@ p,
 	text-align: left;
 }
 
-.portrait {
+.portrait,
+.travel-image {
 	border-radius: 8px;
+}
+
+.portrait {
 	width: 450px;
 	box-shadow: var(--box-shadow);
 }
@@ -193,6 +197,37 @@ p,
 	.portrait {
 		margin-top: 0;
 	}
+}
+
+.travel-heading {
+	text-align: center;
+	font-family: var(--main-heading-font);
+	font-size: 48px;
+	margin-bottom: 50px;
+}
+
+.travel-image {
+	background: black;
+	margin: 0 35px;
+	border-radius: 8px;
+	padding: 3px;
+	transition: all 450ms ease-in-out;
+}
+
+.travel-image:hover {
+	background-color: transparent;
+	padding: 10px;
+	border: 1px solid black;
+	transform: scale(1.06);
+}
+
+.caption {
+	position: relative;
+	top: 15px;
+	left: 27px;
+	font-family: var(--body-font);
+	font-size: 20px;
+	font-weight: 300;
 }
 
 .email-link {
