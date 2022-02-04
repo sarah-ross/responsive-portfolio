@@ -1,8 +1,9 @@
 :root {
-	--primary-color: #6c63ff;
 	--secondary-color: rgb(91, 91, 91);
 	--accent-color: #dadbdc;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	--main-heading-font: lust, serif;
+	--decorative-font: verveine, sans-serif;
 	--body-font: "Montserrat", sans-serif;
 	--background-image: "/images/bangkok.png";
 }
@@ -39,10 +40,14 @@ p,
 }
 
 .index-h1 {
-	font-family: lust, serif;
+	font-family: var(--main-heading-font);
 	font-weight: 700;
 	font-style: normal;
 	font-size: 101px;
+}
+
+.index-emoji {
+	font-size: 53px;
 }
 
 .index-h2 {
@@ -54,14 +59,6 @@ p,
 	top: -30px;
 	font-size: 47px;
 	color: var(--secondary-color);
-}
-
-p {
-	background: var(--secondary-color);
-	padding: 20px;
-	border-radius: 4px;
-	font-size: 14px;
-	line-height: 1.5;
 }
 
 @media (max-width: 766px) {
@@ -96,10 +93,6 @@ p {
 	color: var(--accent-color);
 }
 
-.emoji {
-	font-size: 52px;
-}
-
 .index-button {
 	display: block;
 	width: 310px;
@@ -126,23 +119,6 @@ p {
 	color: black;
 }
 
-.contact-link {
-	background: var(--primary-color);
-	box-shadow: var(--box-shadow);
-	color: white;
-}
-
-.about-link {
-	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
-}
-
-.homepage-link {
-	color: var(--primary-color);
-	text-align: center;
-	display: block;
-}
-
 .container {
 	padding-top: 160px;
 }
@@ -151,13 +127,58 @@ p {
 	padding-bottom: 75px;
 }
 
-.about-paragraphs {
-	display: flex;
-	margin: 30px 0;
+.about-h1,
+.about-h3,
+.about-paragraph {
+	text-align: left;
 }
 
-.about-paragraphs p {
-	margin: 10px;
+.about-h1 {
+	font-family: var(--main-heading-font);
+	font-size: 78px;
+	margin-top: 160px;
+}
+
+.about-emoji {
+	font-size: 67px;
+}
+
+.about-h3 {
+	font-family: var(--decorative-font);
+	color: var(--secondary-color);
+	font-size: 44px;
+	margin-bottom: 40px;
+}
+
+.about-paragraph {
+	display: flex;
+}
+
+.about-paragraph p {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.portrait {
+	border-radius: 8px;
+	width: 450px;
+	box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 766px) {
+	.about-h1 {
+		font-size: 56px;
+	}
+
+	.about-h1 span {
+		font-size: 34px;
+	}
+
+	.about-h3 {
+		font-size: 22px;
+	}
 }
 
 .email-link {
