@@ -167,17 +167,31 @@ p,
 	box-shadow: var(--box-shadow);
 }
 
+@media (max-width: 990px) {
+	.portrait {
+		margin-top: 186px;
+	}
+}
+
 @media (max-width: 766px) {
 	.about-h1 {
-		font-size: 56px;
+		font-size: 64px;
 	}
 
 	.about-h1 span {
-		font-size: 34px;
+		font-size: 64px;
 	}
 
 	.about-h3 {
-		font-size: 22px;
+		font-size: 36px;
+	}
+
+	.about-paragraph p {
+		margin-bottom: 60px;
+	}
+
+	.portrait {
+		margin-top: 0;
 	}
 }
 
