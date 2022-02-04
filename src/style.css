@@ -66,11 +66,11 @@ p {
 
 @media (max-width: 766px) {
 	.index-h1 {
-		font-size: 54px;
+		font-size: 56px;
 	}
 
 	.index-h2 {
-		font-size: 41px;
+		font-size: 38px;
 	}
 
 	.index-h2 span {
@@ -78,8 +78,8 @@ p {
 	}
 
 	.index-h3 {
-		font-size: 25px;
-		margin-top: 15px;
+		font-size: 26px;
+		margin-top: 16px;
 	}
 
 	a .index-button {
