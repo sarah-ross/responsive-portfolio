@@ -135,19 +135,19 @@ p,
 
 .about-h1 {
 	font-family: var(--main-heading-font);
-	font-size: 78px;
-	margin-top: 160px;
+	font-size: 80px;
+	margin-top: 163px;
 }
 
 .about-emoji {
-	font-size: 67px;
+	font-size: 68px;
 }
 
 .about-h3 {
 	font-family: var(--decorative-font);
 	color: var(--secondary-color);
-	font-size: 44px;
-	margin-bottom: 40px;
+	font-size: 46px;
+	margin-bottom: 30px;
 }
 
 .about-paragraph {
@@ -155,7 +155,7 @@ p,
 }
 
 .about-paragraph p {
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: left;
@@ -178,6 +178,12 @@ p,
 }
 
 @media (max-width: 766px) {
+	.about-h1,
+	.about-h1 span .about-h3,
+	.about-paragraph {
+		text-align: center;
+	}
+
 	.about-h1 {
 		font-size: 64px;
 	}
@@ -202,8 +208,8 @@ p,
 .travel-heading {
 	text-align: center;
 	font-family: var(--main-heading-font);
-	font-size: 48px;
-	margin-bottom: 50px;
+	font-size: 50px;
+	margin-bottom: 53px;
 }
 
 .travel-image {
