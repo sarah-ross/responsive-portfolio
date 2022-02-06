@@ -18,9 +18,19 @@ body {
 	padding: 15px;
 }
 
+h1 {
+	font-family: var(--main-heading-font);
+}
+
+h3 {
+	font-family: var(--decorative-font);
+	color: var(--secondary-color);
+}
+
 .index-h1,
 .index-h2,
 .index-h3,
+.portfolio-heading,
 .container {
 	text-align: center;
 	background-color: transparent;
@@ -28,8 +38,7 @@ body {
 	padding: 0;
 }
 
-.index-h2,
-.index-h3 {
+.index-h2 {
 	font-family: verveine, sans-serif;
 	font-weight: 400;
 }
@@ -40,7 +49,6 @@ p,
 }
 
 .index-h1 {
-	font-family: var(--main-heading-font);
 	font-weight: 700;
 	font-style: normal;
 	font-size: 101px;
@@ -58,7 +66,6 @@ p,
 	position: relative;
 	top: -30px;
 	font-size: 47px;
-	color: var(--secondary-color);
 }
 
 @media (max-width: 766px) {
@@ -79,7 +86,7 @@ p,
 		margin-top: 16px;
 	}
 
-	a .index-button {
+	.index-button a {
 		width: 193px;
 		font-size: 16px;
 	}
@@ -134,7 +141,6 @@ p,
 }
 
 .about-h1 {
-	font-family: var(--main-heading-font);
 	font-size: 80px;
 	margin-top: 163px;
 }
@@ -144,8 +150,6 @@ p,
 }
 
 .about-h3 {
-	font-family: var(--decorative-font);
-	color: var(--secondary-color);
 	font-size: 46px;
 	margin-bottom: 30px;
 }
@@ -236,6 +240,15 @@ p,
 	font-weight: 300;
 }
 
+.portfolio-heading {
+	margin-top: 130px;
+	font-size: 78px;
+}
+
+.contact-emoji {
+	font-size: 54px;
+}
+
 .email-link {
 	display: flex;
 	justify-content: center;
@@ -246,4 +259,10 @@ p,
 
 .email-link:hover {
 	text-decoration: underline;
+}
+
+#contact-section {
+	font-family: var(--decorative-font);
+	font-size: 73px;
+	color: var(--secondary-color);
 }
