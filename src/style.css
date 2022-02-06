@@ -30,7 +30,8 @@ h3 {
 .index-h1,
 .index-h2,
 .index-h3,
-.portfolio-heading,
+.portfolio-h1,
+.portfolio-h3,
 .container {
 	text-align: center;
 	background-color: transparent;
@@ -240,13 +241,17 @@ p,
 	font-weight: 300;
 }
 
-.portfolio-heading {
+.portfolio-h1 {
 	margin-top: 130px;
 	font-size: 78px;
 }
 
+.portfolio-h3 {
+	font-size: 38px;
+}
+
 .contact-emoji {
-	font-size: 54px;
+	font-size: 51px;
 }
 
 .email-link {
@@ -262,6 +267,6 @@ p,
 }
 
 #contact-section {
-	font-family: var(--decorative-font);
-	font-size: 73px;
+	font-family: var(--main-heading-font);
+	font-size: 59px;
 }
