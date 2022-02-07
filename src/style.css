@@ -47,6 +47,11 @@ p,
 	font-family: var(--body-font);
 }
 
+.index-heading {
+	text-align: center;
+	margin-top: 180px;
+}
+
 .index-h1 {
 	font-weight: 700;
 	font-style: normal;
