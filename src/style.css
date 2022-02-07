@@ -35,7 +35,6 @@ h3 {
 .container {
 	background-color: transparent;
 	margin: 0 auto;
-	padding: 0;
 }
 
 .index-h2 {
@@ -124,10 +123,6 @@ p,
 	background: transparent;
 	border: 2px solid black;
 	color: black;
-}
-
-.container {
-	padding-top: 160px;
 }
 
 .row {
@@ -251,11 +246,37 @@ p,
 }
 
 .portfolio-h3 {
-	font-size: 38px;
+	font-size: 43px;
+	margin-bottom: 100px;
 }
 
-.project-title {
+.project-title,
+.graphic-project-title {
 	font-size: 56px;
+	margin-top: 40px;
+}
+
+.description {
+	font-size: 18px;
+}
+
+.design-wrapper,
+#contact-section {
+	margin-top: 80px;
+}
+
+.design-wrapper {
+	background: var(--secondary-color);
+}
+
+.design-work {
+	border-radius: 8px;
+	box-shadow: var(--box-shadow);
+}
+
+.graphic-project-title,
+.graphic-title-description {
+	color: white;
 }
 
 .contact-emoji {
