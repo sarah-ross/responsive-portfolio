@@ -99,12 +99,9 @@ p,
 	color: var(--accent-color);
 }
 
-.index-button {
-	display: block;
-	width: 310px;
-	margin: 0 auto;
-	margin-top: 40px;
-	margin-bottom: 30px;
+.index-button,
+.project-button {
+	width: fit-content;
 	padding: 20px 30px;
 	background-color: black;
 	border-radius: 6px;
@@ -114,12 +111,24 @@ p,
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
-	font-size: 22px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
+.index-button {
+	margin-top: 40px;
+	display: block;
+	font-size: 22px;
+	margin: 0 auto;
+}
+
 .index-button:hover {
+	background: transparent;
+	border: 2px solid black;
+	color: black;
+}
+
+.project-button:hover {
 	background: transparent;
 	border: 2px solid black;
 	color: black;
@@ -253,20 +262,34 @@ p,
 .project-title,
 .graphic-project-title {
 	font-size: 56px;
-	margin-top: 40px;
+}
+
+.title-description {
+	padding-right: 25px;
 }
 
 .description {
 	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 50px;
 }
 
 .design-wrapper,
 #contact-section {
-	margin-top: 80px;
+	margin-top: 85px;
+}
+
+.design-wrapper,
+.design-work {
+	border-radius: 8px;
 }
 
 .design-wrapper {
+	margin: 0 auto;
+	box-sizing: content-box;
 	background: var(--secondary-color);
+	border: solid var(--secondary-color) 70px;
+	width: fit-content;
 }
 
 .design-work {
@@ -275,8 +298,28 @@ p,
 }
 
 .graphic-project-title,
-.graphic-title-description {
+.graphic-title-description1,
+.graphic-title-description2,
+.graphic-title-description3 {
 	color: white;
+}
+
+.graphic-title-description1,
+.graphic-title-description2,
+.graphic-title-description3 {
+	padding-left: 25px;
+}
+
+.graphic-title-description1 {
+	margin-top: 170px;
+}
+
+.graphic-title-description2 {
+	margin-top: 277px;
+}
+
+.graphic-title-description3 {
+	margin-top: 46px;
 }
 
 .contact-emoji {
@@ -293,6 +336,14 @@ p,
 
 .email-link:hover {
 	text-decoration: underline;
+}
+
+#booklet-image {
+	margin-top: 30px;
+}
+
+#insite-image {
+	margin-top: 100px;
 }
 
 #contact-section {
