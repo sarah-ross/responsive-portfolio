@@ -1,11 +1,11 @@
 :root {
 	--secondary-color: rgb(91, 91, 91);
 	--accent-color: #dadbdc;
+	--dark-bg-color: #212529;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	--main-heading-font: lust, serif;
 	--decorative-font: verveine, sans-serif;
 	--body-font: "Montserrat", sans-serif;
-	--background-image: "/images/bangkok.png";
 }
 
 body {
@@ -100,19 +100,24 @@ p,
 }
 
 .index-button,
-.project-button {
+.web-project-button,
+.graphic-project-button {
 	width: fit-content;
 	padding: 20px 30px;
-	background-color: black;
 	border-radius: 6px;
 	box-shadow: var(--box-shadow);
 	transition: all 500ms ease-out;
-	color: white;
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+.index-button,
+.web-project-button {
+	background-color: black;
+	color: white;
 }
 
 .index-button {
@@ -122,16 +127,27 @@ p,
 	margin: 0 auto;
 }
 
+.graphic-project-button {
+	background-color: white;
+	color: black;
+}
+
 .index-button:hover {
 	background: transparent;
 	border: 2px solid black;
 	color: black;
 }
 
-.project-button:hover {
+.web-project-button:hover {
 	background: transparent;
 	border: 2px solid black;
 	color: black;
+}
+
+.graphic-project-button:hover {
+	background: transparent;
+	border: 2px solid white;
+	color: white;
 }
 
 .row {
@@ -276,7 +292,7 @@ p,
 
 .design-wrapper,
 #contact-section {
-	margin-top: 85px;
+	margin-top: 100px;
 }
 
 .design-wrapper,
@@ -287,8 +303,8 @@ p,
 .design-wrapper {
 	margin: 0 auto;
 	box-sizing: content-box;
-	background: var(--secondary-color);
-	border: solid var(--secondary-color) 70px;
+	background: var(--dark-bg-color);
+	border: solid var(--dark-bg-color) 70px;
 	width: fit-content;
 }
 
@@ -315,27 +331,40 @@ p,
 }
 
 .graphic-title-description2 {
-	margin-top: 277px;
-}
-
-.graphic-title-description3 {
-	margin-top: 46px;
+	margin-top: 250px;
 }
 
 .contact-emoji {
 	font-size: 51px;
 }
 
-.email-link {
+.email {
 	display: flex;
 	justify-content: center;
-	color: var(--primary-color);
-	font-size: 28px;
-	text-decoration: none;
+	font-size: 38px;
+	margin-top: -30px;
 }
 
-.email-link:hover {
-	text-decoration: underline;
+.linkedin-icon,
+.instagram-icon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	font-size: 32px;
+	margin-top: 36px;
+}
+
+.linkedin-icon {
+	right: -290px;
+}
+
+.instagram-icon {
+	left: -290px;
+}
+
+#thai-food-project,
+#croissant-project {
+	margin-top: 40px;
 }
 
 #booklet-image {
