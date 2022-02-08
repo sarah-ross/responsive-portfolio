@@ -252,7 +252,7 @@ p,
 .travel-image:hover {
 	background-color: transparent;
 	padding: 10px;
-	border: 1px solid black;
+	border: 2px solid black;
 	transform: scale(1.06);
 }
 
@@ -316,6 +316,14 @@ p,
 .design-work {
 	border-radius: 8px;
 	box-shadow: var(--box-shadow);
+	transition: all 450ms ease-in-out;
+}
+
+.design-work:hover {
+	background-color: white;
+	padding: 10px;
+	border: 2px solid black;
+	transform: scale(1.06);
 }
 
 .graphic-project-title,
@@ -340,7 +348,7 @@ p,
 }
 
 .contact-emoji {
-	font-size: 51px;
+	font-size: 48px;
 }
 
 .email {
@@ -348,17 +356,18 @@ p,
 	justify-content: center;
 	font-size: 38px;
 	margin-top: 30px;
+	margin-bottom: 46px;
 }
 
 .icons {
 	display: flex;
 	list-style-type: none;
 	justify-content: space-evenly;
-	margin-top: 30px;
 }
 
 .linkedin-icon,
-.instagram-icon {
+.instagram-icon,
+.facebook-icon {
 	text-align: center;
 	font-size: 32px;
 }
