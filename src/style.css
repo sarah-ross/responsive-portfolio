@@ -1,5 +1,5 @@
 :root {
-	--secondary-color: rgb(91, 91, 91);
+	--secondary-color: rgb(142, 142, 142);
 	--accent-color: #dadbdc;
 	--dark-bg-color: #212529;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -12,13 +12,12 @@ body {
 	display: block;
 	margin: 0 auto;
 	max-width: 100%;
-	background-image: url(/images/logo-background.png);
-	background-repeat: repeat;
-	background-size: 50px;
-	padding: 15px;
+	background: black;
 }
 
-h1 {
+h1,
+h2 {
+	color: white;
 	font-family: var(--main-heading-font);
 }
 
@@ -27,29 +26,54 @@ h3 {
 	color: var(--secondary-color);
 }
 
-.index-h1,
-.index-h2,
-.index-h3,
-.portfolio-h1,
-.portfolio-h3,
-.container {
-	background-color: transparent;
-	margin: 0 auto;
+nav {
+	padding: 20px 0;
 }
 
-.index-h2 {
-	font-family: verveine, sans-serif;
-	font-weight: 400;
+nav ul {
+	margin: 0;
+	padding: 0;
 }
 
-p,
-.nav-item .nav-link {
+nav li {
 	font-family: var(--body-font);
+	font-size: 16px;
+	display: inline;
+	list-style: none;
+	line-height: 42px;
+	margin-left: 25px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	transition: all 375ms ease-in-out;
+}
+
+nav a:hover {
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+p {
+	color: white;
+	font-family: var(--body-font);
+}
+
+@media (max-width: 464px) {
+	.nav-logo {
+		display: none;
+	}
+
+	nav li {
+		text-align: center;
+		font-size: 14px;
+	}
 }
 
 .index-heading {
 	text-align: center;
-	margin-top: 180px;
+	margin-top: 90px;
 }
 
 .index-h1 {
@@ -63,22 +87,24 @@ p,
 }
 
 .index-h2 {
+	color: white;
+	font-family: verveine, sans-serif;
 	font-size: 72px;
 }
 
 .index-h3 {
 	position: relative;
-	top: -30px;
+	top: -34px;
 	font-size: 47px;
 }
 
 @media (max-width: 766px) {
 	.index-h1 {
-		font-size: 56px;
+		font-size: 76px;
 	}
 
 	.index-h2 {
-		font-size: 38px;
+		font-size: 54px;
 	}
 
 	.index-h2 span {
@@ -86,8 +112,8 @@ p,
 	}
 
 	.index-h3 {
-		font-size: 26px;
-		margin-top: 16px;
+		font-size: 35px;
+		margin-top: 20px;
 	}
 
 	.index-button a {
@@ -115,7 +141,6 @@ p,
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
-	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -123,40 +148,40 @@ p,
 .web-project-button {
 	background-color: black;
 	color: white;
+	border: 1px solid white;
 }
 
 .index-button {
-	margin-top: 40px;
-	display: block;
-	font-size: 22px;
 	margin: 0 auto;
+	margin-top: 50px;
+	display: block;
+	font-size: 20px;
+}
+
+.index-button:hover, .web-project-button:hover {
+	background: white;
+	color: black;
 }
 
 .graphic-project-button {
 	background-color: white;
 	color: black;
-}
-
-.index-button:hover {
-	background: transparent;
-	border: 2px solid black;
-	color: black;
-}
-
-.web-project-button:hover {
-	background: transparent;
-	border: 2px solid black;
-	color: black;
+	border: 1px solid black;
 }
 
 .graphic-project-button:hover {
-	background: transparent;
+	background: black;
 	border: 2px solid white;
 	color: white;
 }
 
 .row {
 	padding-bottom: 75px;
+}
+
+.about-me {
+	margin: 0 auto;
+	margin-top: 80px;
 }
 
 .about-h1,
@@ -167,7 +192,7 @@ p,
 
 .about-h1 {
 	font-size: 80px;
-	margin-top: 163px;
+	margin-top: 167px;
 }
 
 .about-emoji {
@@ -175,7 +200,7 @@ p,
 }
 
 .about-h3 {
-	font-size: 46px;
+	font-size: 41px;
 	margin-bottom: 30px;
 }
 
@@ -184,8 +209,7 @@ p,
 }
 
 .about-paragraph p {
-	font-size: 22px;
-	font-weight: 400;
+	font-size: 20px;
 	line-height: 1.5;
 	text-align: left;
 }
@@ -196,7 +220,7 @@ p,
 }
 
 .portrait {
-	width: 450px;
+	height: 700px;
 	box-shadow: var(--box-shadow);
 }
 
@@ -208,8 +232,7 @@ p,
 
 @media (max-width: 766px) {
 	.about-h1,
-	.about-h1 span .about-h3,
-	.about-paragraph {
+	.about-h1 span {
 		text-align: center;
 	}
 
@@ -223,13 +246,17 @@ p,
 
 	.about-h3 {
 		font-size: 36px;
+		text-align: center;
 	}
 
 	.about-paragraph p {
 		margin-bottom: 60px;
+		text-align: center;
 	}
 
 	.portrait {
+		display: block;
+		margin: 0 auto;
 		margin-top: 0;
 	}
 }
@@ -238,31 +265,30 @@ p,
 	text-align: center;
 	font-family: var(--main-heading-font);
 	font-size: 50px;
+	margin-top: 95px;
 	margin-bottom: 53px;
 }
 
 .travel-image {
 	background: black;
-	margin: 0 35px;
+	margin-right: 20px;
 	border-radius: 8px;
 	padding: 3px;
 	transition: all 450ms ease-in-out;
 }
 
 .travel-image:hover {
-	background-color: transparent;
+	background-color: black;
 	padding: 10px;
-	border: 2px solid black;
+	border: 2px solid white;
 	transform: scale(1.06);
 }
 
 .caption {
-	position: relative;
-	top: 15px;
-	left: 27px;
-	font-family: var(--body-font);
+	text-align: center;
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: lighter;
+	margin-top: 7px;
 }
 
 .portfolio-h1,
@@ -271,18 +297,22 @@ p,
 }
 
 .portfolio-h1 {
-	margin-top: 130px;
+	margin-top: 100px;
 	font-size: 78px;
 }
 
 .portfolio-h3 {
-	font-size: 43px;
+	font-size: 45px;
 	margin-bottom: 100px;
 }
 
 .project-title,
 .graphic-project-title {
 	font-size: 56px;
+}
+
+.project-title {
+	color: white;
 }
 
 .title-description {
@@ -308,29 +338,39 @@ p,
 .design-wrapper {
 	margin: 0 auto;
 	box-sizing: content-box;
-	background: var(--dark-bg-color);
-	border: solid var(--dark-bg-color) 70px;
+	background: white;
+	border: solid white 70px;
 	width: fit-content;
 }
 
+.web-work,
 .design-work {
 	border-radius: 8px;
 	box-shadow: var(--box-shadow);
 	transition: all 450ms ease-in-out;
 }
 
+.web-work:hover,
+.design-work:hover {
+	padding: 10px;
+	transform: scale(1.06);
+}
+
+.web-work:hover {
+	background-color: black;
+	border: 2px solid white;
+}
+
 .design-work:hover {
 	background-color: white;
-	padding: 10px;
 	border: 2px solid black;
-	transform: scale(1.06);
 }
 
 .graphic-project-title,
 .graphic-title-description1,
 .graphic-title-description2,
 .graphic-title-description3 {
-	color: white;
+	color: black;
 }
 
 .graphic-title-description1,
@@ -339,12 +379,21 @@ p,
 	padding-left: 25px;
 }
 
+.graphic-project-title {
+	font-size: 42px;
+}
+
 .graphic-title-description1 {
-	margin-top: 170px;
+	margin-top: 130px;
 }
 
 .graphic-title-description2 {
-	margin-top: 250px;
+	margin-top: 200px;
+}
+
+.design-description {
+	color: black;
+	margin-bottom: 50px;
 }
 
 .contact-emoji {
@@ -370,6 +419,7 @@ p,
 .facebook-icon {
 	text-align: center;
 	font-size: 32px;
+	color: white;
 }
 
 #thai-food-project,
