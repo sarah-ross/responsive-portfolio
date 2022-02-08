@@ -158,7 +158,8 @@ p {
 	font-size: 20px;
 }
 
-.index-button:hover, .web-project-button:hover {
+.index-button:hover,
+.web-project-button:hover {
 	background: white;
 	color: black;
 }
@@ -306,8 +307,7 @@ p {
 	margin-bottom: 100px;
 }
 
-.project-title,
-.graphic-project-title {
+.project-title {
 	font-size: 56px;
 }
 
@@ -401,6 +401,7 @@ p {
 }
 
 .email {
+	color: white;
 	display: flex;
 	justify-content: center;
 	font-size: 38px;
@@ -409,7 +410,7 @@ p {
 }
 
 .icons {
-	display: flex;
+	text-align: center;
 	list-style-type: none;
 	justify-content: space-evenly;
 }
@@ -417,9 +418,9 @@ p {
 .linkedin-icon,
 .instagram-icon,
 .facebook-icon {
-	text-align: center;
 	font-size: 32px;
-	color: white;
+	color: var(--secondary-color);
+	margin-bottom: 8px;
 }
 
 #thai-food-project,
