@@ -133,7 +133,6 @@ footer a {
 	}
 
 	.index-button a {
-		width: 193px;
 		font-size: 16px;
 	}
 }
@@ -355,9 +354,9 @@ footer a {
 
 .design-wrapper {
 	margin: 0 auto;
-	box-sizing: content-box;
+	box-sizing: border-box;
 	background: white;
-	border: solid white 70px;
+	border: solid white 50px;
 	width: fit-content;
 }
 
@@ -410,7 +409,7 @@ footer a {
 }
 
 .graphic-title-description3 {
-	margin-top: 30px;
+	margin-top: 23px;
 }
 
 .design-description {
@@ -442,6 +441,7 @@ footer a {
 	.graphic-title-description2,
 	.graphic-title-description3 {
 		margin-top: 42px;
+		padding-left: 0;
 	}
 }
 
