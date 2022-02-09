@@ -116,7 +116,7 @@ footer a {
 
 @media (max-width: 766px) {
 	.index-h1 {
-		font-size: 76px;
+		font-size: 58px;
 	}
 
 	.index-h2 {
@@ -124,12 +124,12 @@ footer a {
 	}
 
 	.index-h2 span {
-		font-size: 34px;
+		font-size: 32px;
 	}
 
 	.index-h3 {
-		font-size: 35px;
-		margin-top: 20px;
+		font-size: 27px;
+		margin-top: 21px;
 	}
 
 	.index-button a {
@@ -150,13 +150,14 @@ footer a {
 .web-project-button,
 .graphic-project-button {
 	width: fit-content;
-	padding: 20px 30px;
+	padding: 15px 25px;
 	border-radius: 6px;
 	box-shadow: var(--box-shadow);
 	transition: all 500ms ease-out;
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--body-font);
+	font-size: 12px;
 	text-transform: uppercase;
 }
 
@@ -172,7 +173,6 @@ footer a {
 	margin-top: 40px;
 	margin-bottom: 105px;
 	display: block;
-	font-size: 20px;
 }
 
 .index-button:hover,
@@ -238,7 +238,7 @@ footer a {
 }
 
 .portrait {
-	height: 700px;
+	height: 620px;
 	box-shadow: var(--box-shadow);
 }
 
@@ -256,6 +256,7 @@ footer a {
 
 	.about-h1 {
 		font-size: 64px;
+		margin-top: 30px;
 	}
 
 	.about-h1 span {
@@ -401,16 +402,47 @@ footer a {
 }
 
 .graphic-title-description1 {
-	margin-top: 130px;
+	margin-top: 200px;
 }
 
 .graphic-title-description2 {
-	margin-top: 200px;
+	margin-top: 280px;
+}
+
+.graphic-title-description3 {
+	margin-top: 60px;
 }
 
 .design-description {
 	color: black;
 	margin-bottom: 50px;
+}
+
+@media (max-width: 766px) {
+	.portfolio-wrapper,
+	.design-wrapper {
+		text-align: center;
+	}
+
+	.description,
+	.design-description {
+		font-size: 16px;
+	}
+
+	.web-work,
+	.design-work {
+		margin-top: 50px;
+	}
+
+	.graphic-project-title {
+		font-size: 34px;
+	}
+
+	.graphic-title-description1,
+	.graphic-title-description2,
+	.graphic-title-description3 {
+		margin-top: 42px;
+	}
 }
 
 .contact-emoji {
