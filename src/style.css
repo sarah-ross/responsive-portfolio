@@ -3,6 +3,7 @@
 	--accent-color: #dadbdc;
 	--dark-bg-color: #212529;
 	--box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	--border-radius: 6px;
 	--main-heading-font: lust, serif;
 	--decorative-font: verveine, sans-serif;
 	--body-font: "Montserrat", sans-serif;
@@ -150,7 +151,7 @@ footer a {
 .graphic-project-button {
 	width: fit-content;
 	padding: 15px 25px;
-	border-radius: 6px;
+	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	transition: all 500ms ease-out;
 	text-align: center;
@@ -169,7 +170,7 @@ footer a {
 
 .index-button {
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 30px;
 	margin-bottom: 105px;
 	display: block;
 }
@@ -228,9 +229,8 @@ footer a {
 	text-align: left;
 }
 
-.portrait,
-.travel-image {
-	border-radius: 8px;
+.img-fluid {
+	border-radius: var(--border-radius);
 }
 
 .portrait {
@@ -285,15 +285,20 @@ footer a {
 	margin-bottom: 53px;
 }
 
-.travel-image {
+.travel-image,
+.index-image {
 	background: black;
-	margin-right: 20px;
-	border-radius: 8px;
+	border-radius: var(--border-radius);
 	padding: 3px;
 	transition: all 450ms ease-in-out;
 }
 
-.travel-image:hover {
+.travel-image {
+	margin-right: 20px;
+}
+
+.travel-image:hover,
+.index-image:hover {
 	background-color: black;
 	padding: 10px;
 	border: 2px solid white;
@@ -347,7 +352,7 @@ footer a {
 
 .design-wrapper,
 .design-work {
-	border-radius: 8px;
+	border-radius: var(--border-radius);
 }
 
 .design-wrapper {
@@ -360,7 +365,7 @@ footer a {
 
 .web-work,
 .design-work {
-	border-radius: 8px;
+	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	transition: all 450ms ease-in-out;
 }
@@ -447,27 +452,26 @@ footer a {
 	font-size: 48px;
 }
 
-.email {
-	color: white;
-	display: flex;
-	justify-content: center;
-	font-size: 38px;
-	margin-top: 30px;
-	margin-bottom: 46px;
+.work-together {
+	text-align: center;
+	font-size: 43px;
+	margin-top: 15px;
 }
 
 .icons {
 	text-align: center;
 	list-style-type: none;
 	justify-content: space-evenly;
+	margin-top: 74px;
 }
 
+.email-icon,
 .linkedin-icon,
 .instagram-icon,
 .facebook-icon {
 	font-size: 32px;
-	color: var(--secondary-color);
-	margin-bottom: 8px;
+	color: white;
+	margin-bottom: 10px;
 }
 
 #thai-food-project,
