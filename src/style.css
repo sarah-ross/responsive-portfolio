@@ -198,8 +198,6 @@ footer a {
 }
 
 .about-me {
-	display: block;
-	margin: 0 auto;
 	margin-top: 77px;
 }
 
@@ -211,7 +209,7 @@ footer a {
 
 .about-h1 {
 	font-size: 80px;
-	margin-top: 167px;
+	margin-top: 40px;
 }
 
 .about-emoji {
@@ -219,12 +217,12 @@ footer a {
 }
 
 .about-h3 {
-	font-size: 41px;
+	font-size: 42px;
 	margin-bottom: 30px;
 }
 
 .about-paragraph p {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.5;
 	text-align: left;
 }
@@ -234,7 +232,6 @@ footer a {
 }
 
 .portrait {
-	height: 620px;
 	margin-left: 63px;
 	box-shadow: var(--box-shadow);
 }
