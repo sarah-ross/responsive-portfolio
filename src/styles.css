@@ -151,6 +151,10 @@ footer {
 	font-family: var(--accent-font-family);
 }
 
+.email-wrapper {
+	list-style: none;
+}
+
 .nav-link-item {
 	margin-top: 25px;
 }
@@ -371,9 +375,19 @@ footer {
 }
 
 .my-work-wrapper {
-	max-width: 70%;
+	max-width: 90%;
 	margin: 0 auto;
 	margin-top: 60px;
+}
+
+.work-list,
+.work-list-2 {
+	list-style: none;
+	display: flex;
+}
+
+.work-list-item {
+	justify-content: space-around;
 }
 
 .work-title {
@@ -548,13 +562,26 @@ footer {
 		margin-top: -100px;
 	}
 
+	.my-work-wrapper {
+		width: 100%;
+	}
+
+	.work-list,
+	.work-list-2,
+	.work-list-item {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.work-title,
 	.work-link {
 		font-size: 16px;
 	}
 
 	.work-title {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 	}
 
 	.work-link {
@@ -562,10 +589,105 @@ footer {
 	}
 
 	.work-description {
-		padding: 30px;
+		width: 250px;
+		padding: 25px;
+		margin-bottom: 20px;
 	}
 
 	.work-description p {
 		display: none;
+	}
+}
+
+@media (max-width: 414px) {
+	nav .nav-link-item {
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	p {
+		font-size: 14px;
+		letter-spacing: 0;
+		line-height: 1.5em;
+	}
+
+	.resume-button {
+		display: none;
+	}
+
+	.intro-paragraph {
+		width: 280px;
+	}
+
+	.button {
+		padding: 10px 15px;
+		letter-spacing: 1px;
+		font-size: 12px;
+	}
+
+	.about-me-paragraph {
+		width: 270px;
+	}
+
+	.skills {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.skills-list-item {
+		font-size: 11px;
+		letter-spacing: 0.5px;
+		padding-left: 0;
+	}
+
+	.gradient-overlay,
+	.portrait {
+		width: 250px;
+		left: 0;
+	}
+
+	.project-section {
+		width: 80%;
+		padding-top: 200px;
+		margin: 0 auto;
+	}
+
+	.left {
+		width: 300px;
+		height: 211px;
+		margin: 0 20px;
+		background-image: url(dictionary-app-constrained.png);
+	}
+
+	.right {
+		width: 225px;
+		margin: 0;
+		margin-top: -70px;
+		min-height: max-content;
+	}
+
+	.featured-project-title {
+		font-size: 14px;
+	}
+
+	.right h3 {
+		font-size: 20px;
+		margin-top: 15px;
+		margin-bottom: 60px;
+	}
+
+	.right p {
+		display: none;
+	}
+
+	.contact-subheading {
+		font-size: 36px;
 	}
 }
