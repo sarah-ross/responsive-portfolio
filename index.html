@@ -2,10 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="This online portfolio showcases Sarah's growing body of work and experience as a front-end developer."
-		/>
+		<meta description="Hey, you found me. I'm Sarah, and I love creating things, 
+		especially for the web. I specialize in front-end development and graphic design." />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta
 			name="viewport"
@@ -17,109 +15,217 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="src/style.css" />
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com"
-		/>
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700;1,800;1,900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://use.typekit.net/lps0dpy.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://use.typekit.net/lps0dpy.css"
-		/>
-		<title>
-			Sarah Ross: Front-End Developer, Graphic Designer
-		</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="/src/styles.css">
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+		<script src="https://kit.fontawesome.com/e2268118a9.js" crossorigin="anonymous"></script>
+		<title>Sarah Ross: Web Developer & Graphic Designer</title>
 	</head>
 	<body>
-		<div class="container">
-			<nav class="d-flex justify-content-between">
-				<img
-					src="/images/logo-icon.png"
-					alt="sarah ross logo icon"
-					class="nav-logo"
-				/>
+		<ul class="icon-wrapper">
+			<li class="icon-list-item">
+				<a href="https://github.com/sarah-ross?tab=repositories" title="github profile" target="_blank">
+					<img src="/src/github.png" alt="github icon" />
+				</a>
+			</li>
+			<li class="icon-list-item">
+				<a href="https://www.instagram.com/sarah.codes._/" title="instagram profile" target="_blank">
+					<img src="/src/instagram.png" alt="instagram icon" />
+				</a>
+			</li>
+			<li class="icon-list-item">
+				<a href="https://www.linkedin.com/in/sarahross-codes/" title="linkedin profile" target="_blank">
+					<img src="/src/linkedin.png" alt="linkedin icon" />
+				</a>
+			</li>
+		</ul>
+		<div class="container-fluid" data-aos="zoom-in">
+			<nav>
 				<ul>
-					<li>
-						<a href="/"> home </a>
+					<li class="nav-link-item">
+						<a href="#about-me-heading"><span class="nav-section-number">01. </span>About</a>
 					</li>
-					<li>
-						<a href="/about.html"> about </a>
+					<li class="nav-link-item">
+						<a href="#my-work-heading"><span class="nav-section-number">02. </span> My Work</a>
 					</li>
-					<li>
-						<a href="/portfolio.html"> portfolio </a>
+					<li class="nav-link-item">
+						<a href="#contact-heading"><span class="nav-section-number">03. </span>Contact</a>
 					</li>
-					<li>
-						<a href="/portfolio.html#contact-section">
-							contact
-						</a>
+					<li class="resume-button">
+						<button class="button">Resume</button>
 					</li>
 				</ul>
 			</nav>
+			<a href="mailto:sarah@sarah-codes.com" class="email-wrapper-link">
+				sarah@sarah-codes.com
+			</a>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<img
-						src="/images/index-portrait1.jpg"
-						alt="sarah ross portrait"
-						class="img-fluid mt-5 index-image"
-					/>
+			<main>
+				<h3 class="hello">Hello, my name is</h3>
+					<h1 class="mt-3">Sarah Ross,</h1>
+					<h2>Web developer & designer.</h2>
+						<p class="intro-paragraph mb-5">
+							With ten years of experience in the design industry, 
+							I specialize in front-end web development and graphic 
+							design. I am passionate about building responsive websites
+							and web apps using the latest technologies and creating
+							high-quality output for print and digital landscapes.
+						</p>
+							<a href="#my-work-heading" class="button">Check out my work</a>
+			</main>
+		</div>
+		<div class="container">
+		<section>
+		<div class="row">
+			<h3>
+				<div id="about-me-heading"><span class="section-number">01.</span>About Me</div>
+			</h3>
+			<div class="col">
+			<p class="about-me-paragraph">
+					Hi! I'm Sarah and love to code and design things. I've created a 
+					wide range of projects for print and the web, such as magazine ads,
+					interactive video brochures, wedding invitations, digital marketing
+					campaigns, product mockups, and more.
+					<br />
+					<br />
+					More recently, my work has been focused in designing and building
+					websites and web apps from the ground up. I have the fundamental and
+					latest coding languages under my belt so I can build engaging and
+					responsive experiences for the web, and I'm always learning more.
+					<div class="container skills">
+					<ul class="skills-list">
+						<li class="skills-list-item">HTML5</li>
+						<li class="skills-list-item">CSS3</li>
+						<li class="skills-list-item">Bootstrap</li>
+					</ul>
+					<ul class="skills-list">
+						<li class="skills-list-item">Javascript</li>
+						<li class="skills-list-item">React.js</li>
+						<li class="skills-list-item">API</li>
+					</ul>
+					<ul class="skills-list">
+						<li class="skills-list-item">NPM</li>
+						<li class="skills-list-item">GitHub</li>
+						<li class="skills-list-item">Figma</li>
+					</ul>
 				</div>
-				<div class="col-md-4">
-					<img
-						src="/images/code.jpg"
-						alt="code on screen"
-						class="img-fluid mt-5 index-image"
-					/>
-				</div>
-				<div class="col-md-4">
-					<img
-						src="/images/index-portrait2.jpg"
-						alt="sarah ross portrait 2"
-						class="img-fluid mt-5 index-image"
-					/>
+			</p>
+			</div>
+			<div class="col-4">
+				<div class="gradient-overlay mt-4" data-aos="fade-in">
+					<img src="/src/portrait-3.jpg" alt="Portrait" class="portrait" />
 				</div>
 			</div>
 		</div>
-		<div class="container index-heading">
-			<h2 class="index-h2">
-				Hi there <span class="index-emoji">👋</span> I am
-			</h2>
-			<h1 class="index-h1">sarah ross</h1>
-			<h3 class="index-h3">
-				front-end developer, graphic designer
-			</h3>
-			<a
-				href="/portfolio.html"
-				title="portfolio"
-				class="index-button"
-				>enter the vault</a
-			>
+		</section>
 		</div>
-		<footer>
-			<p>
-				open-source code by
-				<a
-					href="https://github.com/sarah-ross"
-					target="_blank"
-					title="github profile"
-				>
-					sarah ross
-				</a>
-			</p>
-		</footer>
+		<div class="container project-wrapper">
+		<section class="project-section">
+				<div class="left" data-aos="fade-right"></div>
+				<div class="right" data-aos="fade-left">
+					<div class="content">
+						<div class="featured-project-title">React Dictionary App</div>
+						<h3>Featured Project</h3>
+						<p class="mb-5">
+							A web app for looking up almost any word in the English language. 
+							It shows phonetics, definitions, synonyms, usage examples, and images
+							by using the DictionaryAPI.dev API and Pexels Image API.
+						</p>
+						<a href="https://rad-dodol-50fff9.netlify.app"
+						title="react dictionary app link"
+						class="button">Try it out ▶︎</a>
+					</div>
+				</div>
+		</section>
+		</div>
+		<div class="container">
+			<section class="my-work-section">
+				<h3>
+					<div id="my-work-heading">
+					<span class="section-number">02.</span>
+					My Work
+					</div>
+				</h3>
+				</section>
+				<div class="my-work-wrapper" data-aos="fade-in">
+				<div class="row">
+					<div class="col work-description shadow">
+						<h3 class="work-title">React Weather App</h3>
+							<p class="mb-4">
+								A web app that displays the weather of almost any city
+								around the world using the OpenWeatherAPI and an external
+								animated weather icon component.
+							</p>
+							<a href="https://super-peony-c58c95.netlify.app" class="work-link">Try it ▹</a>
+					</div>
+					<div class="col work-description shadow">
+						<h3 class="work-title">Alarm Chat Webpage</h3>
+							<p class="mb-4">
+								A lead-capture landing page designed and coded for Dynamark Monitoring
+								in Hagerstown, Maryland.</p>
+							<a href="https://myinstantconnect.com/dealer" class="work-link">Go there ▹</a>
+					</div>
+					<div class="col work-description shadow">
+						<h3 class="work-title">Vanilla JS Weather App</h3>
+							<p class="mb-4">
+								This web app displays the weather for almost any city in the world
+								using the OpenWeatherAPI and allows the user to check the weather of their
+								location.
+							</p>
+							<a href="https://friendly-hoover-121662.netlify.app/" class="work-link">Try it ▹</a>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col work-description shadow">
+						<h3 class="work-title">Dynamark Booklet</h3>
+							<p class="mb-4">
+								A leave-behind booklet with a soft-touch lamination finish I created
+								to leave a lasting impression on prospects for the company,
+								Dynamark Monitoring.
+							</p>
+							<a href="#" title="open Dynamark booklet" class="work-link">Open the booklet ▹</a>
+					</div>
+					<div class="col work-description shadow">
+						<h3 class="work-title">Dynamark Brand Guide</h3>
+						<p class="mb-4">
+							An easy-to-follow guide I designed to explain the correct usage of fonts, colors,
+							logos, taglines, photography, etc. for Dynamark Monitoring.
+						</p>
+						<a href="#" title="open Dynamark brand guide" class="work-link">Open Brand Guide ▹</a>
+					</div>
+					<div class="col work-description shadow">
+						<h3 class="work-title">Dynamark Video Brochure</h3>
+						<p class="mb-4">
+							A brochure that opens to reveal an LED screen that plays an animated video. It
+							gives prospects a unique introduction to Dynamark Monitoring.
+						</p>
+						<a href="#" title="view Dynamark video brochure" class="work-link">View the brochure ▹</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container contact-wrapper">
+			<section>
+				<h3>
+					<span class="section-number">03.</span>
+					<span id="contact-heading">Contact</span> 
+					<div class="mt-4 contact-subheading">Let's Stay In Touch.</div>
+				</h3>
+				<p class="mt-4 mb-5">Have a question or a project? I'm here to help.</p>
+				<a href="mailto:sarah@sarah-codes.com" title="email" class="button">Email me</a>
+			</section>
+			<footer>Designed and coded by Sarah Ross</footer>
+		</div>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+				once: true
+			});
+		</script>
 	</body>
 </html>
