@@ -652,17 +652,13 @@ footer {
 	}
 
 	.work-description {
-		width: 250px;
+		width: 300px;
 		padding: 25px;
 		margin-bottom: 20px;
 	}
-
-	.work-description p {
-		display: none;
-	}
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 418px) {
 	nav .nav-link-item {
 		padding: 15px;
 	}
@@ -684,6 +680,11 @@ footer {
 	.project-wrapper,
 	.work-description {
 		margin: 0 30px;
+	}
+
+	.left {
+		height: 250px;
+		width: 70%;
 	}
 
 	.resume-button {
