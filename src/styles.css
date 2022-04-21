@@ -405,7 +405,7 @@ footer {
 	border-radius: var(--border-radius);
 	background: linear-gradient(
 		99.4deg,
-		rgb(20, 15, 32) -16.9%,
+		rgb(20, 15, 32) 12.9%,
 		rgb(71, 30, 84) 119.9%
 	);
 	background-size: 400% 400%;
