@@ -614,6 +614,10 @@ footer {
 		margin-left: 90px;
 	}
 
+	.resume-button {
+		display: none;
+	}
+
 	.intro-paragraph {
 		max-width: 415px;
 	}
@@ -655,6 +659,30 @@ footer {
 		width: 300px;
 		padding: 25px;
 		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	main {
+		padding: 100px 36px;
+	}
+
+	section {
+		padding: 0 28px;
+	}
+
+	nav .nav-link-item {
+		padding: 20px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	.gradient-overlay {
+		right: 80px;
+		margin-left: 0;
+		padding: 0;
 	}
 }
 
