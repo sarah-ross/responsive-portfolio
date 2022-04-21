@@ -672,7 +672,7 @@ footer {
 	}
 
 	nav .nav-link-item {
-		padding: 20px;
+		padding: 18px;
 	}
 
 	h2 {
@@ -688,7 +688,7 @@ footer {
 
 @media only screen and (max-width: 418px) {
 	nav .nav-link-item {
-		padding: 15px;
+		padding: 14px;
 	}
 
 	h1 {
