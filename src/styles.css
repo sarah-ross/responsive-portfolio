@@ -392,17 +392,33 @@ footer {
 
 .work-title {
 	font-family: var(--accent-font-family);
-	color: var(--violet-main-heading);
-	font-size: 18px;
+	color: var(--body-font-color);
+	font-size: 16px;
 	margin-top: 10px;
 	line-height: 1.3em;
+	letter-spacing: 1.5px;
 }
 
 .work-description {
-	background-color: var(--text-box-background-color);
 	margin: 0 9px;
 	padding: 44px;
 	border-radius: var(--border-radius);
+	background: 
+	linear-gradient(99.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+	background-size: 400% 400%;
+	animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .work-description p {
