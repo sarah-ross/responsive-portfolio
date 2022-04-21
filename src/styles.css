@@ -403,10 +403,13 @@ footer {
 	margin: 0 9px;
 	padding: 44px;
 	border-radius: var(--border-radius);
-	background: 
-	linear-gradient(99.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+	background: linear-gradient(
+		99.4deg,
+		rgb(20, 15, 32) -16.9%,
+		rgb(71, 30, 84) 119.9%
+	);
 	background-size: 400% 400%;
-	animation: gradient 12s ease infinite;
+	animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
