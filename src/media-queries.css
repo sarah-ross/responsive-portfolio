@@ -189,6 +189,75 @@
 	}
 }
 
+@media only screen and (max-width: 463px) {
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	main {
+		padding: 100px 50px;
+	}
+
+	section {
+		padding: 0 50px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.about-me-paragraph {
+		width: 310px;
+	}
+
+	.skills {
+		right: 58px;
+	}
+
+	.skills-list-item {
+		font-size: 14px;
+		padding-left: 0;
+		letter-spacing: 1px;
+	}
+
+	.gradient-overlay,
+	.portrait {
+		width: 290px;
+	}
+
+	.project-section {
+		width: 90%;
+	}
+
+	.left {
+		width: 315px;
+		height: 222px;
+		margin: 0 30px;
+		background-image: url(dictionary-app-315px.png);
+	}
+
+	.featured-project-title {
+		font-size: 18px;
+		margin-bottom: 3px;
+	}
+
+	.right {
+		margin-top: -70px;
+	}
+
+	.right p {
+		font-size: 14px;
+	}
+
+	.work-description {
+		margin-left: 90px;
+	}
+}
+
 @media only screen and (max-width: 418px) {
 	nav {
 		margin-top: 30px;
