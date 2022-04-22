@@ -327,12 +327,6 @@
 		width: 230px;
 	}
 
-	.skills {
-		justify-content: center;
-		align-items: center;
-		margin-left: 38px;
-	}
-
 	.skills-list-item {
 		font-size: 11px;
 		letter-spacing: 0.5px;
