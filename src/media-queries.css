@@ -355,7 +355,7 @@
 		margin-left: 40px;
 	}
 
-   .work-description {
+	.work-description {
 		margin-left: 90px;
 	}
 
@@ -451,7 +451,6 @@
 		background-image: url(dictionary-app-constrained.png);
 	}
 
-
 	.work-title {
 		font-size: 18px;
 		margin: 15px;
@@ -466,8 +465,8 @@
 	}
 }
 
-@media only screen and (max-width: 405px) {
-		nav {
+@media only screen and (max-width: 407px) {
+	nav {
 		margin-left: 40px;
 	}
 	nav .nav-link-item {
