@@ -114,8 +114,24 @@ footer {
 	justify-content: flex-end;
 }
 
-.scroll-to-top {
+.mobile-nav {
 	display: none;
+}
+
+.mobile-nav-list-item {
+	padding-top: 28px;
+	list-style: none;
+}
+
+.mobile-nav-link {
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--body-font-reduced-opacity);
+	transition: var(--transition);
+}
+
+.mobile-nav-link:hover {
+	color: var(--violet-medium-opacity);
 }
 
 .button {
@@ -155,11 +171,11 @@ footer {
 
 .nav-link-item a,
 .nav-section-number,
-.email-wrapper-link {
+.email-contact-wrapper-link {
 	font-family: var(--accent-font-family);
 }
 
-.email-wrapper {
+.email-contact-wrapper {
 	list-style: none;
 }
 
@@ -220,7 +236,26 @@ footer {
 	cursor: pointer;
 }
 
-.email-wrapper-link {
+.icon-contact-list-item img {
+	max-width: 20px;
+	padding-top: 28px;
+	opacity: 0.7;
+	transition: var(--transition);
+}
+
+.icon-contact-list-item img:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.mobile-icon-nav {
+	position: fixed;
+	top: 350px;
+	right: 36px;
+	display: none;
+}
+
+.email-contact-wrapper-link {
 	color: var(--body-font-reduced-opacity);
 	writing-mode: vertical-rl;
 	text-align: right;
@@ -233,11 +268,11 @@ footer {
 	transition: var(--transition);
 }
 
-.email-wrapper-link:hover {
+.email-contact-wrapper:hover {
 	color: var(--violet-main-heading);
 }
 
-.email-wrapper-link::before {
+.email-contact-wrapper-link::before {
 	content: "";
 	display: none;
 	width: 1px;
@@ -245,7 +280,7 @@ footer {
 	background-color: var(--violet-main-heading);
 }
 
-.email-wrapper-link::after {
+.email-contact-wrapper-link::after {
 	content: "";
 	display: inline-block;
 	position: relative;

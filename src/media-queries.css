@@ -331,7 +331,7 @@
 	}
 
 	.featured-project-title {
-		font-size: 18px;
+		font-size: 14px;
 		margin-bottom: 3px;
 	}
 
@@ -379,10 +379,6 @@
 		padding: 0 60px;
 	}
 
-	.scroll-to-top {
-		display: unset;
-	}
-
 	h1 {
 		font-size: 40px;
 	}
@@ -397,8 +393,15 @@
 		line-height: 1.5em;
 	}
 
-	.resume-button {
+	.resume-button,
+	.email-contact-wrapper-link,
+	.large-screen-icons {
 		display: none;
+	}
+
+	.mobile-nav,
+	.mobile-icon-nav {
+		display: unset;
 	}
 
 	.intro-paragraph {
