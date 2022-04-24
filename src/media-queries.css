@@ -28,7 +28,7 @@
 
 	h2,
 	.contact-subheading {
-		font-size: 54px;
+		font-size: 48px;
 	}
 
 	.about-me-paragraph {
@@ -74,31 +74,61 @@
 
 @media only screen and (max-width: 994px) {
 	main {
-		padding: 100px 60px;
+		padding: 100px 80px;
 	}
 
-	section {
-		padding: 0 40px;
+	section,
+	.about-me-section,
+	.my-work-wrapper {
+		padding: 0 80px;
+	}
+
+	h1 {
+		font-size: 48px;
 	}
 
 	h2 {
-		font-size: 48px;
+		font-size: 36px;
 		margin-top: 2px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	main {
+		padding: 100px 60px;
+	}
+
+	section,
+	.about-me-section,
+	.my-work-wrapper {
+		padding: 0 60px;
+	}
+
+	.gradient-overlay,
+	.portrait {
+		width: 290px;
+		left: 25px;
+		top: 20px;
 	}
 }
 
 @media only screen and (max-width: 820px) {
 	.container-fluid {
 		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.nav-link-item {
+		padding-left: 72px;
 	}
 
 	h1 {
-		font-size: 58px;
+		font-size: 50px;
 	}
 
 	h2 {
-		font-size: 46px;
-		margin-top: 2px;
+		font-size: 36px;
 	}
 
 	footer {
@@ -117,9 +147,14 @@
 
 	.portrait,
 	.gradient-overlay {
-		width: 325px;
-		left: 60px;
+		width: 275px;
 		top: 25px;
+	}
+
+	.left {
+		width: 535px;
+		height: 376px;
+		background-image: url(dictionary-app-535px.png);
 	}
 
 	.my-work-wrapper {
@@ -156,36 +191,74 @@
 }
 
 @media only screen and (max-width: 650px) {
+	.container-fluid {
+		justify-content: flex-start;
+	}
+
+	.nav-link-item {
+		padding: 34px;
+	}
+
+	.nav-link-item a {
+		text-align: left;
+	}
+
 	main {
-		padding: 100px 36px;
+		padding: 100px 40px;
 	}
 
-	section {
-		padding: 0 28px;
+	section,
+	.about-me-section,
+	.my-work-wrapper {
+		padding: 0 40px;
 	}
 
-	nav .nav-link-item {
-		padding: 10px;
+	h1 {
+		font-size: 52px;
 	}
 
 	h2 {
 		font-size: 40px;
 	}
 
-	.gradient-overlay,
-	.portrait {
-		width: 320px;
-		left: 0;
-	}
-
 	.left {
-		width: 480px;
-		height: 338px;
-		background-image: url(dictionary-app-480px.png);
+		width: 460px;
+		height: 324px;
+		background-image: url(dictionary-app-460px.png);
 	}
 
 	.right {
-		width: 90%;
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	main {
+		padding: 100px 60px;
+	}
+
+	section,
+	.about-me-section,
+	.my-work-wrapper {
+		padding: 0 60px;
+	}
+
+	.skills {
+		padding-left: 4px;
+	}
+
+	.left {
+		width: 380px;
+		height: 267px;
+		background-image: url(dictionary-app-380px.png);
+	}
+
+	.right {
+		margin-top: -90px;
+	}
+
+	.contact-subheading {
+		font-size: 34px;
 	}
 }
 
@@ -202,7 +275,9 @@
 		padding: 100px 50px;
 	}
 
-	section {
+	section,
+	.about-me-section,
+	.my-work-wrapper {
 		padding: 0 50px;
 	}
 
@@ -276,7 +351,9 @@
 		padding: 100px 50px;
 	}
 
-	section {
+	section,
+	.about-me-section,
+	.my-work-wrapper {
 		padding: 0 50px;
 	}
 
