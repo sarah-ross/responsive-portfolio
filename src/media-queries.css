@@ -366,17 +366,7 @@
 
 @media only screen and (max-width: 418px) {
 	nav {
-		margin-top: 25px;
-		margin-left: 40px;
-	}
-	nav .nav-link-item {
-		padding: 12px;
-		align-items: center;
-		justify-content: center;
-	}
-
-	nav .nav-link-item a {
-		font-size: 13px;
+		display: none;
 	}
 
 	main {
@@ -466,19 +456,6 @@
 }
 
 @media only screen and (max-width: 407px) {
-	nav {
-		margin-left: 40px;
-	}
-	nav .nav-link-item {
-		padding: 12px;
-		align-items: flex-start;
-		justify-content: flex-start;
-	}
-
-	nav .nav-link-item a {
-		font-size: 12px;
-	}
-
 	h1 {
 		font-size: 38px;
 	}
