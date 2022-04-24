@@ -468,6 +468,16 @@
 	}
 }
 
+@media only screen and (max-width: 399px) {
+	.skills {
+		margin-left: 15px;
+	}
+
+	.contact-wrapper p {
+		width: 300px;
+	}
+}
+
 @media only screen and (max-width: 393px) {
 	h1 {
 		font-size: 42px;
