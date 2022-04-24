@@ -114,6 +114,10 @@ footer {
 	justify-content: flex-end;
 }
 
+.scroll-to-top {
+	display: none;
+}
+
 .button {
 	background-color: transparent;
 	color: rgb(222, 218, 234);

@@ -379,6 +379,10 @@
 		padding: 0 60px;
 	}
 
+	.scroll-to-top {
+		display: unset;
+	}
+
 	h1 {
 		font-size: 40px;
 	}
