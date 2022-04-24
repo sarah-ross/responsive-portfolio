@@ -3,7 +3,10 @@
 		padding: 130px 90px;
 	}
 
-	section {
+	section,
+	.about-me-section,
+	.project-section,
+	.my-work-wrapper {
 		padding: 0 90px;
 	}
 }
@@ -18,7 +21,10 @@
 		padding: 115px 80px;
 	}
 
-	section {
+	section,
+	.about-me-section,
+	.project-section,
+	.my-work-wrapper {
 		padding: 0 60px;
 	}
 
@@ -79,6 +85,7 @@
 
 	section,
 	.about-me-section,
+	.project-section,
 	.my-work-wrapper {
 		padding: 0 80px;
 	}
@@ -100,6 +107,7 @@
 
 	section,
 	.about-me-section,
+	.project-section,
 	.my-work-wrapper {
 		padding: 0 60px;
 	}
@@ -209,6 +217,7 @@
 
 	section,
 	.about-me-section,
+	.project-section,
 	.my-work-wrapper {
 		padding: 0 40px;
 	}
@@ -239,12 +248,9 @@
 
 	section,
 	.about-me-section,
+	.project-section,
 	.my-work-wrapper {
 		padding: 0 60px;
-	}
-
-	.skills {
-		padding-left: 4px;
 	}
 
 	.left {
@@ -263,55 +269,64 @@
 }
 
 @media only screen and (max-width: 463px) {
+	.nav-link-item {
+		padding: 0 22px;
+	}
+
 	h1 {
-		font-size: 48px;
+		font-size: 40px;
 	}
 
 	h2 {
-		font-size: 36px;
+		font-size: 32px;
 	}
 
 	main {
-		padding: 100px 50px;
+		padding: 100px 70px;
 	}
 
 	section,
 	.about-me-section,
+	.project-section,
 	.my-work-wrapper {
-		padding: 0 50px;
+		padding: 0 70px;
 	}
 
 	p {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	.button {
+		font-size: 12px;
 	}
 
 	.about-me-paragraph {
-		width: 310px;
-	}
-
-	.skills {
-		right: 58px;
+		width: 300px;
 	}
 
 	.skills-list-item {
-		font-size: 14px;
+		font-size: 13px;
 		padding-left: 0;
 		letter-spacing: 1px;
 	}
 
 	.gradient-overlay,
 	.portrait {
-		width: 290px;
+		width: 260px;
+	}
+
+	.skills {
+		padding-left: 4px;
 	}
 
 	.project-section {
 		width: 90%;
+		margin-left: 60px;
 	}
 
 	.left {
 		width: 315px;
 		height: 222px;
-		margin: 0 30px;
 		background-image: url(dictionary-app-315px.png);
 	}
 
@@ -321,40 +336,57 @@
 	}
 
 	.right {
+		width: 225px;
 		margin-top: -70px;
+		min-height: max-content;
+	}
+
+	.right h3 {
+		font-size: 20px;
+		margin-top: 15px;
+		margin-bottom: 60px;
 	}
 
 	.right p {
-		font-size: 14px;
+		display: none;
 	}
 
-	.work-description {
+	.my-work-wrapper {
+		margin-left: 40px;
+	}
+
+   .work-description {
 		margin-left: 90px;
+	}
+
+	.contact-subheading {
+		font-size: 38px;
 	}
 }
 
 @media only screen and (max-width: 418px) {
 	nav {
-		margin-top: 30px;
+		margin-top: 25px;
+		margin-left: 40px;
 	}
 	nav .nav-link-item {
-		padding: 11px;
+		padding: 12px;
 		align-items: center;
 		justify-content: center;
 	}
 
 	nav .nav-link-item a {
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	main {
-		padding: 100px 50px;
+		padding: 100px 60px;
 	}
 
 	section,
 	.about-me-section,
 	.my-work-wrapper {
-		padding: 0 50px;
+		padding: 0 60px;
 	}
 
 	h1 {
@@ -369,16 +401,6 @@
 		font-size: 14px;
 		letter-spacing: 0;
 		line-height: 1.5em;
-	}
-
-	.project-wrapper,
-	.work-description {
-		margin: 0 30px;
-	}
-
-	.left {
-		height: 250px;
-		width: 70%;
 	}
 
 	.resume-button {
@@ -419,7 +441,7 @@
 	.project-section {
 		width: 80%;
 		padding-top: 200px;
-		margin: 0 auto;
+		margin-left: 100px;
 	}
 
 	.left {
@@ -429,35 +451,14 @@
 		background-image: url(dictionary-app-constrained.png);
 	}
 
-	.right {
-		width: 225px;
-		margin: 0;
-		margin-top: -70px;
-		min-height: max-content;
-	}
-
-	.featured-project-title {
-		font-size: 14px;
-	}
-
-	.right h3 {
-		font-size: 20px;
-		margin-top: 15px;
-		margin-bottom: 60px;
-	}
-
-	.right p {
-		display: none;
-	}
-
-	.work-description {
-		margin-right: -85px;
-		margin-top: 20px;
-	}
 
 	.work-title {
 		font-size: 18px;
 		margin: 15px;
+	}
+
+	.work-description {
+		margin-left: 110px;
 	}
 
 	.contact-subheading {
