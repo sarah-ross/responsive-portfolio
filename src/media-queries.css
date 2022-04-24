@@ -274,34 +274,35 @@
 	}
 
 	h1 {
-		font-size: 40px;
+		font-size: 42px;
 	}
 
 	h2 {
-		font-size: 32px;
+		width: 315px;
 	}
 
 	main {
-		padding: 100px 70px;
+		padding: 100px 80px;
 	}
 
 	section,
 	.about-me-section,
 	.project-section,
 	.my-work-wrapper {
-		padding: 0 70px;
+		padding: 0 80px;
 	}
 
 	p {
 		font-size: 14px;
 	}
 
-	.button {
-		font-size: 12px;
+	.intro-paragraph,
+	.about-me-paragraph {
+		width: 315px;
 	}
 
-	.about-me-paragraph {
-		width: 300px;
+	.button {
+		font-size: 12px;
 	}
 
 	.skills-list-item {
@@ -360,7 +361,8 @@
 	}
 
 	.contact-subheading {
-		font-size: 38px;
+		font-size: 34px;
+		width: 315px;
 	}
 }
 
@@ -370,21 +372,22 @@
 	}
 
 	main {
-		padding: 100px 60px;
+		padding: 100px 70px;
 	}
 
 	section,
 	.about-me-section,
 	.my-work-wrapper {
-		padding: 0 60px;
+		padding: 0 70px;
 	}
 
-	h1 {
-		font-size: 40px;
+	h1,
+	h2 {
+		width: 290px;
 	}
 
 	h2 {
-		font-size: 28px;
+		font-size: 30px;
 	}
 
 	p {
@@ -404,18 +407,15 @@
 		display: unset;
 	}
 
-	.intro-paragraph {
-		width: 280px;
+	.intro-paragraph,
+	.about-me-paragraph {
+		width: 320px;
 	}
 
 	.button {
 		padding: 10px 15px;
 		letter-spacing: 1px;
 		font-size: 12px;
-	}
-
-	.about-me-paragraph {
-		width: 270px;
 	}
 
 	.gradient-overlay,
@@ -456,10 +456,6 @@
 	.work-description {
 		margin-left: 110px;
 	}
-
-	.contact-subheading {
-		font-size: 36px;
-	}
 }
 
 @media only screen and (max-width: 407px) {
@@ -467,36 +463,33 @@
 		font-size: 38px;
 	}
 
-	h2 {
-		font-size: 26px;
+	.hello {
+		font-size: 18px;
 	}
 }
 
 @media only screen and (max-width: 393px) {
-	nav .nav-link-item {
-		padding: 10px;
-	}
-
 	h1 {
-		font-size: 36px;
+		font-size: 42px;
 	}
 
 	h2 {
-		font-size: 24px;
+		font-size: 34px;
+		width: 320px;
+	}
+
+	footer {
+		margin-left: 100px;
 	}
 
 	.hello {
 		font-size: 16px;
 	}
 
-	.intro-paragraph {
-		width: 244px;
-	}
-
 	.skills {
 		justify-content: center;
 		align-items: center;
-		margin-left: 50px;
+		margin-left: 90px;
 	}
 
 	.skills-list-item {
@@ -512,24 +505,37 @@
 	}
 
 	.work-description {
-		margin-left: 50px;
+		margin-left: 140px;
+	}
+
+	.contact-wrapper p {
+		width: 300px;
 	}
 }
 
 @media only screen and (max-width: 360px) {
-	nav .nav-link-item {
-		padding: 9px;
-	}
-
-	nav .nav-link-item a {
-		font-size: 13px;
-	}
-
 	h1 {
-		font-size: 32px;
+		font-size: 40px;
 	}
 
 	h2 {
-		font-size: 22px;
+		font-size: 32px;
+	}
+
+	h2,
+	footer,
+	.intro-paragraph,
+	.about-me-paragraph,
+	#about-me-heading,
+	#my-work-heading {
+		width: 320px;
+	}
+
+	.hello {
+		font-size: 14px;
+	}
+
+	.contact-wrapper h3 {
+		width: 320px;
 	}
 }
