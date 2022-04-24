@@ -423,6 +423,10 @@
 		width: 230px;
 	}
 
+	.skills {
+		margin-left: 20px;
+	}
+
 	.skills-list-item {
 		font-size: 11px;
 		letter-spacing: 0.5px;
@@ -465,16 +469,6 @@
 
 	.hello {
 		font-size: 18px;
-	}
-}
-
-@media only screen and (max-width: 399px) {
-	.skills {
-		margin-left: 15px;
-	}
-
-	.contact-wrapper p {
-		width: 300px;
 	}
 }
 
