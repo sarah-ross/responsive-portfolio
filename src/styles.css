@@ -5,7 +5,7 @@
 	--body-font-color: rgb(218, 234, 230);
 	--body-font-reduced-opacity: rgba(218, 234, 230, 0.7);
 	--text-box-background-color: rgb(20, 15, 32);
-	--background-color: rgb(28, 24, 24);
+	--background-color: rgb(27, 25, 24);
 	--body-font-family: "Karla", sans-serif;
 	--accent-font-family: "Inconsolata", monospace;
 	--border-radius: 4px;
@@ -112,26 +112,6 @@ footer {
 .container-fluid {
 	display: flex;
 	justify-content: flex-end;
-}
-
-.mobile-nav {
-	display: none;
-}
-
-.mobile-nav-list-item {
-	padding-top: 28px;
-	list-style: none;
-}
-
-.mobile-nav-link {
-	text-decoration: none;
-	font-weight: 300;
-	color: var(--body-font-reduced-opacity);
-	transition: var(--transition);
-}
-
-.mobile-nav-link:hover {
-	color: var(--violet-medium-opacity);
 }
 
 .button {
@@ -248,32 +228,6 @@ footer {
 	cursor: pointer;
 }
 
-.mobile-icon-nav::before {
-	content: "";
-	display: none;
-	width: 0;
-	height: 0;
-	background-color: var(--violet-main-heading);
-}
-
-.mobile-icon-nav::after {
-	content: "";
-	display: inline-block;
-	position: relative;
-	top: 50px;
-	left: 8px;
-	width: 2px;
-	height: 310px;
-	background-color: var(--violet-minimum-opacity);
-}
-
-.mobile-icon-nav {
-	position: fixed;
-	top: 350px;
-	right: 36px;
-	display: none;
-}
-
 .email-contact-wrapper-link {
 	color: var(--body-font-reduced-opacity);
 	writing-mode: vertical-rl;
@@ -287,7 +241,7 @@ footer {
 	transition: var(--transition);
 }
 
-.email-contact-wrapper:hover {
+.email-contact-wrapper-link:hover {
 	color: var(--violet-main-heading);
 }
 

@@ -402,11 +402,6 @@
 		display: none;
 	}
 
-	.mobile-nav,
-	.mobile-icon-nav {
-		display: unset;
-	}
-
 	.intro-paragraph,
 	.about-me-paragraph {
 		width: 320px;
