@@ -367,6 +367,10 @@
 }
 
 @media only screen and (max-width: 418px) {
+	html {
+		width: 100%;
+	}
+
 	nav,
 	.icon-wrapper::after {
 		display: none;
