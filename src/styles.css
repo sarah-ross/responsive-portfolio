@@ -108,7 +108,6 @@ img {
 
 main,
 section {
-	width: 90%;
 	margin: 0 auto;
 }
 
@@ -133,7 +132,7 @@ section {
 .portrait {
 	grid-column: 5 / 4;
 	z-index: -1;
-	max-width: 54em;
+	width: 60vw;
 	position: relative;
 	top: 19em;
 }
@@ -210,9 +209,6 @@ section {
 .right-text {
 	z-index: 1;
 	align-self: center;
-	background: var(--background-color-80);
-	padding: 2em;
-	border-radius: var(--border-radius);
 }
 
 .left-text {
@@ -238,6 +234,6 @@ section {
 }
 
 .project-mockup-image {
-	width: 235em;
+	width: 100vw:
 	height: auto;
 }
