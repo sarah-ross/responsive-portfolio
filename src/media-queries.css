@@ -1,0 +1,68 @@
+@media (max-width: 702px) {
+	nav li:nth-child(2) {
+		display: none;
+	}
+
+	span {
+		display: inline-block;
+	}
+}
+
+@media (max-width: 414px) {
+	h1 {
+		font-size: 13vw;
+	}
+
+	h2 {
+		font-size: 8vw;
+	}
+
+	span,
+	.hello {
+		font-size: 4vw;
+	}
+
+	.portrait {
+		width: 90vw;
+		top: 24vh;
+	}
+
+	.project-wrapper {
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 20vh;
+	}
+
+	.project-title {
+		font-size: 7vw;
+	}
+
+	.left-text,
+	.right-text {
+		width: 90vw;
+		z-index: -1;
+	}
+
+	.left-text {
+		margin-right: 0;
+		margin-bottom: -8vh;
+	}
+
+	.right-text {
+		margin-left: 0;
+		margin-top: -8vh;
+	}
+
+	.project-number {
+		text-align: center;
+	}
+
+	.right-text > .project-number {
+		text-align: center;
+		margin-top: 6vh;
+	}
+
+	.project-description {
+		font-size: 3.5vw;
+	}
+}
