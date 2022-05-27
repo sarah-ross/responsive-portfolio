@@ -229,13 +229,7 @@ span,
 
 .left-text,
 .right-text {
-	z-index: 1;
 	width: 50vw;
-	background: var(--background-color-80);
-	padding: 1.75em;
-	margin-top: 8vh;
-	border-radius: var(--border-radius);
-	box-shadow: var(--box-shadow);
 }
 
 .left-text {
@@ -247,13 +241,26 @@ span,
 }
 
 .project-number {
-	opacity: 0.15;
-	font-size: 7em;
+	float: inline-start;
+	z-index: -1;
+	margin-top: -38vh;
+	overflow: hidden;
+	opacity: 0.1;
+	font-size: 22vw;
 	font-style: italic;
 }
 
-.right-text > .project-number {
-	text-align: right;
+.left-text > .project-number {
+	margin-right: 20vw;
+}
+
+.project-content {
+	z-index: 1;
+	background: var(--background-color-80);
+	padding: 2em;
+	margin-top: -12vh;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
 }
 
 .project-title {
