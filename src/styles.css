@@ -46,13 +46,20 @@ nav ul li {
 	padding: 2.5em;
 }
 
-nav ul li a,
-span a {
+nav ul li a {
 	text-decoration: none;
 	color: var(--body-font-reduced-opacity);
 	font-size: 0.9em;
 	letter-spacing: 0.1em;
 	transition: var(--transition);
+}
+
+nav ul li a:hover {
+	color: var(--body-font-color);
+}
+
+nav ul li a:focus {
+	color: var(--body-font-color);
 }
 
 h2,
@@ -105,13 +112,22 @@ h2 {
 	}
 }
 
-span {
+.mobile-nav {
 	display: none;
 }
 
-span a {
+.mobile-nav a {
 	text-decoration: none;
 	color: var(--body-font-color);
+	transition: var(--transition);
+}
+
+.mobile-nav a:hover {
+	color: var(--body-font-reduced-opacity);
+}
+
+.mobile-nav a:focus {
+	color: var(--body-font-reduced-opacity);
 }
 
 img {
@@ -143,8 +159,7 @@ span,
 }
 
 .portrait,
-.mouse-wrapper,
-.project-number {
+.mouse-wrapper {
 	position: relative;
 }
 
@@ -225,11 +240,12 @@ span,
 
 .project-wrapper {
 	justify-content: space-around;
-	margin-bottom: 26vh;
+	margin-bottom: 54vh;
 }
 
 .left-text,
 .right-text {
+	z-index: 1;
 	width: 50vw;
 }
 
@@ -241,25 +257,9 @@ span,
 	margin-left: -7vw;
 }
 
-.project-number {
-	z-index: -1;
-	opacity: 0.1;
-	font-size: 20vw;
-	font-style: italic;
-}
-
-.right-text > .project-number {
-	float: left;
-}
-
-.left-text > .project-number {
-	float: right;
-}
-
 .project-content {
-	z-index: 1;
 	background: var(--background-color-80);
-	padding: 2em;
+	padding: 2.25em;
 	margin-top: -12vh;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
@@ -277,6 +277,8 @@ span,
 
 .project-mockup-image {
 	width: 100vw;
+	position: relative;
+	z-index: -1;
 }
 
 .project-link {
@@ -289,4 +291,15 @@ span,
 	padding: 1.25em 2em;
 	border: 0.05em solid var(--body-font-color);
 	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.project-link a:hover {
+	background: var(--body-font-color);
+	color: var(--background-color);
+}
+
+.project-link a:focus {
+	background: var(--body-font-color);
+	color: var(--background-color);
 }
