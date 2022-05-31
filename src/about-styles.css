@@ -106,6 +106,7 @@ h3 {
 }
 
 .mobile-nav {
+	display: none;
 	font-size: 2vw;
 	list-style: none;
 	padding: 0;
