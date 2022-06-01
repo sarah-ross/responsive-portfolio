@@ -74,11 +74,9 @@ h2 {
 }
 
 h3 {
-	font-size: 2.75vw;
-	width: 70vw;
-	padding: 2vw;
-	margin-top: 17vh;
-	margin-bottom: 30vh;
+	font-size: 2.5vw;
+	width: 65vw;
+	margin: 25vh 0;
 }
 
 footer {
@@ -91,12 +89,12 @@ footer {
 }
 
 .portrait-2 {
-	display: block;
 	border-radius: var(--border-radius);
-	width: 60vw;
 	position: fixed;
-	top: 1;
-	left: 1;
+	top: 50%;
+	left: 50%;
+	margin-top: -262.5px;
+	margin-left: -323px;
 	z-index: -2;
 	overflow: hidden;
 }
@@ -130,4 +128,11 @@ footer {
 
 .mobile-nav li:hover {
 	opacity: 0.7;
+}
+
+.signature {
+	font-family: mina, serif;
+	font-size: 2em;
+	color: var(--body-font-reduced-opacity);
+	margin-top: 1.5em;
 }
