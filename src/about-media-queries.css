@@ -1,0 +1,48 @@
+@media (max-width: 1199px) {
+	body {
+		margin: 0 4em;
+	}
+}
+
+@media (max-width: 895px) {
+	nav li:nth-child(2) {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: inline-block;
+	}
+}
+
+@media (max-width: 425px) {
+	body {
+		margin: 0 2vw;
+	}
+
+	nav ul {
+		justify-content: space-evenly;
+	}
+
+	h2 {
+		font-size: 7.25vw;
+		grid-column: 1 / 1;
+		width: 40vw;
+	}
+
+	h3 {
+		font-size: 4.25vw;
+		grid-column: 2 / -1;
+		width: 60vw;
+		padding: 1em;
+	}
+
+	.mobile-nav li {
+		font-size: 3.5vw;
+		line-height: 1.75em;
+	}
+
+	.portrait-2 {
+		height: 70vh;
+		width: auto;
+	}
+}
