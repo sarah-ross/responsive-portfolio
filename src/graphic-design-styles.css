@@ -1,0 +1,79 @@
+:root {
+	--body-font-color: rgb(218, 234, 230);
+	--body-font-reduced-opacity: rgba(218, 234, 230, 0.7);
+	--text-box-background-color: rgb(20, 15, 32);
+	--background-color: rgb(25, 25, 25);
+	--background-color-80: rgba(25, 25, 25, 0.8);
+	--background-color-60: rgba(25, 25, 25, 0.6);
+	--body-font-family: quiche-sans, sans-serif;
+	--border-radius: 4px;
+	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
+	--transition: all 375ms ease-out;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+nav ul {
+	display: flex;
+}
+
+body {
+	font-family: var(--body-font-family);
+	color: var(--body-font-color);
+	background: var(--background-color);
+	margin: 0 auto;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: var(--background-color-60);
+}
+
+nav ul {
+	justify-content: space-around;
+	list-style: none;
+}
+
+nav ul li {
+	padding: 2.5em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--body-font-reduced-opacity);
+	font-size: 0.9em;
+	letter-spacing: 0.1em;
+	transition: var(--transition);
+}
+
+nav ul li a:hover {
+	color: var(--body-font-color);
+}
+
+nav ul li a:focus {
+	color: var(--body-font-color);
+}
+
+h3,
+footer {
+	font-weight: 200;
+}
+
+h3 {
+	font-size: 2em;
+	margin-top: 13vh;
+}
+
+p {
+	opacity: 0.5;
+}
+
+footer {
+	margin: 1em 0;
+}
