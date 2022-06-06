@@ -8,6 +8,7 @@
 	--body-font-family: quiche-sans, sans-serif;
 	--border-radius: 4px;
 	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
+	--box-shadow-2: 6px 3px 22px rgba(25, 25, 25, 0.8);
 	--transition: all 375ms ease-out;
 }
 
@@ -61,11 +62,13 @@ nav ul li a:focus {
 }
 
 h3,
-footer {
+footer,
+.note {
 	font-weight: 200;
 }
 
-h3 {
+h3,
+.note {
 	font-size: 2em;
 	margin-top: 13vh;
 }
@@ -74,6 +77,33 @@ p {
 	opacity: 0.5;
 }
 
-footer {
-	margin: 1em 0;
+img {
+	box-shadow: var(--box-shadow-2);
+}
+
+.image-wrapper {
+	background: #d1d1d1;
+	padding: 3em;
+	margin: 1em;
+	border-radius: var(--border-radius);
+}
+
+.button {
+	display: block;
+	margin: 3em auto;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--body-font-color);
+	border: 1px solid var(--body-font-reduced-opacity);
+	border-radius: var(--border-radius);
+	width: 15%;
+	padding: 1.5em 2.5em;
+	transition: var(--transition);
+}
+
+.button:hover {
+	color: var(--body-font-reduced-opacity);
+	cursor: pointer;
+	transform: scale(1.1);
 }
