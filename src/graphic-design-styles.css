@@ -73,17 +73,28 @@ h3,
 	margin-top: 13vh;
 }
 
+h4 {
+	font-weight: 800;
+	color: var(--background-color);
+}
+
+h4 small {
+	display: block;
+	font-weight: 300;
+	font-size: 0.7em;
+}
+
 p {
 	opacity: 0.5;
 }
 
 img {
-	box-shadow: var(--box-shadow-2);
+	vertical-align: middle;
 }
 
 .image-wrapper {
 	background: #d1d1d1;
-	padding: 3em;
+	padding: 4em 3em 0 3em;
 	margin: 1em;
 	border-radius: var(--border-radius);
 }
