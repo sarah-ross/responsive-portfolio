@@ -143,6 +143,13 @@ footer {
 }
 
 .skills-list-item {
+	list-style: none;
 	margin-top: 0.5em;
 	font-size: 2vw;
+}
+
+.skills-list-item:before {
+	content: "✓";
+	font-size: 1.5vw;
+	padding-right: 0.25em;
 }
