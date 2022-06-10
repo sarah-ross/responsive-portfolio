@@ -131,11 +131,7 @@ h2 {
 	transition: var(--transition);
 }
 
-.mobile-nav a:hover {
-	color: var(--body-font-reduced-opacity);
-}
-
-.mobile-nav a:focus {
+.mobile-nav a:is(:hover, :focus) {
 	color: var(--body-font-reduced-opacity);
 }
 
@@ -303,12 +299,7 @@ span,
 	transition: var(--transition);
 }
 
-.project-link a:hover {
-	background: var(--body-font-color);
-	color: var(--background-color);
-}
-
-.project-link a:focus {
+.project-link a:is(:hover, :focus) {
 	background: var(--body-font-color);
 	color: var(--background-color);
 }
