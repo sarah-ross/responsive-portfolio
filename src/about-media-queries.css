@@ -35,4 +35,9 @@
 		height: 70vh;
 		width: auto;
 	}
+
+	.container {
+		flex-direction: column;
+		text-align: center;
+	}
 }
