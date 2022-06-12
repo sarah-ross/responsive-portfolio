@@ -67,8 +67,7 @@ footer,
 	font-weight: 200;
 }
 
-h3,
-.note {
+h3 {
 	font-size: 2em;
 	margin-top: 13vh;
 }
@@ -114,6 +113,10 @@ img {
 	padding: 4em 3em 0 3em;
 	margin-bottom: 1.5em;
 	border-radius: var(--border-radius);
+}
+
+.note {
+	font-size: 1.25em;
 }
 
 .note strong {
