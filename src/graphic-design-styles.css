@@ -97,6 +97,18 @@ img {
 	vertical-align: middle;
 }
 
+.mobile-nav a {
+	display: none;
+	text-decoration: none;
+	color: var(--body-font-color);
+	opacity: 0.8;
+	transition: var(--transition);
+}
+
+.mobile-nav a:is(:focus, :hover) {
+	opacity: 1;
+}
+
 .image-wrapper {
 	background: #d1d1d1;
 	padding: 4em 3em 0 3em;
@@ -126,4 +138,14 @@ img {
 	color: var(--body-font-reduced-opacity);
 	cursor: pointer;
 	transform: scale(1.1);
+}
+
+@media (max-width: 448px) {
+	nav li:nth-child(2) {
+		display: none;
+	}
+
+	.mobile-nav a {
+		display: unset;
+	}
 }
