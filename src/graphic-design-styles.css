@@ -143,7 +143,7 @@ img {
 	transform: scale(1.1);
 }
 
-@media (max-width: 448px) {
+@media (max-width: 523px) {
 	nav li:nth-child(2) {
 		display: none;
 	}
