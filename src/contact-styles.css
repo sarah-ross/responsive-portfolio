@@ -85,10 +85,12 @@ ul li img:is(:hover, :focus) {
 	transform: scale(1.2);
 }
 
-.container {
-	background: url(/src/bangkok.png) no-repeat;
+.container-fluid {
+	background: url(/src/bangkok.png) no-repeat center center
+		fixed;
+	background-size: cover;
 	border-radius: var(--border-radius);
-	padding: 20vh 20vw;
+	padding: 22vh 22vw;
 	margin-top: 4vh;
 	z-index: -1;
 }
@@ -99,7 +101,19 @@ ul li img:is(:hover, :focus) {
 	background: var(--background-color-80);
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
-	padding: 4ch;
+	padding: 5ch;
+}
+
+.mobile-nav a {
+	display: none;
+	text-decoration: none;
+	color: var(--body-font-color);
+	opacity: 0.8;
+	transition: var(--transition);
+}
+
+.mobile-nav a:is(:focus, :hover) {
+	opacity: 1;
 }
 
 .button {
@@ -119,4 +133,14 @@ ul li img:is(:hover, :focus) {
 .button:is(:hover, :focus) {
 	background: var(--body-font-color);
 	color: var(--background-color);
+}
+
+@media (max-width: 703px) {
+	nav li:nth-child(2) {
+		display: none;
+	}
+
+	.mobile-nav a {
+		display: unset;
+	}
 }
