@@ -93,8 +93,8 @@ footer {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-top: -262.5px;
-	margin-left: -323px;
+	margin-top: -262.5px; /* Negative half of height. */
+	margin-left: -323px; /* Negative half of width. */
 	z-index: -2;
 	overflow: hidden;
 }
@@ -128,13 +128,6 @@ footer {
 
 .mobile-nav li:hover {
 	opacity: 0.7;
-}
-
-.signature {
-	font-family: mina, serif;
-	font-size: 2em;
-	color: var(--body-font-reduced-opacity);
-	margin-top: 1.5em;
 }
 
 .tech-stack {
