@@ -5,7 +5,8 @@
 	--background-color: rgb(25, 25, 25);
 	--background-color-80: rgba(25, 25, 25, 0.8);
 	--background-color-60: rgba(25, 25, 25, 0.6);
-	--body-font-family: quiche-sans, sans-serif;
+	--display-font-family: temeraire, serif;
+	--body-font-family: filson-pro, sans-serif;
 	--border-radius: 4px;
 	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
 	--transition: all 375ms ease-out;
@@ -33,6 +34,18 @@ nav {
 	top: 0;
 	z-index: 2;
 	background: var(--background-color-60);
+	animation: dropInAnimation ease-in-out 1s 1 backwards;
+}
+
+@keyframes dropInAnimation {
+	0% {
+		opacity: 0;
+		transform: translateY(-28ch);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 nav ul {
@@ -56,6 +69,15 @@ nav ul li a:is(:hover, :focus) {
 	color: var(--body-font-color);
 }
 
+.nav-logo {
+	max-width: 3.5ch;
+	transition: var(--transition);
+}
+
+.nav-logo:is(:hover, :focus) {
+	transform: scale(1.1);
+}
+
 h3,
 ul li,
 footer {
@@ -65,14 +87,41 @@ footer {
 h2 {
 	padding: 0.25em;
 	margin-top: 5vh;
-	font-size: 5.75vw;
+	font-family: var(--display-font-family);
+	font-size: 5.25vw;
 	width: 30vw;
+	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+h2 ul li a {
+	font-family: var(--body-font-family);
 }
 
 h3 {
 	font-size: 1.5em;
 	width: 65vw;
 	margin: 25vh 0;
+	animation: fadeInAnimation-h3 ease-in 525ms 2s 1 backwards;
+}
+
+@keyframes fadeInAnimation-h3 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 .image-wrapper {

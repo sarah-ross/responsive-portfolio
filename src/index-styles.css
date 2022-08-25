@@ -5,7 +5,8 @@
 	--background-color: rgb(25, 25, 25);
 	--background-color-80: rgba(25, 25, 25, 0.8);
 	--background-color-60: rgba(25, 25, 25, 0.6);
-	--body-font-family: quiche-sans, sans-serif;
+	--body-font-family: filson-pro, sans-serif;
+	--display-font-family: temeraire, serif;
 	--border-radius: 4px;
 	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
 	--transition: all 375ms ease-out;
@@ -18,6 +19,7 @@
 }
 
 nav ul,
+.nav-logo,
 .mouse-wrapper,
 .mouse,
 .project-wrapper {
@@ -35,27 +37,32 @@ nav {
 	top: 0;
 	z-index: 2;
 	background: var(--background-color-60);
-	animation: scaleInAnimation ease-in 525ms;
-	animation-iteration-count: 1;
-	animation-fill-mode: backwards;
+	animation: dropInAnimation ease-in-out 1s 1 backwards;
 }
 
-@keyframes scaleInAnimation {
+@keyframes dropInAnimation {
 	0% {
 		opacity: 0;
+		transform: translateY(-28ch);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
 nav ul {
 	justify-content: space-around;
 	list-style: none;
+	align-items: center;
 }
 
 nav ul li {
 	padding: 2.5em;
 }
 
-nav ul li a {
+nav ul li a,
+.mobile-nav {
 	text-decoration: none;
 	color: var(--body-font-reduced-opacity);
 	font-size: 0.9em;
@@ -71,12 +78,20 @@ nav ul li a:focus {
 	color: var(--body-font-color);
 }
 
+.nav-logo {
+	max-width: 3.5ch;
+}
+
+.nav-logo:is(:hover, :focus) {
+	transform: scale(1.1);
+}
+
 h2,
 h3,
 footer,
 .hello,
 .project-description {
-	font-weight: 200;
+	font-weight: 100;
 }
 
 h1,
@@ -85,11 +100,11 @@ h1,
 }
 
 h1 {
+	font-family: temeraire, serif;
+	font-style: normal;
+	font-weight: 900;
 	font-size: 7vw;
-	font-weight: 600;
-	animation: fadeInAnimation ease-in 525ms 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: backwards;
+	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
 }
 
 @keyframes fadeInAnimation {
@@ -103,12 +118,10 @@ h1 {
 }
 
 h2 {
-	font-size: 5vw;
-	letter-spacing: 0.04em;
+	font-size: 4.25vw;
+	letter-spacing: 0.1em;
 	line-height: 1.25em;
-	animation: fadeInAnimation-h2 ease-in 525ms 2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: backwards;
+	animation: fadeInAnimation-h2 ease-in 525ms 2s 1 backwards;
 }
 
 @keyframes fadeInAnimation-h2 {
@@ -135,6 +148,10 @@ h2 {
 	color: var(--body-font-reduced-opacity);
 }
 
+.new-window-icon {
+	max-width: 1.4ch;
+}
+
 img {
 	border-radius: var(--border-radius);
 }
@@ -148,14 +165,8 @@ section {
 	margin-top: 40vh;
 }
 
-.logo {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -126px;
-	margin-left: -133px;
-	opacity: 0.3;
-	z-index: -1;
+section h3 {
+	font-family: var(--display-font-family);
 }
 
 .grid {
@@ -281,8 +292,7 @@ span,
 }
 
 .project-title {
-	font-size: 2.5em;
-	font-weight: 500;
+	font-size: 1.75em;
 }
 
 .project-description {

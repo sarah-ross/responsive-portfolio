@@ -5,7 +5,8 @@
 	--background-color: rgb(25, 25, 25);
 	--background-color-80: rgba(25, 25, 25, 0.8);
 	--background-color-60: rgba(25, 25, 25, 0.6);
-	--body-font-family: quiche-sans, sans-serif;
+	--display-font-family: temeraire, serif;
+	--body-font-family: filson-pro, sans-serif;
 	--border-radius: 4px;
 	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
 	--box-shadow-2: 6px 3px 22px rgba(25, 25, 25, 0.8);
@@ -34,6 +35,18 @@ nav {
 	top: 0;
 	z-index: 2;
 	background: var(--background-color-60);
+	animation: dropInAnimation ease-in-out 1s 1 backwards;
+}
+
+@keyframes dropInAnimation {
+	0% {
+		opacity: 0;
+		transform: translateY(-28ch);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 nav ul {
@@ -61,6 +74,15 @@ nav ul li a:focus {
 	color: var(--body-font-color);
 }
 
+.nav-logo {
+	max-width: 3.5ch;
+	transition: var(--transition);
+}
+
+.nav-logo:is(:hover, :focus) {
+	transform: scale(1.1);
+}
+
 h3,
 footer,
 .note {
@@ -68,17 +90,18 @@ footer,
 }
 
 h3 {
+	font-family: var(--display-font-family);
 	font-size: 2em;
 	margin-top: 13vh;
 }
 
 h4,
 .button a {
-	font-size: 1.75ch;
+	font-size: 1.5ch;
 }
 
 h4 {
-	font-weight: 800;
+	font-weight: 700;
 	color: var(--background-color);
 }
 
@@ -94,6 +117,20 @@ p {
 
 img {
 	vertical-align: middle;
+}
+
+.container {
+	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 .mobile-nav a {
@@ -143,7 +180,7 @@ img {
 	transform: scale(1.1);
 }
 
-@media (max-width: 523px) {
+@media (max-width: 684px) {
 	nav li:nth-child(2) {
 		display: none;
 	}
@@ -152,3 +189,5 @@ img {
 		display: unset;
 	}
 }
+
+

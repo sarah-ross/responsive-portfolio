@@ -5,7 +5,8 @@
 	--background-color: rgb(25, 25, 25);
 	--background-color-80: rgba(25, 25, 25, 0.8);
 	--background-color-60: rgba(25, 25, 25, 0.6);
-	--body-font-family: quiche-sans, sans-serif;
+	--display-font-family: temeraire, serif;
+	--body-font-family: filson-pro, sans-serif;
 	--border-radius: 4px;
 	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
 	--transition: all 375ms ease-out;
@@ -33,6 +34,18 @@ nav {
 	top: 0;
 	z-index: 2;
 	background: var(--background-color-60);
+	animation: dropInAnimation ease-in-out 1s 1 backwards;
+}
+
+@keyframes dropInAnimation {
+	0% {
+		opacity: 0;
+		transform: translateY(-28ch);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 nav ul {
@@ -67,27 +80,37 @@ footer {
 }
 
 h2 {
+	font-family: var(--display-font-family);
 	font-size: 3.5ch;
 }
 
-ul {
+.social-icon-list {
 	list-style: none;
 	margin-top: 3vh;
 }
 
-ul li img {
+.social-icon-list li img {
 	width: 25px;
 	opacity: 0.7;
 	transition: var(--transition);
 }
 
-ul li img:is(:hover, :focus) {
+.social-icon-list li img:is(:hover, :focus) {
 	transform: scale(1.2);
 }
 
+.nav-logo {
+	max-width: 3.5ch;
+	transition: var(--transition);
+}
+
+.nav-logo:is(:hover, :focus) {
+	transform: scale(1.1);
+}
+
 .container-fluid {
-	background: url(/src/bangkok.png) no-repeat center center
-		fixed;
+	background: url(/src/img/bangkok.png) no-repeat center
+		center fixed;
 	background-size: cover;
 	border-radius: var(--border-radius);
 	padding: 22vh 22vw;
@@ -102,6 +125,17 @@ ul li img:is(:hover, :focus) {
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	padding: 5ch;
+	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 .mobile-nav a {
@@ -133,15 +167,6 @@ ul li img:is(:hover, :focus) {
 .button:is(:hover, :focus) {
 	background: var(--body-font-color);
 	color: var(--background-color);
-}
-
-.logo img {
-	width: 15em;
-	display: block;
-	margin: 0 auto;
-	padding: 1.25em;
-	opacity: 0.7;
-	z-index: -1;
 }
 
 @media (max-width: 703px) {
