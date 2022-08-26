@@ -70,16 +70,13 @@ nav ul li a,
 	transition: var(--transition);
 }
 
-nav ul li a:hover {
-	color: var(--body-font-color);
-}
-
-nav ul li a:focus {
+nav ul li a:is(:hover, :focus) {
 	color: var(--body-font-color);
 }
 
 .nav-logo {
 	max-width: 3.5ch;
+	transition: var(--transition);
 }
 
 .nav-logo:is(:hover, :focus) {
