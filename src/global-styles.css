@@ -1,14 +1,16 @@
 :root {
-	--body-font-color: rgb(218, 234, 230);
-	--body-font-reduced-opacity: rgba(218, 234, 230, 0.7);
-	--text-box-background-color: rgb(20, 15, 32);
-	--background-color: rgb(25, 25, 25);
-	--background-color-80: rgba(25, 25, 25, 0.8);
-	--background-color-60: rgba(25, 25, 25, 0.6);
-	--body-font-family: filson-pro, sans-serif;
-	--display-font-family: temeraire, serif;
-	--border-radius: 4px;
-	--box-shadow: 4px 2px 18px rgba(218, 234, 230, 0.2);
+	--cloud: rgb(225, 236, 239);
+	--storm: rgb(110, 130, 143);
+	--lavender: rgb(224, 220, 255);
+	--indigo: rgb(107, 59, 255);
+	--mint: rgb(169, 255, 218);
+	--electric: rgb(0, 243, 153);
+	--midnight: rgb(5, 4, 43);
+	--midnight-80: rgba(5, 4, 43, 0.8);
+	--midnight-60: rgba(5, 4, 43, 0.6);
+	--body-font: filson-pro, sans-serif;
+	--display-font: temeraire, serif;
+	--border-radius: 8px;
 	--transition: all 375ms ease-out;
 }
 
@@ -16,12 +18,14 @@
 ::before,
 ::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	font-family: var(--body-font-family);
-	color: var(--body-font-color);
-	background: var(--background-color);
+	font-family: var(--body-font);
+	color: var(--cloud);
+	background: var(--midnight);
 }
 
 nav ul,
@@ -33,7 +37,7 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 2;
-	background: var(--background-color-60);
+	background: var(--midnight-80);
 	animation: dropInAnimation ease-in-out 1s 1 backwards;
 }
 
@@ -58,21 +62,16 @@ nav ul li {
 	padding: 2.5em;
 }
 
-nav ul li a,
-.mobile-nav {
+nav ul li a {
 	text-decoration: none;
-	color: var(--body-font-reduced-opacity);
+	color: var(--mint);
 	font-size: 0.9em;
 	letter-spacing: 0.1em;
 	transition: var(--transition);
 }
 
 nav ul li a:is(:hover, :focus) {
-	color: var(--body-font-color);
-}
-
-footer {
-   font-weight: 100;
+	color: var(--cloud);
 }
 
 .nav-logo {
@@ -82,18 +81,4 @@ footer {
 
 .nav-logo:is(:hover, :focus) {
 	transform: scale(1.1);
-}
-
-.mobile-nav {
-	display: none;
-}
-
-.mobile-nav a {
-	text-decoration: none;
-	color: var(--body-font-color);
-	transition: var(--transition);
-}
-
-.mobile-nav a:is(:hover, :focus) {
-	color: var(--body-font-reduced-opacity);
 }
