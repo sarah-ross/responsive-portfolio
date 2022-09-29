@@ -1,9 +1,8 @@
-body {
-	font-weight: 300;
+* {
+	font-weight: 200;
 }
 
 h1 {
-	font-weight: 200;
 	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
 }
 
@@ -35,14 +34,24 @@ small {
 	max-width: 20ch;
 }
 
-.container-fluid {
+.about {
 	margin: 30vh 0;
 	min-height: 100vh;
+	background: center / cover fixed no-repeat
+		url(/src/img/portrait.png);
+}
+
+.container-fluid {
 	background-image: linear-gradient(
-		146deg,
-		rgb(0, 243, 153),
-		rgb(107, 59, 255) 93.71%
+		150deg,
+		rgba(5, 4, 43, 0.7),
+		rgba(0, 243, 153, 0.5),
+		rgba(107, 59, 255, 0.7),
+		rgba(5, 4, 43, 0.7)
 	);
+	background-size: 400% 400%;
+	min-height: 100vh;
+	animation: gradient 12s ease infinite;
 }
 
 @keyframes gradient {
@@ -57,10 +66,18 @@ small {
 	}
 }
 
+.container-fluid > * {
+	filter: drop-shadow(
+			0.25rem 0.25rem 0.75rem var(--midnight)
+		),
+		contrast(100%);
+}
+
 .container-fluid > p {
 	margin: 0 auto;
 	max-width: 60ch;
 	font-size: 18px;
+	font-weight: 400;
 }
 
 .container-fluid > h2 {
@@ -78,19 +95,22 @@ small {
 	margin: 5vh auto;
 	padding: 10px;
 	text-align: center;
-	color: var(--mint);
+	background: var(--cloud);
+	color: var(--midnight);
+	opacity: 0.6;
+	font-size: 20px;
+	font-weight: 500;
 	text-decoration: none;
 	text-transform: lowercase;
 	letter-spacing: 2px;
-	border: 2px solid var(--lavender);
 	border-radius: var(--border-radius);
 	transition: var(--transition);
 }
 
 .button:is(:hover, :focus) {
-	color: var(--lavender);
-	transform: scale(1.05);
-	border: 2px solid var(--mint);
+	color: var(--cloud);
+	background: var(--midnight);
+	transform: scale(1.03);
 }
 
 .carousel {

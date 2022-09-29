@@ -66,6 +66,7 @@ nav ul li a {
 	text-decoration: none;
 	color: var(--mint);
 	font-size: 0.9em;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 	transition: var(--transition);
 }
