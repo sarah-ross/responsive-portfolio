@@ -18,6 +18,7 @@ h1 {
 
 h2 {
 	font-family: var(--display-font);
+	font-size: 4ch;
 	font-weight: 900;
 }
 
@@ -81,7 +82,6 @@ small {
 }
 
 .container-fluid > h2 {
-	font-size: 56px;
 	padding-top: 18vh;
 }
 
@@ -89,7 +89,7 @@ small {
 	margin-top: 5vh;
 }
 
-.button {
+.resume-button {
 	display: block;
 	max-width: 20ch;
 	margin: 5vh auto;
@@ -107,10 +107,14 @@ small {
 	transition: var(--transition);
 }
 
-.button:is(:hover, :focus) {
+.resume-button:is(:hover, :focus) {
 	color: var(--cloud);
 	background: var(--midnight);
 	transform: scale(1.03);
+}
+
+.project-title {
+	margin: 15vh 0 9vh 0;
 }
 
 .carousel {
@@ -145,10 +149,59 @@ small {
 
 .featured-project {
 	background: var(--cloud);
+	padding-bottom: 12vh;
 }
 
 .featured-project > h2,
 .featured-project-title,
 .featured-project-description {
 	color: var(--midnight);
+}
+
+.featured-project h2 {
+	padding-top: 13vh;
+}
+
+.shadow {
+	margin: 0 auto;
+	z-index: 10;
+	width: 80ch;
+	height: 4ch;
+	background: var(--midnight);
+	opacity: 0.3;
+	border-radius: 50%;
+	filter: blur(26px);
+}
+
+.featured-project h3 {
+	margin-top: 10vh;
+}
+
+.featured-project p {
+	margin: 0 auto;
+	max-width: 80ch;
+	font-size: 18px;
+}
+
+.featured-project-button {
+	display: block;
+	max-width: 12ch;
+	margin: auto;
+	padding: 10px 0;
+	text-align: center;
+	color: var(--midnight);
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: 2px solid var(--indigo);
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.featured-project-button:is(:hover, :focus) {
+	background: var(--indigo);
+	color: var(--cloud);
+	opacity: 0.8;
 }
