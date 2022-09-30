@@ -26,6 +26,10 @@ h3 {
 	font-family: var(--display-font);
 }
 
+p {
+	font-size: 18px;
+}
+
 small {
 	color: var(--storm);
 	font-weight: 500;
@@ -35,14 +39,14 @@ small {
 	max-width: 20ch;
 }
 
-.about {
+.about-section {
 	margin: 30vh 0;
 	min-height: 100vh;
 	background: center / cover fixed no-repeat
 		url(/src/img/portrait.png);
 }
 
-.container-fluid {
+.about-container {
 	background-image: linear-gradient(
 		150deg,
 		rgba(5, 4, 43, 0.7),
@@ -114,7 +118,7 @@ small {
 }
 
 .project-title {
-	margin: 15vh 0 9vh 0;
+	margin: 15vh 0 3vh 0;
 }
 
 .carousel {
@@ -173,6 +177,17 @@ small {
 	filter: blur(26px);
 }
 
+.smaller-shadow {
+	margin: 0 auto;
+	z-index: 10;
+	width: 60ch;
+	height: 4ch;
+	background: var(--midnight);
+	opacity: 0.4;
+	border-radius: 50%;
+	filter: blur(26px);
+}
+
 .featured-project h3 {
 	margin-top: 10vh;
 }
@@ -180,7 +195,6 @@ small {
 .featured-project p {
 	margin: 0 auto;
 	max-width: 80ch;
-	font-size: 18px;
 }
 
 .featured-project-button {
@@ -201,7 +215,91 @@ small {
 }
 
 .featured-project-button:is(:hover, :focus) {
-	background: var(--indigo);
+	background: rgba(107, 59, 255, 0.3);
+	color: var(--midnight);
+}
+
+.image-wrapper,
+.web-project-image {
+	padding: 3rem;
+}
+
+.image-wrapper {
+	background-color: var(--lavender);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.project-description {
+	max-width: 60%;
+}
+
+.scroll-to-top {
+	color: var(--indigo);
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: lowercase;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.scroll-to-top:is(:hover, :focus) {
+	color: var(--electric);
+}
+
+.request-heading,
+.contact-heading {
+	margin-top: 16vh;
+}
+
+.access-button {
+	margin: 0 auto;
+	width: 17ch;
 	color: var(--cloud);
-	opacity: 0.8;
+	border: 2px solid var(--electric);
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.access-button:is(:hover, :focus) {
+	border: 2px solid var(--indigo);
+	color: var(--cloud);
+	transform: scale(1.03);
+}
+
+.social-icon-list {
+	list-style: none;
+}
+
+.social-icon {
+	width: 36px;
+	align-items: center;
+	margin: 4vw;
+	transition: var(--transition);
+}
+
+.social-icon:is(:hover, :focus) {
+	filter: drop-shadow(
+		0.25rem 0.5rem 1rem rgba(225, 236, 239, 0.9)
+	);
+	transform: scale(1.1);
+}
+
+#contact h4 {
+	color: var(--storm);
+}
+
+footer {
+	color: var(--mint);
+}
+
+footer span {
+	color: var(--lavender);
 }
