@@ -52,6 +52,7 @@ footer span {
 	min-height: 100vh;
 	background: center / cover fixed no-repeat
 		url(/src/img/portrait.png);
+	border-radius: 0 90px;
 }
 
 .about-container {
@@ -66,6 +67,7 @@ footer span {
 	);
 	background-size: 400% 400%;
 	min-height: 100vh;
+	border-radius: 0 90px;
 	animation: gradient 14s ease infinite;
 }
 
@@ -83,9 +85,8 @@ footer span {
 
 .about-container * {
 	filter: drop-shadow(
-			0.25rem 0.25rem 0.75rem var(--midnight)
-		),
-		contrast(100%);
+		0.25rem 0.25rem 1.25rem var(--midnight)
+	);
 }
 
 .about-container p {
@@ -156,6 +157,13 @@ footer span {
 	transition: opacity 0.25s;
 	position: absolute;
 	z-index: 1;
+}
+
+.indicator {
+	margin: 25px auto;
+	width: 2px;
+	height: 60px;
+	background-color: var(--electric);
 }
 
 .featured-project {
@@ -247,6 +255,10 @@ h5 {
 
 .text-wrapper {
 	align-self: center;
+}
+
+.text-wrapper h5 {
+	color: var(--cloud);
 }
 
 .project-button {
@@ -345,13 +357,13 @@ h5 {
 }
 
 .social-icon-list {
+	max-width: 70ch;
 	list-style: none;
+	margin: 50px auto;
 }
 
 .social-icon {
-	width: 34px;
-	align-items: center;
-	margin: 4vw;
+	max-width: 3ch;
 	transition: var(--transition);
 }
 

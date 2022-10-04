@@ -52,19 +52,19 @@ nav {
 }
 
 nav ul {
-	justify-content: space-around;
+	justify-content: space-between;
 	list-style: none;
-	align-items: center;
 }
 
 nav ul li {
+	align-self: center;
 	padding: 2.5em;
 }
 
 nav ul li a {
 	text-decoration: none;
 	color: var(--lavender);
-	font-size: 0.9em;
+	font-size: 1em;
 	font-weight: 400;
 	letter-spacing: 0.1em;
 	transition: var(--transition);
