@@ -7,7 +7,6 @@
 	--electric: rgb(0, 243, 153);
 	--midnight: rgb(5, 4, 43);
 	--midnight-80: rgba(5, 4, 43, 0.8);
-	--midnight-60: rgba(5, 4, 43, 0.6);
 	--body-font: filson-pro, sans-serif;
 	--display-font: temeraire, serif;
 	--border-radius: 8px;
@@ -64,7 +63,7 @@ nav ul li {
 
 nav ul li a {
 	text-decoration: none;
-	color: var(--mint);
+	color: var(--lavender);
 	font-size: 0.9em;
 	font-weight: 400;
 	letter-spacing: 0.1em;
@@ -81,5 +80,12 @@ nav ul li a:is(:hover, :focus) {
 }
 
 .nav-logo:is(:hover, :focus) {
+	filter: drop-shadow(
+		0.25rem 0.5rem 1rem rgba(225, 236, 239, 0.9)
+	);
 	transform: scale(1.1);
+}
+
+.graphic-design-nav-link {
+	color: var(--mint);
 }

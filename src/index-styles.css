@@ -60,11 +60,13 @@ footer span {
 		rgba(5, 4, 43, 0.7),
 		rgba(0, 243, 153, 0.6),
 		rgba(107, 59, 255, 0.7),
+		rgba(0, 243, 153, 0.6),
+		rgba(107, 59, 255, 0.7),
 		rgba(5, 4, 43, 0.7)
 	);
 	background-size: 400% 400%;
 	min-height: 100vh;
-	animation: gradient 12s ease infinite;
+	animation: gradient 14s ease infinite;
 }
 
 @keyframes gradient {
@@ -108,22 +110,22 @@ footer span {
 	margin: 5vh auto;
 	padding: 10px 15px;
 	text-align: center;
-	background: var(--cloud);
 	color: var(--midnight);
-	opacity: 0.6;
-	font-size: 20px;
+	background: rgba(225, 236, 239, 0.5);
+	font-size: 18px;
 	font-weight: 500;
 	text-decoration: none;
 	text-transform: lowercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	border-radius: var(--border-radius);
 	transition: var(--transition);
 }
 
 .resume-button:is(:hover, :focus) {
 	color: var(--cloud);
-	background: var(--midnight);
+	background: rgba(5, 4, 43, 0.5);
 	transform: scale(1.03);
+	font-weight: 500;
 }
 
 .project-title {
@@ -347,7 +349,7 @@ h5 {
 }
 
 .social-icon {
-	width: 36px;
+	width: 34px;
 	align-items: center;
 	margin: 4vw;
 	transition: var(--transition);
