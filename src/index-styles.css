@@ -128,10 +128,6 @@ footer span {
 	font-weight: 500;
 }
 
-.project-title {
-	margin: 15vh 0 3vh 0;
-}
-
 .carousel {
 	align-items: center;
 	display: flex;
@@ -247,6 +243,10 @@ h5 {
 	background: rgba(0, 243, 153, 0.3);
 	border: 2px solid var(--electric);
 	color: var(--midnight);
+}
+
+.text-wrapper {
+	align-self: center;
 }
 
 .project-button {
