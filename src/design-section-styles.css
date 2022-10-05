@@ -1,0 +1,50 @@
+.design-section h2 {
+	margin-top: 15vh;
+}
+
+.design-project-title {
+	margin: 15vh 0 7vh 0;
+}
+
+.carousel {
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-images {
+	max-width: 500px;
+	margin: 0 -25px;
+	border-radius: var(--border-radius);
+	filter: drop-shadow(
+		0.25rem 0.25rem 1.25rem var(--midnight)
+	);
+	transform: translateX(0);
+	transition: transform 0.25s;
+}
+
+.previous-button,
+.next-button {
+	background: var(--indigo);
+	border: 0;
+	border-radius: 50%;
+	color: var(--cloud);
+	font-weight: 700;
+	width: 3em;
+	height: 3em;
+	opacity: 0.75;
+	transition: opacity 0.25s;
+	position: absolute;
+	z-index: 1;
+}
+
+.indicator {
+	margin: 25px auto;
+	width: 2px;
+	height: 60px;
+	background-color: var(--electric);
+}
+
+.design-project-description {
+	margin-bottom: 15vh;
+}

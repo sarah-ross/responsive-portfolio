@@ -1,0 +1,150 @@
+.featured-project {
+	background: var(--cloud);
+	padding-bottom: 12vh;
+}
+
+.featured-project h2,
+.featured-project-title,
+.featured-project-description {
+	color: var(--midnight);
+}
+
+.featured-project h2 {
+	padding-top: 15vh;
+}
+
+.shadow {
+	margin: 0 auto;
+	margin-top: -20px;
+	z-index: 10;
+	width: 80ch;
+	height: 4ch;
+	background: var(--midnight);
+	opacity: 0.3;
+	border-radius: 50%;
+	filter: blur(26px);
+}
+
+.smaller-shadow {
+	margin: 0 auto;
+	margin-top: -60px;
+	z-index: 10;
+	width: 60ch;
+	height: 4ch;
+	background: var(--midnight);
+	opacity: 0.4;
+	border-radius: 50%;
+	filter: blur(26px);
+}
+
+.featured-project h3 {
+	margin-top: 10vh;
+}
+
+.featured-project p {
+	margin: 0 auto;
+	max-width: 80ch;
+}
+
+.featured-technologies-list {
+	list-style: none;
+}
+
+.featured-technologies-list-item,
+h5 {
+	color: var(--midnight);
+	font-size: 18px;
+}
+
+.featured-technologies-list-item::before {
+	content: "▶︎";
+	font-size: 10px;
+	color: var(--indigo);
+}
+
+.featured-project-button {
+	display: block;
+	width: fit-content;
+	margin: 15px;
+	padding: 10px 15px;
+	text-align: center;
+	color: var(--midnight);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: 2px solid var(--indigo);
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.featured-project-button:is(:hover, :focus) {
+	background: rgba(0, 243, 153, 0.3);
+	border: 2px solid var(--electric);
+	color: var(--midnight);
+}
+
+.text-wrapper {
+	align-self: center;
+}
+
+.text-wrapper h5 {
+	color: var(--cloud);
+}
+
+.project-button {
+	display: block;
+	width: fit-content;
+	margin: 15px 15px 0 0;
+	padding: 10px 15px;
+	color: var(--cloud);
+	border: 1px solid var(--indigo);
+	border-radius: var(--border-radius);
+	text-decoration: none;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-weight: 500;
+	transition: var(--transition);
+}
+
+.project-button:is(:hover, :focus) {
+	background: rgba(0, 243, 153, 0.3);
+	border: 1px solid var(--electric);
+	color: var(--cloud);
+}
+
+.technologies-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.technologies-list-item::before {
+	content: "▷";
+	font-size: 9px;
+	color: var(--mint);
+}
+
+.image-wrapper,
+.web-project-image {
+	padding: 3rem;
+}
+
+.image-wrapper {
+	background-color: var(--lavender);
+	width: 100%;
+	height: 100%;
+}
+
+.mint {
+	background-color: var(--mint);
+}
+
+.cloud {
+	background-color: var(--cloud);
+}
+
+.text-wrapper {
+	padding: 0 3rem;
+}

@@ -1,0 +1,14 @@
+:root {
+	--cloud: rgb(225, 236, 239);
+	--storm: rgb(110, 130, 143);
+	--lavender: rgb(224, 220, 255);
+	--indigo: rgb(107, 59, 255);
+	--mint: rgb(169, 255, 218);
+	--electric: rgb(0, 243, 153);
+	--midnight: rgb(5, 4, 43);
+	--midnight-80: rgba(5, 4, 43, 0.8);
+	--body-font: filson-pro, sans-serif;
+	--display-font: temeraire, serif;
+	--border-radius: 8px;
+	--transition: all 375ms ease-out;
+}

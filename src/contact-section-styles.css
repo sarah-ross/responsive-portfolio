@@ -1,0 +1,59 @@
+.scroll-to-top {
+	color: var(--indigo);
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: lowercase;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.scroll-to-top:is(:hover, :focus) {
+	color: var(--electric);
+}
+
+.request-heading,
+.contact-heading {
+	margin-top: 16vh;
+}
+
+.access-button {
+	margin: 0 auto;
+	width: fit-content;
+	color: var(--cloud);
+	border: 2px solid var(--electric);
+	padding: 10px 15px;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.access-button:is(:hover, :focus) {
+	border: 2px solid var(--indigo);
+	color: var(--cloud);
+	transform: scale(1.03);
+}
+
+.social-icon-list {
+	list-style: none;
+	margin: 80px auto;
+}
+
+.social-icon {
+	max-width: 3ch;
+	transition: var(--transition);
+}
+
+.social-icon:is(:hover, :focus) {
+	filter: drop-shadow(
+		0.25rem 0.5rem 1rem rgba(225, 236, 239, 0.9)
+	);
+	transform: scale(1.1) translateY(-7px);
+}
+
+#contact h4 {
+	color: var(--storm);
+}

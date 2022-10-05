@@ -1,0 +1,81 @@
+.about-section {
+	margin: 15vh 0;
+	min-height: 100vh;
+	background: center / cover fixed no-repeat
+		url(/src/img/portrait.png);
+	border-radius: 0 90px;
+}
+
+.about-container {
+	background-image: linear-gradient(
+		150deg,
+		rgba(5, 4, 43, 0.7),
+		rgba(0, 243, 153, 0.6),
+		rgba(107, 59, 255, 0.7),
+		rgba(0, 243, 153, 0.6),
+		rgba(107, 59, 255, 0.7),
+		rgba(5, 4, 43, 0.7)
+	);
+	background-size: 400% 400%;
+	min-height: 100vh;
+	border-radius: 0 90px;
+	animation: gradient 14s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.about-container * {
+	filter: drop-shadow(
+		0.25rem 0.25rem 1.25rem var(--midnight)
+	);
+}
+
+.about-container p {
+	margin: 0 auto;
+	max-width: 60ch;
+	font-size: 18px;
+	font-weight: 400;
+	backdrop-filter: blur(6px);
+}
+
+.about-container h2 {
+	padding-top: 18vh;
+}
+
+.about-container h3 {
+	margin-top: 5vh;
+}
+
+.resume-button {
+	display: block;
+	width: fit-content;
+	margin: 5vh auto;
+	padding: 10px 15px;
+	text-align: center;
+	color: var(--midnight);
+	background: rgba(225, 236, 239, 0.5);
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.resume-button:is(:hover, :focus) {
+	color: var(--cloud);
+	background: rgba(5, 4, 43, 0.5);
+	transform: scale(1.03);
+	font-weight: 500;
+}
