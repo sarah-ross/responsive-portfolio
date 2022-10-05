@@ -129,19 +129,29 @@ footer span {
 	font-weight: 500;
 }
 
+.design-section h2 {
+	margin-top: 15vh;
+}
+
+.design-project-title {
+	margin: 15vh 0 7vh 0;
+}
+
 .carousel {
 	align-items: center;
-	display: flex;
-	margin: 2em auto;
 	overflow: hidden;
 	position: relative;
 }
 
 .carousel-images {
-	display: flex;
+	max-width: 500px;
+	margin: 0 -25px;
+	border-radius: var(--border-radius);
+	filter: drop-shadow(
+		0.25rem 0.25rem 1.25rem var(--midnight)
+	);
 	transform: translateX(0);
 	transition: transform 0.25s;
-	width: 300px;
 }
 
 .previous-button,
@@ -164,6 +174,10 @@ footer span {
 	width: 2px;
 	height: 60px;
 	background-color: var(--electric);
+}
+
+.design-project-description {
+	margin-bottom: 15vh;
 }
 
 .featured-project {
@@ -225,8 +239,8 @@ h5 {
 }
 
 .featured-technologies-list-item::before {
-	content: "▷";
-	font-size: 9px;
+	content: "▶︎";
+	font-size: 10px;
 	color: var(--indigo);
 }
 
@@ -357,9 +371,8 @@ h5 {
 }
 
 .social-icon-list {
-	max-width: 70ch;
 	list-style: none;
-	margin: 50px auto;
+	margin: 80px auto;
 }
 
 .social-icon {
