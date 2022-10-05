@@ -44,29 +44,36 @@
 		</title>
 	</head>
 	<body>
-		<nav>
-			<ul>
+		<nav class="d-flex justify-content-between top-nav">
+			<div>
+				<a href="/" title="Home">
+					<img
+						src="/src/img/logo-seal.png"
+						alt="Personal Brand Logo Seal"
+						class="nav-logo"
+					/>
+				</a>
+			</div>
+			<input id="menu-toggle" type="checkbox" />
+			<label
+				class="menu-button-container"
+				for="menu-toggle"
+			>
+				<div class="menu-button"></div>
+			</label>
+			<ul class="menu">
 				<li>
-					<a href="/" title="Homepage">
-						<img
-							src="/src/img/logo-seal.png"
-							alt="personal brand logo-seal"
-							class="nav-logo"
-						/>
-					</a>
-				</li>
-				<li>
-					<a href="#web-work" title="Web Development"
-						>web work
-					</a>
+					<a href="#design-work" title="Design Work"
+						>design work</a
+					>
 				</li>
 				<li>
 					<a
-						href="#design-work"
-						title="Graphic Design Work"
-						class="graphic-design-nav-link"
-						>design work
-					</a>
+						href="#web-work"
+						title="Web Work"
+						class="mint-nav-link"
+						>web work</a
+					>
 				</li>
 				<li>
 					<a href="#contact" title="Contact">contact</a>
