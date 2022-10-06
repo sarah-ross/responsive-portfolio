@@ -24,13 +24,13 @@ nav ul {
 
 nav ul li {
 	align-self: center;
-	padding: 2.5em;
+	padding: 2em;
 }
 
 nav ul li a {
 	text-decoration: none;
 	color: var(--lavender);
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-weight: 400;
 	letter-spacing: 0.1em;
 	transition: var(--transition);
@@ -41,7 +41,7 @@ nav ul li a:is(:hover, :focus) {
 }
 
 .nav-logo {
-	max-width: 3.5ch;
+	max-width: 3ch;
 	transition: var(--transition);
 }
 
@@ -138,6 +138,7 @@ nav ul li a:is(:hover, :focus) {
 
 @media (max-width: 700px) {
 	.menu-button-container {
+		position: sticky;
 		display: flex;
 	}
 	.menu {
