@@ -1,7 +1,7 @@
 .about-section {
 	margin: 15vh 0;
 	min-height: 100vh;
-	background: center / cover fixed no-repeat
+	background: center / auto fixed no-repeat
 		url(/src/img/portrait.png);
 	border-radius: 0 90px;
 }
