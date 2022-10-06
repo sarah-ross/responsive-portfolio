@@ -160,4 +160,8 @@ h5 {
 	.text-wrapper {
 		padding: 3em 1em;
 	}
+
+	.row:nth-child(even) {
+		flex-direction: column-reverse;
+	}
 }
