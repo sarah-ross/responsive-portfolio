@@ -67,7 +67,6 @@ h5 {
 	width: fit-content;
 	margin: 15px;
 	padding: 10px 15px;
-	text-align: center;
 	color: var(--midnight);
 	font-size: 14px;
 	font-weight: 600;
@@ -150,15 +149,14 @@ h5 {
 }
 
 @media (max-width: 700px) {
-	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-	}
-
 	.featured-project,
 	.text-wrapper {
-		padding: 3em 1em;
+		padding: 4em 1em;
+	}
+
+	.featured-technologies-list,
+	.technologies-list {
+		flex-wrap: wrap;
 	}
 
 	.row:nth-child(even) {

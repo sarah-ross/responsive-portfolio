@@ -137,6 +137,10 @@ nav ul li a:is(:hover, :focus) {
 }
 
 @media (max-width: 700px) {
+	.top-nav {
+		position: sticky;
+	}
+
 	.menu-button-container {
 		position: sticky;
 		display: flex;
