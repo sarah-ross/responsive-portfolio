@@ -17,16 +17,6 @@ h1 {
 	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
 }
 
-@keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
 h2 {
 	font-family: var(--display-font);
 	font-size: 4ch;
@@ -56,6 +46,16 @@ footer span {
 
 .logo {
 	max-width: 20ch;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 700px) {
