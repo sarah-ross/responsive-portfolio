@@ -46,5 +46,7 @@
 }
 
 .design-project-description {
+	margin: 0 auto;
 	margin-bottom: 15vh;
+	width: 75%;
 }

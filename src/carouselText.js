@@ -41,46 +41,22 @@ let projectDescription = document.querySelector(
 	"#design-project-description"
 );
 
-let projectTextWrapper = document.querySelector(
-	".design-text-wrapper"
-);
-
-const textSlider = {
-	title: projectTitle,
-	description: projectDescription,
-	currentTextWrapper: projectTextWrapper,
-	handle: null,
-	idle: true,
-	activeIndex: -1,
-	interval: 7000,
-};
-
-function displayProjectText() {
-	projectTitles.forEach((title) => {
-		projectTitle.innerHTML = title;
-	});
-
-	projectDescriptions.forEach((description) => {
-		projectDescription.innerHTML = description;
-	});
-}
-
-function loadingAnimation() {
-	textSlider.title.classList.add("ready");
-	textSlider.currentTextWrapper.addEventListener(
-		"transitioned",
-		start,
-		{
-			once: true,
+function changeProjectText() {
+	projectTitles.forEach(function (displayTitle, index) {
+		if (index > 0) {
+			projectTitle.innerHTML = projectTitles[+1];
 		}
-	);
+	});
+
+	projectDescriptions.forEach(function (
+		displayDescription,
+		index
+	) {
+		if (index > 0) {
+			projectDescription.innerHTML =
+				projectDescriptions[+1];
+		}
+	});
 }
 
-function start() {
-	autoplay(true);
-	wheelControl();
-	window.innerWidth <= 1024 && touchControl();
-}
-
-displayProjectText();
-loadingAnimation();
+setInterval(changeProjectText, 6000);
