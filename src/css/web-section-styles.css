@@ -37,13 +37,23 @@
 	filter: blur(26px);
 }
 
-.featured-project h3 {
+.travel-project {
+	padding: 15vh 0;
+}
+
+.featured-project h3,
+.travel-project h3 {
 	margin-top: 10vh;
 }
 
-.featured-project p {
+.featured-project p,
+.travel-project p {
 	margin: 0 auto;
 	max-width: 80ch;
+}
+
+.travel-project h5 {
+	color: var(--cloud);
 }
 
 .featured-technologies-list {
@@ -123,6 +133,10 @@ h5 {
 	content: "▷";
 	font-size: 9px;
 	color: var(--mint);
+}
+
+.travel-project .technologies-list-item::before {
+	padding-right: 5px;
 }
 
 .image-wrapper,
