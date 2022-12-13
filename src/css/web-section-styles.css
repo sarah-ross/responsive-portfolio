@@ -25,6 +25,18 @@
 	filter: blur(26px);
 }
 
+.large-shadow {
+	margin: 0 auto;
+	margin-top: -60px;
+	z-index: 10;
+	width: 100ch;
+	height: 5ch;
+	background: var(--midnight);
+	opacity: 0.3;
+	border-radius: 50%;
+	filter: blur(26px);
+}
+
 .smaller-shadow {
 	margin: 0 auto;
 	margin-top: -60px;
@@ -37,27 +49,22 @@
 	filter: blur(26px);
 }
 
-.travel-project {
-	padding: 15vh 0;
-}
-
-.featured-project h3,
-.travel-project h3 {
+.featured-project h3 {
 	margin-top: 10vh;
 }
 
-.featured-project p,
-.travel-project p {
+.featured-project p {
 	margin: 0 auto;
 	max-width: 80ch;
 }
 
-.travel-project h5 {
-	color: var(--cloud);
-}
-
 .featured-technologies-list {
 	list-style: none;
+	margin-bottom: 15vh;
+}
+
+.featured-technologies-list:last-child {
+	margin-bottom: unset;
 }
 
 .featured-technologies-list-item,
@@ -133,10 +140,6 @@ h5 {
 	content: "▷";
 	font-size: 9px;
 	color: var(--mint);
-}
-
-.travel-project .technologies-list-item::before {
-	padding-right: 5px;
 }
 
 .image-wrapper,
