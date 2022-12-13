@@ -1,9 +1,6 @@
 .about-section {
 	margin: 15vh 0;
 	min-height: 100vh;
-	background-image: url(/src/img/portrait.png);
-	background-size: cover;
-	background-repeat: no-repeat;
 	border-radius: 0 90px;
 }
 
@@ -19,6 +16,7 @@
 	);
 	background-size: 400% 400%;
 	min-height: 100vh;
+	padding-bottom: 15vh;
 	border-radius: 0 90px;
 	animation: gradient 12s ease infinite;
 }
@@ -39,6 +37,13 @@
 	filter: drop-shadow(
 		0.25rem 0.25rem 1.25rem var(--midnight)
 	);
+}
+
+.portrait {
+	display: block;
+	margin: 5vh auto;
+	border-radius: 80%;
+	filter: grayscale(100%);
 }
 
 .about-container p {
