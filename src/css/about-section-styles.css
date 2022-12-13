@@ -42,6 +42,7 @@
 .portrait {
 	display: block;
 	margin: 5vh auto;
+	border: 2px solid var(--cloud);
 	border-radius: 80%;
 	filter: grayscale(100%);
 }
