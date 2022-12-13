@@ -86,3 +86,10 @@
 	left: 47%;
 	transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+@media (max-width: 700px) {
+	.design-section {
+		width: 100%;
+		margin: 0 auto;
+	}
+}

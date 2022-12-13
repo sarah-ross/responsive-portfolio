@@ -17,8 +17,8 @@
 	margin: 0 auto;
 	margin-top: -20px;
 	z-index: 10;
-	width: 80ch;
-	height: 4ch;
+	width: 80vw;
+	height: 4vh;
 	background: var(--midnight);
 	opacity: 0.3;
 	border-radius: 50%;
@@ -29,8 +29,8 @@
 	margin: 0 auto;
 	margin-top: -60px;
 	z-index: 10;
-	width: 100ch;
-	height: 5ch;
+	width: 100vw;
+	height: 5vh;
 	background: var(--midnight);
 	opacity: 0.3;
 	border-radius: 50%;
@@ -41,8 +41,8 @@
 	margin: 0 auto;
 	margin-top: -60px;
 	z-index: 10;
-	width: 60ch;
-	height: 4ch;
+	width: 60vw;
+	height: 4vh;
 	background: var(--midnight);
 	opacity: 0.4;
 	border-radius: 50%;
@@ -223,6 +223,11 @@ h5 {
 }
 
 @media (max-width: 700px) {
+	.web-section {
+		width: 100%;
+		margin: 0 auto;
+	}
+
 	.featured-project,
 	.text-wrapper {
 		padding: 4em 1em;
