@@ -1,3 +1,7 @@
+.design-section {
+	min-height: 100vh;
+}
+
 .design-section h2 {
 	margin-top: 15vh;
 }
@@ -6,47 +10,89 @@
 	margin: 15vh 0 7vh 0;
 }
 
-.carousel {
-	align-items: center;
+.carousel-wrapper {
 	overflow: hidden;
-	position: relative;
+	width: 90%;
+	margin: 15vh auto;
 }
 
-.carousel-images {
-	max-width: 500px;
-	margin: 0 -25px;
-	border-radius: var(--border-radius);
-	filter: drop-shadow(
-		0.25rem 0.25rem 1.25rem var(--midnight)
-	);
-	transform: translateX(0);
-	transition: transform 0.25s;
+.carousel-wrapper * {
+	box-sizing: border-box;
+}
+
+.carousel {
+	transform-style: preserve-3d;
+}
+
+.carousel-image {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin: auto;
+	padding: 1rem 4rem;
+	border-radius: 6px;
+	z-index: 100;
+	transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+}
+
+.carousel-image.initial,
+.carousel-image.active {
+	opacity: 1;
+	position: relative;
+	z-index: 900;
+}
+
+.carousel-image.prev,
+.carousel-image.next {
+	z-index: 800;
+}
+
+.carousel-image.prev {
+	transform: translateX(-100%); // Move prev item to left
+}
+
+.carousel-image.next {
+	transform: translateX(100%); // Move next item to right
 }
 
 .previous-button,
 .next-button {
-	background: var(--indigo);
-	border: 0;
-	border-radius: 50%;
-	color: var(--cloud);
-	font-weight: 700;
-	width: 3em;
-	height: 3em;
-	opacity: 0.75;
-	transition: opacity 0.25s;
 	position: absolute;
-	z-index: 1;
+	top: 50%;
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--cloud);
+	opacity: 0.5;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1001; // Arranged on top of everything
+	border: 1px solid var(--midnight);
 }
 
-.indicator {
-	margin: 25px auto;
-	width: 2px;
-	height: 60px;
-	background-color: var(--electric);
+.previous-button {
+	left: 0;
 }
 
-.design-project-description {
-	margin: 0 auto;
-	margin-bottom: 15vh;
-	width: 75%;
+.next-button {
+	right: 0;
+}
+
+.previous-button::after,
+.next-button::after {
+	content: " ";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 54%;
+	border-right: 2px solid var(--midnight);
+	border-bottom: 2px solid var(--midnight);
+	transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.next-button::after {
+	left: 47%;
+	transform: translate(-50%, -50%) rotate(-45deg);
 }

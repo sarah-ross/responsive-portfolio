@@ -1,62 +1,115 @@
-let projectTitles = [
-	"Vector Icons",
-	"ProCabello Artwork",
-	"Dynamark Booklet",
-	"SSN Full Page Ad",
-	"SSN Junior Page Ad",
-	"Impressed Logo Design",
-	"Storefront Abstract Image",
-	"Dynamark Package Design",
-	"Dynamark Brand Style Guide",
-	"Shibuya Crossing",
-];
+!(function (d) {
+	let itemClassName = "carousel-image";
+	(items = d.getElementsByClassName(itemClassName)),
+		(totalItems = items.length),
+		(slide = 0),
+		(moving = true);
 
-let projectDescriptions = [
-	"A series of icons I created in Adobe Illustrator and have used for multiple projects. Alternate versions are available with different stroke weights and fill colors, including no fill as shown.",
-	//
-	"A sample design I did in Adobe Photoshop for a cosmetics distribution company located in Florida. I was given their brand guidelines and asked to think outside the box - to create something they weren't expecting.",
-	//
-	"A leave-behind booklet I designed in Adobe CC with a soft-touch lamination finish to leave a lasting impression on prospects for the company, Dynamark Monitoring. The full booklet is available for viewing.",
-	//
-	"A full page printed advertisement (Dimensions 10.875 by 13.875 inches with bleed) I designed in Adobe CC on behalf of Dynamark Monitoring for publication in a newsletter popular to the alarm monitoring industry, Security System News (SSN).",
-	//
-	"A junior page printed advertisement (Dimensions 8.375 by 11.125 inches with bleed) I designed in Adobe CC on behalf of Dynamark Monitoring for publication in SSN.",
-	//
-	"A logo I created in Adobe Illustrator for a local business specializing in pressed flower art. The drawing on the left was provided by the business owner as a reference, with the right showing the final design. A light variation over a dark background is available.",
-	//
-	"I created this in Adobe Photoshop from an image I captured with my Nikon D3300 while visiting my great grandmother who lived in Cumberland, Maryland.",
-	//
-	"A package design I created in Adobe CC for nurturing high-value prospects through the sales process with personalized gifts on behalf of Dynamark Monitoring.",
-	//
-	"With no guidelines previously in place, I designed an easy-to-follow brand guide in Adobe CC to explain the correct usage of fonts, colors, logos, taglines, photogtaphy, messaging, and more for Dynamark Monitoring. The full guide is available for viewing.",
-	//
-	"A photo I captured on my Nikon D3300 and manipulated in Adobe Photoshop during a vacation in Japan.",
-];
+	function setInitialClasses() {
+		// Targets the previous, current, and next items
+		// This assumes there are at least three items.
+		items[totalItems - 1].classList.add("prev");
+		items[0].classList.add("active");
+		items[1].classList.add("next");
+	}
+	// Set event listeners
+	function setEventListeners() {
+		let next = d.getElementsByClassName("next-button")[0],
+			prev = d.getElementsByClassName("previous-button")[0];
+		next.addEventListener("click", moveNext);
+		prev.addEventListener("click", movePrev);
+	}
 
-let projectTitle = document.querySelector(
-	"#design-project-title"
-);
-
-let projectDescription = document.querySelector(
-	"#design-project-description"
-);
-
-function changeProjectText() {
-	projectTitles.forEach(function (displayTitle, index) {
-		if (index > 0) {
-			projectTitle.innerHTML = projectTitles[+1];
+	// Next navigation handler
+	function moveNext() {
+		// Check if moving
+		if (!moving) {
+			// If it's the last slide, reset to 0, else +1
+			if (slide === totalItems - 1) {
+				slide = 0;
+			} else {
+				slide++;
+			}
+			// Move carousel to updated slide
+			moveCarouselTo(slide);
 		}
-	});
+	}
+	// Previous navigation handler
+	function movePrev() {
+		// Check if moving
+		if (!moving) {
+			// If it's the first slide, set as the last slide, else -1
+			if (slide === 0) {
+				slide = totalItems - 1;
+			} else {
+				slide--;
+			}
 
-	projectDescriptions.forEach(function (
-		displayDescription,
-		index
-	) {
-		if (index > 0) {
-			projectDescription.innerHTML =
-				projectDescriptions[+1];
+			// Move carousel to updated slide
+			moveCarouselTo(slide);
 		}
-	});
-}
+	}
 
-setInterval(changeProjectText, 6000);
+	function disableInteraction() {
+		// Set 'moving' to true for the same duration as our transition.
+		// (0.5s = 500ms)
+
+		moving = true;
+		// setTimeout runs its function once after the given time
+		setTimeout(function () {
+			moving = false;
+		}, 500);
+	}
+
+	function moveCarouselTo(slide) {
+		// Check if carousel is moving, if not, allow interaction
+		if (!moving) {
+			// temporarily disable interactivity
+			disableInteraction();
+			// Update the "old" adjacent slides with "new" ones
+			let newPrevious = slide - 1,
+				newNext = slide + 1,
+				oldPrevious = slide - 2,
+				oldNext = slide + 2;
+			// Test if carousel has more than three items
+			if (totalItems - 1 > 3) {
+				// Checks and updates if the new slides are out of bounds
+				if (newPrevious <= 0) {
+					oldPrevious = totalItems - 1;
+				} else if (newNext >= totalItems - 1) {
+					oldNext = 0;
+				}
+				// Checks and updates if slide is at the beginning/end
+				if (slide === 0) {
+					newPrevious = totalItems - 1;
+					oldPrevious = totalItems - 2;
+					oldNext = slide + 1;
+				} else if (slide === totalItems - 1) {
+					newPrevious = slide - 1;
+					newNext = 0;
+					oldNext = 1;
+				}
+				// Now we've worked out where we are and where we're going,
+				// by adding/removing classes we'll trigger the transitions.
+				// Reset old next/prev elements to default classes
+				items[oldPrevious].className = itemClassName;
+				items[oldNext].className = itemClassName;
+				// Add new classes
+				items[newPrevious].className =
+					itemClassName + " prev";
+				items[slide].className = itemClassName + " active";
+				items[newNext].className = itemClassName + " next";
+			}
+		}
+	}
+
+	function initCarousel() {
+		setInitialClasses();
+		setEventListeners();
+		// Set moving to false so that the carousel becomes interactive
+		moving = false;
+	}
+
+	// make it rain
+	initCarousel();
+})(document);
