@@ -9,10 +9,6 @@
 	color: var(--midnight);
 }
 
-.featured-project h2 {
-	padding-top: 15vh;
-}
-
 .shadow {
 	margin: 0 auto;
 	margin-top: -20px;

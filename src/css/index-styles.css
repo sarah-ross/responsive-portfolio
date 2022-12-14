@@ -21,6 +21,7 @@ h2 {
 	font-family: var(--display-font);
 	font-size: 4ch;
 	font-weight: 900;
+	padding-top: 15vh;
 }
 
 h3 {

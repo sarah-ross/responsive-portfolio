@@ -53,12 +53,21 @@
 	width: 3rem;
 	height: 3rem;
 	background-color: var(--cloud);
-	opacity: 0.5;
+	opacity: 0.4;
 	transform: translateY(-50%);
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 1001; // Arranged on top of everything
 	border: 1px solid var(--midnight);
+	transition: var(--transition);
+}
+
+.previous-button:is(:hover, :focus) {
+	opacity: 0.8;
+}
+
+.next-button:is(:hover, :focus) {
+	opacity: 0.8;
 }
 
 .previous-button {
