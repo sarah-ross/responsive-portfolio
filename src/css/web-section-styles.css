@@ -11,26 +11,14 @@
 
 .shadow {
 	margin: 0 auto;
-	margin-top: -20px;
+	margin-top: -25px;
 	z-index: 10;
 	width: 80vw;
 	height: 4vh;
 	background: var(--midnight);
 	opacity: 0.3;
 	border-radius: 50%;
-	filter: blur(26px);
-}
-
-.large-shadow {
-	margin: 0 auto;
-	margin-top: -60px;
-	z-index: 10;
-	width: 100vw;
-	height: 5vh;
-	background: var(--midnight);
-	opacity: 0.3;
-	border-radius: 50%;
-	filter: blur(26px);
+	filter: blur(27px);
 }
 
 .smaller-shadow {
@@ -42,7 +30,7 @@
 	background: var(--midnight);
 	opacity: 0.4;
 	border-radius: 50%;
-	filter: blur(26px);
+	filter: blur(27px);
 }
 
 .featured-project h3 {
@@ -51,7 +39,7 @@
 
 .featured-project p {
 	margin: 0 auto;
-	max-width: 80ch;
+	max-width: 80%;
 }
 
 .featured-technologies-list {
@@ -81,7 +69,7 @@ h5 {
 	margin: 15px;
 	padding: 10px 15px;
 	color: var(--midnight);
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 600;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -116,7 +104,7 @@ h5 {
 	text-decoration: none;
 	text-transform: lowercase;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 500;
 	transition: var(--transition);
 }

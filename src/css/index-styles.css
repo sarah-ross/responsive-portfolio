@@ -14,18 +14,21 @@ body {
 }
 
 h1 {
+	font-size: 52px;
+	font-weight: 200;
 	animation: fadeInAnimation ease-in 525ms 1s 1 backwards;
 }
 
 h2 {
 	font-family: var(--display-font);
-	font-size: 4ch;
+	font-size: 48px;
 	font-weight: 900;
 	padding-top: 15vh;
 }
 
 h3 {
 	font-family: var(--display-font);
+	font-size: 32px;
 }
 
 p {
@@ -43,10 +46,6 @@ footer {
 
 footer span {
 	color: var(--lavender);
-}
-
-.logo {
-	max-width: 20ch;
 }
 
 @keyframes fadeInAnimation {
