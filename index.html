@@ -17,13 +17,12 @@
 			crossorigin="anonymous"
 		/>
 		<link
+			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 			rel="stylesheet"
-			href="https://use.typekit.net/fti4vug.css"
 		/>
 		<link
 			rel="stylesheet"
-			type="text/css"
-			href="slick/slick-theme.css"
+			href="https://use.typekit.net/fti4vug.css"
 		/>
 		<link
 			rel="stylesheet"
@@ -47,6 +46,7 @@
 			rel="stylesheet"
 			href="/src/css/contact-section-styles.css"
 		/>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<title>
 			Sarah Ross: Web Developer, Graphic Designer
 		</title>
@@ -860,10 +860,12 @@
 			Designed and built by
 			<span class="fw-bolder">Sarah Ross</span>
 		</footer>
-		<script
-			type="text/javascript"
-			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-		></script>
+		<script>
+			AOS.init({
+				once: true,
+				delay: 200,
+			});
+		</script>
 		<script src="/src/carouselText.js"></script>
 	</body>
 </html>
