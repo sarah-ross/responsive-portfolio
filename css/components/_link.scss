@@ -1,0 +1,36 @@
+a:not(.btn, .navbar-brand, .nav-link, .back-to-top) {
+	&:link,
+	&:visited {
+		width: fit-content;
+		display: block;
+		text-decoration: none;
+		color: $link-color;
+	}
+
+	span {
+		position: relative;
+		display: inline-flex;
+		align-items: flex-end;
+
+		&::after {
+			content: "";
+			background: url("/src/icons/arrow-link.svg") no-repeat
+				center;
+			width: 20px;
+			height: 20px;
+			margin-left: 0.5rem;
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $link-color-hover;
+
+		span::after {
+			background: url("/src/icons/arrow-link-hover.svg")
+				no-repeat center;
+			animation: arrowLoop 0.45s ease forwards;
+		}
+	}
+}

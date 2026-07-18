@@ -1,0 +1,69 @@
+/* Back to top floating button */
+.back-to-top {
+	width: 3rem;
+	height: 3rem;
+	position: fixed;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	border-radius: 50%;
+	background: $base-background;
+	color: $light-purple;
+	border: 1px solid $light-purple;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	box-shadow: 0 2px 12px rgba(200, 129, 255, 0.5);
+	transition: all 0.3 ease-in-out;
+	z-index: 1000;
+
+	.back-to-top__icon {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		border-radius: inherit;
+		overflow: hidden;
+
+		img {
+			width: 1rem;
+			height: auto;
+			display: block;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				90deg,
+				transparent,
+				rgba(238, 206, 249, 0.3),
+				transparent
+			);
+			transition: transform 0.7s ease;
+			transform: skewX(-20deg); /* Angles the shine beam */
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus-visible {
+		text-decoration: none;
+		transform: translateY(-0.35rem);
+
+		.back-to-top__icon::after {
+			transform: translateX(200%) skewX(-20deg);
+		}
+	}
+
+	&.is-visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}

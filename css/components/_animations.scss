@@ -1,0 +1,54 @@
+/* Register the custom property for smooth angle interpolation */
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes rotate-glow {
+	0% {
+		--angle: 0deg;
+	}
+	100% {
+		--angle: 360deg;
+	}
+}
+
+@keyframes fadeDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes arrowLoop {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	25% {
+		transform: translateX(8px);
+		opacity: 0;
+	}
+	26% {
+		transform: translateX(-10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

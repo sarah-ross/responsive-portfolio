@@ -1,0 +1,68 @@
+#hero {
+	height: fit-content;
+	min-height: 50vh;
+	position: relative;
+	width: 100%;
+	background-color: $base-background-darker;
+	margin: 10rem auto 5rem;
+	border-radius: $border-radius;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		border-radius: inherit;
+		background: conic-gradient(
+			from var(--angle),
+			$orange,
+			$purple,
+			$blue,
+			$blue,
+			$purple,
+			$orange
+		);
+		animation: rotate-glow 12s linear infinite;
+	}
+
+	&::after {
+		filter: blur(0.7rem);
+	}
+
+	#interactive-bg {
+		width: inherit;
+		height: inherit;
+		min-height: inherit;
+		overflow: hidden;
+		position: relative;
+		padding: 2.25rem 1.5rem;
+		border-radius: inherit;
+
+		@include breakpoint(medium) {
+			padding: 3rem;
+		}
+
+		.mouse-glow-blob {
+			position: absolute;
+			width: 250px;
+			height: 250px;
+			/* Centers the anchor point so the mouse is exactly in the middle of the blur */
+			top: -125px;
+			left: -125px;
+			background: radial-gradient(
+				circle,
+				#00ffc8,
+				#85adff,
+				#c881ff,
+				rgba(0, 0, 0, 0) 70%
+			);
+			filter: blur(75px);
+			opacity: 0.3;
+			pointer-events: none; /* Stops it from blocking text links or clicks */
+			will-change: transform;
+			/* Tweaking this transition duration changes the fluidity/lag effect */
+			transition: transform 0.15s ease-out;
+		}
+	}
+}

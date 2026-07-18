@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
-			description="Hey, you found me. I'm Sarah. I love designing and building things for print and the web. I specialize in front-end development and graphic design."
+			description="Hey, you found me. I'm Sarah. I love designing and building things for the web. I specialize in web design and front-end development."
 		/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta
@@ -11,848 +11,457 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
+			href="/node_modules/bootstrap/dist/css/bootstrap.css"
 		/>
 		<link
 			rel="stylesheet"
-			href="https://use.typekit.net/fti4vug.css"
+			href="https://use.typekit.net/wmu4mlu.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="/src/css/index-styles.css"
-		/>
-		<link rel="stylesheet" href="/src/css/variables.css" />
-		<link rel="stylesheet" href="/src/css/nav-styles.css" />
-		<link
-			rel="stylesheet"
-			href="/src/css/about-section-styles.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="/src/css/design-section-styles.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="/src/css/web-section-styles.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="/src/css/contact-section-styles.css"
-		/>
-		<title>
-			Sarah Ross: Web Developer, Graphic Designer
-		</title>
+		<link rel="stylesheet" href="/css/site-styles.css" />
+		<title>Sarah Ross: Web Designer & Developer</title>
 	</head>
-	<body>
-		<nav class="d-flex justify-content-between top-nav">
-			<div>
-				<a href="/" title="Home">
-					<img
-						src="/src/img/logo-seal.png"
-						alt="Personal Brand Logo Seal"
-						class="nav-logo"
-					/>
-				</a>
+	<header>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand logo" href="#"
+					><img
+						width="50"
+						height="50"
+						alt="Sarah Ross"
+						src="/src/img/logo.svg"
+				/></a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="navbarNav"
+				>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#featured-work"
+								>Featured Work</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#other-projects"
+								>Other Projects</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="btn btn-primary" href="#contact"
+								><span>Contact</span></a
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<input id="menu-toggle" type="checkbox" />
-			<label
-				class="menu-button-container"
-				for="menu-toggle"
-			>
-				<div class="menu-button"></div>
-			</label>
-			<ul class="menu">
-				<li>
-					<a
-						href="#about"
-						title="About"
-						class="mint-nav-link"
-						>about</a
-					>
-				</li>
-				<li>
-					<a href="#design-work" title="Design Work"
-						>design work</a
-					>
-				</li>
-				<li>
-					<a
-						href="#web-work"
-						title="Web Work"
-						class="mint-nav-link"
-						>web work</a
-					>
-				</li>
-				<li>
-					<a href="#contact" title="Contact">contact</a>
-				</li>
-			</ul>
 		</nav>
-		<main id="home" class="d-block mx-auto">
-			<h1 class="text-center mt-5 mb-5">Hello, I am</h1>
-			<img
-				src="/src/img/logo.png"
-				alt="personal brand main logo"
-				class="d-block mx-auto img-fluid"
-			/>
+	</header>
+	<body>
+		<main class="container">
+			<div id="hero">
+				<div
+					id="interactive-bg"
+					class="d-flex flex-column justify-content-center"
+				>
+					<div class="mouse-glow-blob" id="glow-blob"></div>
+					<h1 class="mb-4">
+						<span>Sarah Ross</span>
+						<span>Web Designer & Developer</span>
+					</h1>
+					<p>
+						I love designing and building things for the
+						web. I specialize in web design and front-end
+						development.
+					</p>
+				</div>
+			</div>
+			<div id="featured-work" class="my-4 my-lg-5">
+				<h2>Featured Work</h2>
+				<div
+					class="row align-items-center flex-column flex-lg-row pb-5 mb-5"
+				>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<a
+								href="https://gilariver.dev.geonetric.com/"
+								target="_blank"
+								><span>Gila River Health Care</span></a
+							>
+						</h3>
+						<p class="description">
+							This client exclusively serves the Gila River
+							Indian Community. They were looking for a
+							colorful site that showcased their brand and
+							cultural identity, while giving users
+							simplified access to make an appointment, view
+							their locations, and browse services.
+						</p>
+						<p>
+							Please note this site has not yet launched and
+							the link above will take you to a dev
+							environment. The client is responsible for
+							building out their own pages and replacing any
+							placeholder content. Some pages may not be
+							available or blank. You can access the dev
+							site with the following credentials:
+						</p>
+						<ul class="plain">
+							<li>Username: Geonetric</li>
+							<li>Password: Geonet123</li>
+						</ul>
+					</div>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of Gila River Health Care site"
+								src="/src/img/web work/gila-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+				</div>
+				<div
+					class="row align-items-center flex-column-reverse flex-lg-row pb-5 my-5"
+				>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of UMMS Intranet site"
+								src="/src/img/web work/umms-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<span
+								>University of Maryland Medical System
+								Intranet</span
+							>
+						</h3>
+						<p class="description">
+							This client wanted a brand new intranet that
+							allowed users to quickly find information,
+							view the latest company news, and connect with
+							other team members.
+							<br />
+							Because this is an intranet, it's not
+							accessible to the public. You are welcome to
+							view my Figma designs instead at the following
+							links:
+						</p>
+						<ul class="plain">
+							<li>
+								<a
+									href="https://www.figma.com/proto/uMLKUunE9zkhHJGV1UgCbo/UMMS-Intranet-Design?node-id=14-117&t=MzSImLCiybkmIC3O-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1"
+									target="_blank"
+									><span>Desktop concept</span></a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.figma.com/make/e2vmYnnEewpAHpRiwYVn2M/Mobile-Version-Optimization?fullscreen=1&t=yPiVPnxEf46PlIwn-1&code-node-id=0-9"
+									target="_blank"
+									><span>Mobile concept</span></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div
+					class="row align-items-center flex-column flex-lg-row pb-5 my-5"
+				>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<a
+								href="https://www.bartonhealth.org/"
+								target="_blank"
+								><span>Barton Health</span></a
+							>
+						</h3>
+						<p class="description">
+							This client wanted to emphasize their deep
+							roots in the Lake Tahoe community, give users
+							easy access to their top services, and
+							highlight their upcoming expansion. They loved
+							the use of the wave mask and deep blue colors
+							from their branding, as well as imagery that
+							showcased their active community.
+						</p>
+					</div>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of Barton Health site"
+								src="/src/img/web work/barton-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+				</div>
+				<div
+					class="row align-items-center flex-column-reverse flex-lg-row pb-5 my-5"
+				>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of Burke Rehabilitation site"
+								src="/src/img/web work/burke-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<a
+								href="https://www.burke.org/"
+								target="_blank"
+								><span>Burke Rehabilitation</span></a
+							>
+						</h3>
+						<p class="description">
+							This client wanted a user-driven experience
+							that reinforced their brand identity and their
+							market position as a top, award-winning
+							rehabilitation facility. They were looking for
+							a simple design using various shades of blue
+							from their color palette, and their own
+							photography so users could visualize
+							themselves as part of the story.
+						</p>
+					</div>
+				</div>
+				<div
+					class="row align-items-center flex-column flex-lg-row pb-5 my-5"
+				>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<a
+								href="https://www.stbernards.info/locations/profile/st-bernards-medical-center/?searchId=f087b4bc-4c7d-f111-a88c-000d3a61151d&sort=11&page=1&pageSize=20"
+								target="_blank"
+								><span
+									>St. Bernards Location Profile</span
+								></a
+							>
+						</h3>
+						<p class="description">
+							This client had specific locations they wanted
+							to highlight using a custom location profile.
+							They were looking for a clean, polished layout
+							that blended well with the rest of their site
+							design, a larger location image, various
+							sections for customized content, and the
+							ability to pull in providers on the location
+							profiles. This design won an award in 2025.
+						</p>
+					</div>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of St. Bernards Location Profile page"
+								src="/src/img/web work/location-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+				</div>
+				<div
+					class="row align-items-center flex-column-reverse flex-lg-row pb-5 my-5"
+				>
+					<div class="col col-lg-5">
+						<div
+							class="images position-relative d-inline-flex flex-row-reverse align-items-end"
+						>
+							<img
+								alt="Desktop and mobile mockups of St. Bernards Testimonial Hub"
+								src="/src/img/web work/testimonial-mockups.png"
+								width="700"
+								height="auto"
+							/>
+						</div>
+					</div>
+					<div class="col col-lg-7 position-relative">
+						<h3 class="project-name">
+							<a
+								href="https://www.stbernards.info/about-us/testimonials-hub/"
+								target="_blank"
+								><span
+									>St. Bernards Testimonial Hub</span
+								></a
+							>
+						</h3>
+						<p class="description">
+							The client needed a single-page design to
+							display their patient testimonials, and wanted
+							an element to encourage users to interact with
+							each testimonial. I provided them the option
+							to include an image for each testimonial, but
+							wanted to maintain the integrity of the design
+							even if an image wasn't used by creating a
+							generic placeholder with their logomark.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="other-projects" class="mb-4 mb-lg-5">
+				<h2 class="mb-3">Other Projects</h2>
+				<div
+					class="row align-items-stretch flex-column flex-lg-row my-5"
+				>
+					<div class="col">
+						<div class="card">
+							<div
+								class="glass d-flex flex-column justify-content-center px-3"
+							>
+								<h3 class="card-title px-3">
+									<a
+										href="https://rad-dodol-50fff9.netlify.app/"
+										target="_blank"
+										><span>React Dictionary App</span></a
+									>
+								</h3>
+								<p class="card-body">
+									A web app I designed and built with
+									React.js for looking up almost any word in
+									the English language. It shows phonetics,
+									definitions, synonyms, usage examples, and
+									images by using the DictionaryAPI.dev and
+									the Pexels Image API.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div
+								class="glass d-flex flex-column justify-content-center px-3"
+							>
+								<h3 class="card-title px-3">
+									<a
+										href="https://aquamarine-madeleine-772b9a.netlify.app/"
+										target="_blank"
+										><span>JavaScript World Clock</span></a
+									>
+								</h3>
+								<p class="card-body">
+									A simple web app I built using Vanilla
+									JavaScript and Moment.js. It displays the
+									current date and time of a range of cities
+									in their respective time zones. The home
+									page features three cities showing their
+									dates and times changing at a one-second
+									interval.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div
+								class="glass d-flex flex-column justify-content-center px-3"
+							>
+								<h3 class="card-title px-3">
+									<a
+										href="https://friendly-hoover-121662.netlify.app/"
+										target="_blank"
+										><span>JavaScript Weather App</span></a
+									>
+								</h3>
+								<p class="card-body">
+									This web app I built with vanilla
+									JavaScript displays the current weather
+									and forecast for almost any city in the
+									world using the OpenWeatherAPI and allows
+									the user to check the weather of their
+									current location.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contact" class="mb-4 mb-lg-5">
+				<h2 class="mb-3">Contact Me</h2>
+				<p>
+					Let's connect! Reach out on my socials, or
+					complete the contact form below.
+				</p>
+				<ul class="socials">
+					<li><a href="#">LinkedIn</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">GitHub</a></li>
+				</ul>
+				<form action="#" method="post">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						required
+					/>
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						required
+					/>
+					<label for="message">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						required
+					></textarea>
+					<button class="btn btn-primary" type="submit">Send</button>
+				</form>
+			</div>
 		</main>
-		<div class="mx-auto mt-5 mb-5 text-center">
-			Thanks for visiting! This website is a work in
-			progress.
-		</div>
-		<section class="about-section" id="about">
-			<div class="container-fluid about-container">
-				<h2 class="text-center">A little about me</h2>
-				<img
-					src="/src/img/portrait.jpg"
-					alt="portrait of Sarah Ross"
-					class="img-fluid portrait"
-				/>
-				<p class="text-center">
-					I'm a creative professional with five years of
-					experience across three different B2B industries,
-					and I'm ready to expand my work into tech.
-				</p>
-				<h3 class="text-center">Where I've Been</h3>
-				<p class="text-center">
-					I've designed a wide range of projects for print
-					and the web, such as magazine ads, interactive
-					video brochures, wedding invitations, digital
-					marketing campaigns, web banners, product mockups,
-					and more.
-				</p>
-				<h3 class="text-center">Where I'm Going</h3>
-				<p class="text-center">
-					My recent work has been focused in designing and
-					building websites from scratch through front end
-					development. I have the modern essential coding
-					languages under my belt so I can build engaging
-					and responsive experiences for the web, and I'm
-					always learning more.
-				</p>
-				<a
-					href="https://drive.google.com/file/d/1Qb7fHez1hwOjkwjvaX1mivQIBDP7G8ov/view?usp=sharing"
-					target="_blank"
-					title="Download Resume"
-					class="resume-button"
-					>Download Resume</a
-				>
-			</div>
-		</section>
-		<section
-			class="text-center design-section"
-			id="design-work"
+		<a
+			href="#"
+			id="back-to-top-btn"
+			class="back-to-top"
+			aria-label="Back to top"
 		>
-			<h2>Design Work</h2>
-			<div class="carousel-wrapper">
-				<div class="carousel">
-					<img
-						src="/src/img/design work/personal branding.png"
-						alt="Personal branding"
-						class="carousel-image initial"
-					/>
-					<img
-						src="/src/img/design work/bangkok.png"
-						alt="Bangkok photo art"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/booklet cover and inside.png"
-						alt="Dynamark booklet"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/care package design-front.jpg"
-						alt="Care package front design"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/dynamark brand style guide-inside.jpg"
-						alt="Dynamark brand style guide"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/icons.png"
-						alt="icon library"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/Impressed Logo Design.png"
-						alt="Impressed logo design"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/RoyaleUSA.png"
-						alt="RoyaleUSA art"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/ssn full page inside cover ad.jpg"
-						alt="Inside cover ad"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/storefront.jpg"
-						alt="Storefront image art"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/ssn june jr page ad.jpg"
-						alt="Jr. page ad"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/tampa-cityscape.png"
-						alt="Tampa cityscape"
-						class="carousel-image"
-					/>
-					<img
-						src="/src/img/design work/video brochure-inside right.jpg"
-						alt="Video brochure"
-						class="carousel-image"
-					/>
-
-					<div class="previous-button"></div>
-					<div class="next-button"></div>
-				</div>
-			</div>
-		</section>
-		<section class="web-section" id="web-work">
-			<div class="text-center featured-project">
-				<h2>Web Work</h2>
-				<small class="d-block fs-5 text-center"
-					>Featured Projects</small
-				>
+			<span class="back-to-top__icon" aria-hidden="true">
 				<img
-					src="/src/img/web work/react dictionary app.png"
-					alt="React Dictionary App"
-					class="img-fluid mt-4"
+					src="/src/icons/back-to-top-arrow.svg"
+					alt=""
 				/>
-				<div class="shadow"></div>
-				<h3 class="featured-project-title">
-					React Dictionary App
-				</h3>
-				<p class="mt-3 mb-5 featured-project-description">
-					A web app I designed and built with React.js for
-					looking up almost any word in the English
-					language. It shows phonetics, definitions,
-					synonyms, usage examples, and images by using the
-					DictionaryAPI.dev and the Pexels Image API.
-				</p>
-				<div class="d-flex justify-content-center">
-					<a
-						href="https://rad-dodol-50fff9.netlify.app"
-						target="_blank"
-						title="React Dictionary App"
-						class="featured-project-button"
-						>Try it >></a
-					>
-					<a
-						href="https://github.com/sarah-ross/react-dictionary-app"
-						target="_blank"
-						title="View project on GitHub"
-						class="featured-project-button"
-						>View project on GitHub</a
-					>
-				</div>
-				<h5 class="mt-5">Technologies used:</h5>
-				<ul
-					class="d-flex justify-content-center featured-technologies-list"
-				>
-					<li class="me-3 featured-technologies-list-item">
-						HTML
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						CSS
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						React.js
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						JSX
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						Bootstrap
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						API (AJAX)
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						Git
-					</li>
-					<li class="me-3 featured-technologies-list-item">
-						GitHub
-					</li>
-				</ul>
-				<img
-					src="/src/img/web work/travel-landing page-mockups.png"
-					alt="travel landing page mockups"
-					class="img-fluid p-5"
-				/>
-				<div class="shadow"></div>
-				<h3 class="featured-project-title">
-					Travel Landing Page
-				</h3>
-				<p class="mt-3 mb-5 featured-project-description">
-					A simple, lightweight landing page I designed and
-					built to demonstrate the use of CSS transform
-					properties, filters, and class manipulation
-					through JavaScript.
-				</p>
-				<div class="d-flex justify-content-center">
-					<a
-						href="https://super-concha-a41bfe.netlify.app"
-						target="_blank"
-						title="Travel Landing Page"
-						class="featured-project-button"
-						>Visit page >></a
-					>
-					<a
-						href="https://github.com/sarah-ross/shecodes-basics-add-on"
-						target="_blank"
-						title="View project on GitHub"
-						class="featured-project-button"
-						>View project on GitHub</a
-					>
-				</div>
-				<h5 class="mt-5">Technologies used:</h5>
-				<ul
-					class="d-flex justify-content-center featured-technologies-list"
-				>
-					<li class="featured-technologies-list-item pe-3">
-						HTML
-					</li>
-					<li class="featured-technologies-list-item pe-3">
-						CSS
-					</li>
-					<li class="featured-technologies-list-item pe-3">
-						JavaScript
-					</li>
-					<li class="featured-technologies-list-item pe-3">
-						GitHub
-					</li>
-				</ul>
-			</div>
-			<div class="container-fluid px-0 pb-4">
-				<div class="row g-0">
-					<div class="col-lg-6">
-						<div class="image-wrapper mint">
-							<img
-								src="/src/img/web work/world clock app.png"
-								alt="JavaScript World Clock"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">
-							JavaScript World Clock
-						</h3>
-						<p class="project-description">
-							A website with logic I built using Vanilla
-							JavaScript and Moment.js. It displays the
-							current date and time of a range of cities in
-							their respective time zones. The home page
-							features three cities showing their dates and
-							times changing at a one-second interval.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://aquamarine-madeleine-772b9a.netlify.app"
-								target="_blank"
-								title="JavaScript World Clock"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/world-clock"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								JavaScript
-							</li>
-							<li class="me-2 technologies-list-item">
-								Moment.js
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">React Weather App</h3>
-						<p class="project-description">
-							A web I built with React.js that displays the
-							current weather and forecast of almost any
-							city around the world using the OpenWeatherAPI
-							and an external animated weather component.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://super-peony-c58c95.netlify.app"
-								target="_blank"
-								title="React Weather App"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/react-weather-app-main"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								React.js
-							</li>
-							<li class="me-2 technologies-list-item">
-								JSX
-							</li>
-							<li class="me-2 technologies-list-item">
-								Bootstrap
-							</li>
-							<li class="me-2 technologies-list-item">
-								API (AJAX)
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-6">
-						<div class="image-wrapper">
-							<img
-								src="/src/img/web work/react weather app.png"
-								alt="React Weather App"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6">
-						<div class="image-wrapper mint">
-							<img
-								src="/src/img/web work/vanilla js weather app.png"
-								alt="Vanilla JS Weather App"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">
-							Vanilla JS Weather App
-						</h3>
-						<p class="project-description">
-							This web app I built with vanilla JavaScript
-							displays the current weather and forecast for
-							almost any city in the world using the
-							OpenWeatherAPI and allows the user to check
-							the weather of their current location.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://friendly-hoover-121662.netlify.app"
-								target="_blank"
-								title="Vanilla JavaScript Weather App"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/shecodes-plus"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								JavaScript
-							</li>
-							<li class="me-2 technologies-list-item">
-								Bootstrap
-							</li>
-							<li class="me-2 technologies-list-item">
-								API (AJAX)
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">React Chat App</h3>
-						<p class="project-description">
-							A chat app I built using React.js, the Stream
-							API and its components. It can be set up with
-							user authentication, avatars, a light or dark
-							theme, and custom styling.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://monumental-crumble-46cfe2.netlify.app"
-								target="_blank"
-								title="React Chat App"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/react-stream-chat-app"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								React.js
-							</li>
-							<li class="me-2 technologies-list-item">
-								Stream API
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-6">
-						<div class="image-wrapper cloud">
-							<img
-								src="/src/img/web work/react chat app.png"
-								alt="React Chat App"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6">
-						<div class="image-wrapper">
-							<img
-								src="/src/img/web work/alarmchat landing page.png"
-								alt="AlarmChat Landing Page"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">
-							AlarmChat Landing Page
-						</h3>
-						<p class="project-description">
-							A lead-capture page I designed and built for
-							Dynamark Monitoring located in Hagerstown
-							Maryland. By submitting the form, it allows
-							users to access a demo of the company's
-							emergency group chat software.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://myinstantconnect.com/dealer"
-								target="_blank"
-								title="AlarmChat Landing Page"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/alarmchat-landing-page"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								Boostrap
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">
-							Vanilla JS Tic Tac Toe
-						</h3>
-						<p class="project-description">
-							A simple game I built with vanilla JavaScript
-							to demonstrate the fundamentals of the
-							language. It alternates between X's and O's
-							with a color to indicate the winner and a
-							button to restart the game.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://roaring-melba-e38a5b.netlify.app"
-								target="_blank"
-								title="Vanilla JavaScript Tic Tac Toe Game"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/tic-tac-toe"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on Github</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								JavaScript
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-6">
-						<div class="image-wrapper mint">
-							<img
-								src="/src/img/web work/vanilla js tic tac toe.png"
-								alt="Vanilla JS Tic Tac Toe game"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row g-0">
-					<div class="col-lg-6">
-						<div class="image-wrapper cloud">
-							<img
-								src="/src/img/web work/react calculator app.png"
-								alt="React Calculator App"
-								class="img-fluid web-project-image"
-							/>
-							<div class="smaller-shadow"></div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-wrapper">
-						<h3 class="project-title">
-							React Calculator App
-						</h3>
-						<p class="project-description">
-							A calculator app I built with React.js to
-							showcase the use of basic styling, operators,
-							conditional rendering, and cases.
-						</p>
-						<div class="d-flex justify-content-start">
-							<a
-								href="https://deft-muffin-76d81d.netlify.app"
-								target="_blank"
-								title="React Calculator App"
-								class="project-button"
-								>Try it >></a
-							>
-							<a
-								href="https://github.com/sarah-ross/react-calculator"
-								target="_blank"
-								title="View project on GitHub"
-								class="project-button"
-								>View project on GitHub</a
-							>
-						</div>
-						<h5 class="mt-5">Technologies used:</h5>
-						<ul
-							class="d-flex justify-content-start technologies-list"
-						>
-							<li class="me-2 technologies-list-item">
-								HTML
-							</li>
-							<li class="me-2 technologies-list-item">
-								CSS
-							</li>
-							<li class="me-2 technologies-list-item">
-								React.js
-							</li>
-							<li class="me-2 technologies-list-item">
-								Git
-							</li>
-							<li class="me-2 technologies-list-item">
-								GitHub
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section
-			class="text-center contact-section"
-			id="contact"
-		>
-			<a href="#home" class="d-block mt-5 scroll-to-top"
-				>Back to top ↑</a
-			>
-			<h3 class="request-heading">
-				For full portfolio access, <br />
-				please send me a request:
-			</h3>
-			<a
-				href="mailto:sarah@sarah-codes.com"
-				class="d-block mt-5 access-button"
-				>Request access</a
-			>
-			<h2 class="contact-heading">
-				Hey, you made it this far.
-			</h2>
-			<h4 class="mt-4">Let's connect:</h4>
-			<ul
-				class="d-flex justify-content-center social-icon-list"
-			>
-				<li class="social-icon-item">
-					<a
-						href="mailto:sarah@sarah-codes.com"
-						class="social-link"
-					>
-						<img
-							src="/src/icons/email.png"
-							alt="Email me"
-							class="me-5 social-icon"
-						/>
-					</a>
-				</li>
-				<li class="social-icon-item">
-					<a
-						href="https://github.com/sarah-ross"
-						target="_blank"
-						class="social-link"
-					>
-						<img
-							src="/src/icons/github.png"
-							alt="View Github Profile"
-							class="me-5 social-icon"
-						/>
-					</a>
-				</li>
-				<li class="social-icon-item">
-					<a
-						href="https://www.linkedin.com/in/sarahross-codes/"
-						target="_blank"
-						class="social-link"
-					>
-						<img
-							src="/src/icons/linkedin.png"
-							alt="View LinkedIn Profile"
-							class="me-5 social-icon"
-						/>
-					</a>
-				</li>
-				<li class="social-icon-item">
-					<a
-						href="https://www.instagram.com/sarah.codes._/"
-						target="_blank"
-						class="social-link"
-					>
-						<img
-							src="/src/icons/instagram.png"
-							alt="View Instagram Profile"
-							class="me-5 social-icon"
-						/>
-					</a>
-				</li>
-			</ul>
-		</section>
-		<footer class="text-center fw-semibold mt-5 mb-4">
-			Designed and built by
-			<span class="fw-bolder">Sarah Ross</span>
-		</footer>
-		<script src="/src/carouselText.js"></script>
+			</span>
+		</a>
 	</body>
+	<footer class="py-4 mt-5 text-center">
+		<p class="mb-0">
+			&copy; 2026 Sarah Ross. All rights reserved.
+		</p>
+	</footer>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<script src="/js/site-scripts.js"></script>
 </html>

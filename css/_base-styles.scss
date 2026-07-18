@@ -1,0 +1,79 @@
+body {
+	font-family: $base-font;
+	background-color: #161517;
+	/* Creates a subtle, CSS-only noise texture */
+	background-image: radial-gradient(
+		rgba(200, 129, 255, 0.03) 1px,
+		transparent 0
+	);
+	background-size: 24px 24px;
+	color: $body-color;
+	overflow-x: hidden;
+
+	* {
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+p,
+ul {
+	font-size: 1.1rem;
+}
+
+h1 {
+	span:first-of-type {
+		@include font-extended-extra-black;
+		font-size: 2.75rem;
+		color: transparent;
+		display: block;
+		opacity: 0;
+		background-image: linear-gradient(
+			65deg,
+			$purple,
+			$light-purple,
+			#fff
+		);
+		background-clip: text;
+		animation: fadeIn 1s ease-in-out forwards;
+
+		@include breakpoint(x-small) {
+			font-size: 3.25rem;
+		}
+
+		@include breakpoint(medium) {
+			font-size: 5.5rem;
+		}
+	}
+
+	span:last-of-type {
+		@include font-extended-extra-light;
+		font-size: 1.45rem;
+		opacity: 0;
+		animation: fadeIn 1s ease-in-out forwards 0.5s;
+
+		@include breakpoint(x-small) {
+			font-size: 1.65rem;
+		}
+
+		@include breakpoint(medium) {
+			font-size: 2.25rem;
+		}
+	}
+}
+
+h2 {
+	@include font-extended-extra-light;
+	font-size: 2rem;
+
+	@include breakpoint(medium) {
+		font-size: 3rem;
+	}
+}
+
+h3 {
+	font-size: 1.35rem;
+
+	@include breakpoint(medium) {
+		font-size: 2.25rem;
+	}
+}

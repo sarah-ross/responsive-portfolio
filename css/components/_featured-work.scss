@@ -1,0 +1,131 @@
+#featured-work {
+	h2 {
+		margin-bottom: 5rem;
+
+		@include breakpoint(large) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	.project-name {
+		span::after {
+			width: 32px !important;
+			height: 32px !important;
+		}
+	}
+
+	.row {
+		.col:has(.project-name) {
+			&::before {
+				content: "";
+				width: 999em;
+				position: absolute;
+				z-index: -1;
+				border-radius: $border-radius;
+				top: -2em;
+				background: $base-background-darker;
+			}
+		}
+
+		&:first-of-type {
+			.col:has(.project-name) {
+				&::before {
+					height: 42em;
+					box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+					left: -965em;
+
+					@include breakpoint(small) {
+						height: 31em;
+					}
+
+					@include breakpoint(large) {
+						height: 25em;
+						left: -948em;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(2) {
+			.col:has(.project-name) {
+				&::before {
+					height: 30em;
+					right: -965em;
+					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
+
+					@include breakpoint(large) {
+						height: 21.5em;
+						right: -948em;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(3) {
+			.col:has(.project-name) {
+				&::before {
+					height: 15em;
+					left: -965em;
+					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
+
+					@include breakpoint(large) {
+						left: -948em;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(4) {
+			.col:has(.project-name) {
+				&::before {
+					height: 15em;
+					right: -965em;
+					box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+
+					@include breakpoint(large) {
+						right: -948em;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(5) {
+			.col:has(.project-name) {
+				&::before {
+					height: 16em;
+					left: -965em;
+					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
+
+					@include breakpoint(large) {
+						left: -948em;
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(6) {
+			.col:has(.project-name) {
+				&::before {
+					height: 17em;
+					right: -965em;
+					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
+
+					@include breakpoint(large) {
+						right: -948em;
+					}
+				}
+			}
+		}
+
+		.images {
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

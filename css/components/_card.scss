@@ -1,0 +1,100 @@
+.card {
+	width: 100%;
+	min-height: 440px;
+	color: $card-color;
+	background: linear-gradient(
+		135deg,
+		#667eea 0%,
+		#764ba2 100%
+	);
+	padding: 0;
+	border-radius: $border-radius;
+
+	/* The Glass Card Effect */
+	.glass {
+		width: inherit;
+		height: inherit;
+		min-height: inherit;
+		border-radius: inherit;
+
+		/* Core Glassmorphism Trick */
+		background: rgba(22, 21, 23, 0.95);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(
+			10px
+		); /* Safari support */
+
+		/* Glass Borders & Depth Shadows */
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 0 28px 0 rgba(200, 129, 255, 0.2);
+	}
+
+	.card-title,
+	.card-body {
+		flex: unset;
+	}
+
+	.card-title {
+		font-size: 1.2rem;
+
+		@include breakpoint(medium) {
+			font-size: 1.75rem;
+		}
+		span::after {
+			width: 26px !important;
+			height: 26px !important;
+		}
+	}
+}
+
+/* Card Container to isolate absolute positioning layers */
+.glow-card-wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+/* The Background Aura Effect */
+.card-aura {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: radial-gradient(
+		circle,
+		#c881ff 0%,
+		transparent 70%
+	);
+	filter: blur(40px);
+	opacity: 0.25;
+	z-index: -1;
+	transition:
+		opacity 0.4s ease,
+		transform 0.4s ease;
+}
+
+/* Custom styling for your dark card theme */
+.custom-dark-card {
+	background-color: #161517 !important;
+	border: 1px solid rgba(200, 129, 255, 0.2) !important; /* Subtle glowing edge */
+	border-radius: 12px;
+	backdrop-filter: blur(
+		10px
+	); /* Keeps the background crisp if elements overlap */
+}
+
+/* Hover Effects for Interaction */
+.glow-card-wrapper:hover .card-aura {
+	opacity: 0.5; /* Brightens the glow */
+	transform: scale(1.15); /* Expands the aura softly */
+	background: radial-gradient(
+		circle,
+		#c881ff 0%,
+		#85adff 50%,
+		transparent 70%
+	); /* Blends into your accent color */
+}
+
+.glow-card-wrapper:hover .custom-dark-card {
+	border-color: #c881ff !important; /* Makes the edge glow brighter on hover */
+}

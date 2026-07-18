@@ -1,0 +1,28 @@
+/* Color Palette */
+$light-purple: #e7c2f3;
+$purple: #c881ff;
+$blue: #85adff;
+$orange: #ff7f62;
+$base-background: #161517;
+$base-background-darker: darken($base-background, 2%);
+
+$base-font: area-normal-light, sans-serif;
+$h1-font: area-extended, sans-serif;
+$body-color: #fff;
+$body-background: $base-background;
+$border-radius: 1.5rem;
+$link-color: $light-purple;
+$link-color-hover: $purple;
+$header-background: rgba(22, 21, 23, 0.75);
+$footer-color: $light-purple;
+$footer-background: $base-background;
+$button-color: $light-purple;
+$button-color-hover: $light-purple;
+$button-background: #000;
+$card-color: $body-color;
+$card-background: linear-gradient(
+	145deg,
+	rgba(0, 0, 0, 0.95) 0%,
+	rgba(22, 21, 23, 0.95) 50%,
+	rgba(0, 0, 0, 0.95) 100%
+);

@@ -1,0 +1,43 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $header-background;
+	z-index: 1000;
+	padding: 0.75em 0;
+	backdrop-filter: blur(14px);
+	box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+	animation: fadeDown 0.3s ease-in-out forwards;
+
+	.logo {
+		&:hover,
+		&:active,
+		&:focus {
+			img {
+				box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+			}
+		}
+	}
+
+	.navbar-nav {
+		@include breakpoint(medium) {
+			gap: 1em;
+		}
+
+		.nav-item {
+			.nav-link {
+				&:link,
+				&:visited {
+					color: $link-color;
+					transition: color 0.3s ease;
+				}
+
+				&:hover,
+				&:focus {
+					color: $link-color-hover;
+				}
+			}
+		}
+	}
+}

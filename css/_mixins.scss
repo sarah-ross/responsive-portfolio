@@ -1,0 +1,49 @@
+/* Font Mixins */
+@mixin font-extra-light {
+	font-family: area-normal-light, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@mixin font-extended-extra-light {
+	font-family: area-extended-light, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@mixin font-extra-black {
+	font-family: area-normal, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@mixin font-extended-extra-black {
+	font-family: area-extended, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* Breakpoint Mixins */
+@mixin breakpoint($point) {
+	@if $point == x-small {
+		@media (min-width: 400px) {
+			@content;
+		}
+	} @else if $point == small {
+		@media (min-width: 600px) {
+			@content;
+		}
+	} @else if $point == medium {
+		@media (min-width: 900px) {
+			@content;
+		}
+	} @else if $point == large {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $point == xlarge {
+		@media (min-width: 1800px) {
+			@content;
+		}
+	}
+}
