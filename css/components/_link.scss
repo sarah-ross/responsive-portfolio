@@ -9,16 +9,18 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top) {
 
 	span {
 		position: relative;
-		display: inline-flex;
-		align-items: flex-end;
+		display: inline;
+		line-height: 1.4;
 
 		&::after {
 			content: "";
+			display: inline-block;
 			background: url("/src/icons/arrow-link.svg") no-repeat
 				center;
 			width: 20px;
 			height: 20px;
-			margin-left: 0.5rem;
+			margin-left: 0.35rem;
+			vertical-align: text-bottom;
 		}
 	}
 

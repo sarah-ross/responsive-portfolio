@@ -56,6 +56,7 @@
 	&:focus-visible {
 		text-decoration: none;
 		transform: translateY(-0.35rem);
+		box-shadow: 0 0 20px rgba(200, 129, 255, 0.4);
 
 		.back-to-top__icon::after {
 			transform: translateX(200%) skewX(-20deg);

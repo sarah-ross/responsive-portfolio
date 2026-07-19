@@ -4,6 +4,16 @@ const blob = document.getElementById("glow-blob");
 const backToTopButton = document.getElementById(
 	"back-to-top-btn",
 );
+const contactForm = document.getElementById("contact-form");
+const submitMessage = document.getElementById(
+	"form-submit-message",
+);
+const emailInput = document.getElementById("email");
+
+const isValidEmail = (value) => {
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailPattern.test(value);
+};
 
 if (container && blob) {
 	container.addEventListener("mousemove", (e) => {
@@ -40,5 +50,45 @@ if (backToTopButton) {
 	backToTopButton.addEventListener("click", (e) => {
 		e.preventDefault();
 		window.scrollTo({ top: 0, behavior: "smooth" });
+	});
+}
+
+if (contactForm && submitMessage && emailInput) {
+	contactForm.addEventListener("submit", async (event) => {
+		event.preventDefault();
+
+		if (!isValidEmail(emailInput.value.trim())) {
+			submitMessage.textContent =
+				"Please enter a valid email address.";
+			submitMessage.className = "mb-0 text-danger";
+			emailInput.focus();
+			return;
+		}
+
+		submitMessage.textContent = "Sending...";
+		submitMessage.className = "mb-0 text-muted";
+
+		try {
+			const response = await fetch(contactForm.action, {
+				method: contactForm.method,
+				body: new FormData(contactForm),
+				headers: {
+					Accept: "application/json",
+				},
+			});
+
+			if (response.ok) {
+				submitMessage.textContent =
+					"Your message has been sent!";
+				submitMessage.className = "mb-0";
+				contactForm.reset();
+			} else {
+				throw new Error("Unable to send message");
+			}
+		} catch (error) {
+			submitMessage.textContent =
+				"Sorry, there was a problem sending your message.";
+			submitMessage.className = "mb-0 text-danger";
+		}
 	});
 }

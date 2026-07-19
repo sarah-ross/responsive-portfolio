@@ -9,8 +9,10 @@
 
 	.project-name {
 		span::after {
-			width: 32px !important;
-			height: 32px !important;
+			@include breakpoint(large) {
+				width: 32px !important;
+				height: 32px !important;
+			}
 		}
 	}
 
@@ -24,6 +26,7 @@
 				border-radius: $border-radius;
 				top: -2em;
 				background: $base-background-darker;
+				overflow-x: hidden;
 			}
 		}
 
@@ -36,6 +39,7 @@
 
 					@include breakpoint(small) {
 						height: 31em;
+						left: -954em;
 					}
 
 					@include breakpoint(large) {
@@ -53,6 +57,10 @@
 					right: -965em;
 					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 
+					@include breakpoint(small) {
+						right: -954em;
+					}
+
 					@include breakpoint(large) {
 						height: 21.5em;
 						right: -948em;
@@ -68,6 +76,10 @@
 					left: -965em;
 					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
 
+					@include breakpoint(small) {
+						left: -954em;
+					}
+
 					@include breakpoint(large) {
 						left: -948em;
 					}
@@ -81,6 +93,10 @@
 					height: 15em;
 					right: -965em;
 					box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+
+					@include breakpoint(small) {
+						right: -954em;
+					}
 
 					@include breakpoint(large) {
 						right: -948em;
@@ -96,6 +112,10 @@
 					left: -965em;
 					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 
+					@include breakpoint(small) {
+						left: -954em;
+					}
+
 					@include breakpoint(large) {
 						left: -948em;
 					}
@@ -109,6 +129,10 @@
 					height: 17em;
 					right: -965em;
 					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
+
+					@include breakpoint(small) {
+						right: -954em;
+					}
 
 					@include breakpoint(large) {
 						right: -948em;

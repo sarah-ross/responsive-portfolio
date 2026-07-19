@@ -11997,9 +11997,11 @@ body * {
   transition: all 0.3s ease-in-out;
 }
 
-p,
-ul {
-  font-size: 1.1rem;
+@media (min-width: 1200px) {
+  p,
+  ul {
+    font-size: 1.1rem;
+  }
 }
 
 h1 span:first-of-type, .h1 span:first-of-type {
@@ -12020,7 +12022,7 @@ h1 span:first-of-type, .h1 span:first-of-type {
     font-size: 3.25rem;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   h1 span:first-of-type, .h1 span:first-of-type {
     font-size: 5.5rem;
   }
@@ -12038,7 +12040,7 @@ h1 span:last-of-type, .h1 span:last-of-type {
     font-size: 1.65rem;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   h1 span:last-of-type, .h1 span:last-of-type {
     font-size: 2.25rem;
   }
@@ -12050,7 +12052,7 @@ h2, .h2 {
   font-style: normal;
   font-size: 2rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   h2, .h2 {
     font-size: 3rem;
   }
@@ -12059,7 +12061,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: 1.35rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   h3, .h3 {
     font-size: 2.25rem;
   }
@@ -12124,15 +12126,17 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):link, a:not(.btn, .navbar-br
 }
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top) span {
   position: relative;
-  display: inline-flex;
-  align-items: flex-end;
+  display: inline;
+  line-height: 1.4;
 }
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top) span::after {
   content: "";
+  display: inline-block;
   background: url("/src/icons/arrow-link.svg") no-repeat center;
   width: 20px;
   height: 20px;
-  margin-left: 0.5rem;
+  margin-left: 0.35rem;
+  vertical-align: text-bottom;
 }
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):active, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):focus {
   color: #c881ff;
@@ -12269,9 +12273,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
     margin-bottom: 4rem;
   }
 }
-#featured-work .project-name span::after {
-  width: 32px !important;
-  height: 32px !important;
+@media (min-width: 1200px) {
+  #featured-work .project-name span::after {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }
 #featured-work .row .col:has(.project-name)::before {
   content: "";
@@ -12281,6 +12287,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   border-radius: 1.5rem;
   top: -2em;
   background: rgb(16.9, 16.1318181818, 17.6681818182);
+  overflow-x: hidden;
 }
 #featured-work .row:first-of-type .col:has(.project-name)::before {
   height: 42em;
@@ -12290,6 +12297,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 @media (min-width: 600px) {
   #featured-work .row:first-of-type .col:has(.project-name)::before {
     height: 31em;
+    left: -954em;
   }
 }
 @media (min-width: 1200px) {
@@ -12303,6 +12311,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   right: -965em;
   box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 }
+@media (min-width: 600px) {
+  #featured-work .row:nth-of-type(2) .col:has(.project-name)::before {
+    right: -954em;
+  }
+}
 @media (min-width: 1200px) {
   #featured-work .row:nth-of-type(2) .col:has(.project-name)::before {
     height: 21.5em;
@@ -12314,6 +12327,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   left: -965em;
   box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
 }
+@media (min-width: 600px) {
+  #featured-work .row:nth-of-type(3) .col:has(.project-name)::before {
+    left: -954em;
+  }
+}
 @media (min-width: 1200px) {
   #featured-work .row:nth-of-type(3) .col:has(.project-name)::before {
     left: -948em;
@@ -12323,6 +12341,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   height: 15em;
   right: -965em;
   box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+}
+@media (min-width: 600px) {
+  #featured-work .row:nth-of-type(4) .col:has(.project-name)::before {
+    right: -954em;
+  }
 }
 @media (min-width: 1200px) {
   #featured-work .row:nth-of-type(4) .col:has(.project-name)::before {
@@ -12334,6 +12357,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   left: -965em;
   box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 }
+@media (min-width: 600px) {
+  #featured-work .row:nth-of-type(5) .col:has(.project-name)::before {
+    left: -954em;
+  }
+}
 @media (min-width: 1200px) {
   #featured-work .row:nth-of-type(5) .col:has(.project-name)::before {
     left: -948em;
@@ -12343,6 +12371,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   height: 17em;
   right: -965em;
   box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
+}
+@media (min-width: 600px) {
+  #featured-work .row:nth-of-type(6) .col:has(.project-name)::before {
+    right: -954em;
+  }
 }
 @media (min-width: 1200px) {
   #featured-work .row:nth-of-type(6) .col:has(.project-name)::before {
@@ -12391,7 +12424,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 }
 @media (min-width: 900px) {
   .card .card-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 }
 .card .card-title span::after {
@@ -12441,7 +12474,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 #contact form {
   display: block;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(231, 194, 243, 0.5);
   border-radius: 1.5rem;
   background: linear-gradient(135deg, rgba(22, 21, 23, 0.98) 0%, rgba(10, 10, 12, 0.96) 100%);
   box-shadow: 0 0 24px rgba(200, 129, 255, 0.12);
@@ -12468,11 +12501,14 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 #contact input:focus,
 #contact textarea:focus {
   box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
 }
 #contact textarea {
   min-height: 9rem;
   resize: vertical;
+}
+#contact #form-submit-message {
+  color: #edfdba;
 }
 #contact .socials {
   display: flex;
@@ -12486,8 +12522,9 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   color: #e7c2f3;
   text-decoration: none;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(231, 194, 243, 0.5);
   border-radius: 999px;
+  box-shadow: 0 0 10px rgba(200, 129, 255, 0.4);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12495,6 +12532,21 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   height: 3rem;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+}
+#contact .socials li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(238, 206, 249, 0.3), transparent);
+  transition: transform 0.7s ease;
+  transform: skewX(-20deg); /* Angles the shine beam */
+}
+#contact .socials li a span::after {
+  content: none;
 }
 #contact .socials li a svg {
   width: 1.5rem;
@@ -12506,16 +12558,12 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   fill: #e7c2f3;
   transition: fill 0.3s ease;
 }
-#contact .socials li a:hover, #contact .socials li a:focus {
-  color: #c881ff;
-  border-color: #c881ff;
-  box-shadow: 0 0 16px rgba(200, 129, 255, 0.4);
-  background: rgba(200, 129, 255, 0.08);
+#contact .socials li a:hover, #contact .socials li a:active, #contact .socials li a:focus {
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(200, 129, 255, 0.4);
 }
-#contact .socials li a:hover svg path,
-#contact .socials li a:hover svg rect, #contact .socials li a:focus svg path,
-#contact .socials li a:focus svg rect {
-  fill: #c881ff;
+#contact .socials li a:hover::after, #contact .socials li a:active::after, #contact .socials li a:focus::after {
+  transform: translateX(200%) skewX(-20deg);
 }
 
 header {
@@ -12531,6 +12579,7 @@ header {
   animation: fadeDown 0.3s ease-in-out forwards;
 }
 header .logo:hover img, header .logo:active img, header .logo:focus img {
+  border-radius: 5px;
   box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
 }
 @media (min-width: 900px) {
@@ -12547,7 +12596,7 @@ header .navbar-nav .nav-item .nav-link:hover, header .navbar-nav .nav-item .nav-
 }
 
 footer {
-  color: #e7c2f3;
+  color: #fff;
   background: #161517;
   box-shadow: 0 -2px 14px rgba(200, 129, 255, 0.5);
 }
@@ -12600,6 +12649,7 @@ footer {
 .back-to-top:hover, .back-to-top:active, .back-to-top:focus-visible {
   text-decoration: none;
   transform: translateY(-0.35rem);
+  box-shadow: 0 0 20px rgba(200, 129, 255, 0.4);
 }
 .back-to-top:hover .back-to-top__icon::after, .back-to-top:active .back-to-top__icon::after, .back-to-top:focus-visible .back-to-top__icon::after {
   transform: translateX(200%) skewX(-20deg);
