@@ -12439,10 +12439,8 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 }
 
 #contact form {
-  display: grid;
-  gap: 1rem;
+  display: block;
   padding: 1.5rem;
-  margin-top: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 1.5rem;
   background: linear-gradient(135deg, rgba(22, 21, 23, 0.98) 0%, rgba(10, 10, 12, 0.96) 100%);
@@ -12451,20 +12449,17 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   -webkit-backdrop-filter: blur(10px);
 }
 #contact label {
-  font-family: area-normal, sans-serif;
-  font-weight: 200;
-  font-style: normal;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: #e7c2f3;
 }
 #contact input,
 #contact textarea {
   width: 100%;
   padding: 0.9rem 1rem;
+  margin: 1rem 0;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.04);
   color: #fff;
   outline: none;
@@ -12472,8 +12467,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 }
 #contact input:focus,
 #contact textarea:focus {
-  border-color: #c881ff;
-  box-shadow: 0 0 0 3px rgba(200, 129, 255, 0.2);
+  box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
   background: rgba(255, 255, 255, 0.06);
 }
 #contact textarea {
@@ -12494,11 +12488,34 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   padding: 0.4rem 0.7rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+#contact .socials li a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.3s ease;
+}
+#contact .socials li a svg path,
+#contact .socials li a svg rect {
+  fill: #e7c2f3;
+  transition: fill 0.3s ease;
 }
 #contact .socials li a:hover, #contact .socials li a:focus {
   color: #c881ff;
   border-color: #c881ff;
+  box-shadow: 0 0 16px rgba(200, 129, 255, 0.4);
+  background: rgba(200, 129, 255, 0.08);
+}
+#contact .socials li a:hover svg path,
+#contact .socials li a:hover svg rect, #contact .socials li a:focus svg path,
+#contact .socials li a:focus svg rect {
+  fill: #c881ff;
 }
 
 header {
