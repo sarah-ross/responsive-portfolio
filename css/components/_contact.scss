@@ -44,7 +44,7 @@
 	}
 
 	#form-submit-message {
-		color: #edfdba;
+		color: $form-submit-color;
 	}
 
 	.socials {
@@ -95,8 +95,11 @@
 			}
 
 			svg {
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 1.25rem;
+				height: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 				transition: all 0.3s ease;
 			}
 

@@ -20,9 +20,7 @@ $button-color: $light-purple;
 $button-color-hover: $light-purple;
 $button-background: #000;
 $card-color: $body-color;
-$card-background: linear-gradient(
-	145deg,
-	rgba(0, 0, 0, 0.95) 0%,
-	rgba(22, 21, 23, 0.95) 50%,
-	rgba(0, 0, 0, 0.95) 100%
-);
+$card-background: $base-background-darker;
+$card-purple: darken($purple, 12%);
+$card-orange: darken($orange, 12%);
+$form-submit-color: #edfdba;

@@ -11991,7 +11991,7 @@ body {
   background-image: radial-gradient(rgba(200, 129, 255, 0.03) 1px, transparent 0);
   background-size: 24px 24px;
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 body * {
   transition: all 0.3s ease-in-out;
@@ -12115,6 +12115,11 @@ h3, .h3 {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top):link, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):visited {
@@ -12287,7 +12292,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   border-radius: 1.5rem;
   top: -2em;
   background: rgb(16.9, 16.1318181818, 17.6681818182);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 #featured-work .row:first-of-type .col:has(.project-name)::before {
   height: 42em;
@@ -12397,23 +12402,39 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   width: 100%;
   min-height: 440px;
   color: #fff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 0;
+  position: relative;
+  background-color: hsl(240, 15%, 9%);
+  background-image: radial-gradient(at 78% 40%, hsl(240, 15%, 9%) 0px, transparent 85%), radial-gradient(at 49% 30%, hsl(240, 15%, 9%) 0px, transparent 85%), radial-gradient(at 14% 26%, hsl(240, 15%, 9%) 0px, transparent 85%), radial-gradient(at 0% 64%, rgb(173.2857142857, 67.8, 255) 0px, transparent 85%), radial-gradient(at 41% 94%, #c881ff 0px, transparent 85%), radial-gradient(at 100% 99%, rgb(255, 77.1044585987, 36.8) 0px, transparent 85%);
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+  border: none;
   border-radius: 1.5rem;
-  /* The Glass Card Effect */
 }
-.card .glass {
-  width: inherit;
-  height: inherit;
-  min-height: inherit;
-  border-radius: inherit;
-  /* Core Glassmorphism Trick */
-  background: rgba(22, 21, 23, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  /* Glass Borders & Depth Shadows */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 28px 0 rgba(200, 129, 255, 0.2);
+.card .card-border {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%);
+  border-radius: 1.5rem;
+}
+.card .card-border::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+  width: 200%;
+  height: 10rem;
+  background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, #c881ff 40%, #ff7f62 60%, hsla(0, 0%, 40%, 0) 100%);
+  animation: rotate 7s linear infinite;
 }
 .card .card-title,
 .card .card-body {
@@ -12430,45 +12451,6 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 .card .card-title span::after {
   width: 26px !important;
   height: 26px !important;
-}
-
-/* Card Container to isolate absolute positioning layers */
-.glow-card-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-/* The Background Aura Effect */
-.card-aura {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: radial-gradient(circle, #c881ff 0%, transparent 70%);
-  filter: blur(40px);
-  opacity: 0.25;
-  z-index: -1;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Custom styling for your dark card theme */
-.custom-dark-card {
-  background-color: #161517 !important;
-  border: 1px solid rgba(200, 129, 255, 0.2) !important; /* Subtle glowing edge */
-  border-radius: 12px;
-  backdrop-filter: blur(10px); /* Keeps the background crisp if elements overlap */
-}
-
-/* Hover Effects for Interaction */
-.glow-card-wrapper:hover .card-aura {
-  opacity: 0.5; /* Brightens the glow */
-  transform: scale(1.15); /* Expands the aura softly */
-  background: radial-gradient(circle, #c881ff 0%, #85adff 50%, transparent 70%); /* Blends into your accent color */
-}
-
-.glow-card-wrapper:hover .custom-dark-card {
-  border-color: #c881ff !important; /* Makes the edge glow brighter on hover */
 }
 
 #contact form {
@@ -12549,8 +12531,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   content: none;
 }
 #contact .socials li a svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s ease;
 }
 #contact .socials li a svg path,
@@ -12581,6 +12566,9 @@ header {
 header .logo:hover img, header .logo:active img, header .logo:focus img {
   border-radius: 5px;
   box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+}
+header .navbar-toggler-icon {
+  background-color: #fff;
 }
 @media (min-width: 900px) {
   header .navbar-nav {

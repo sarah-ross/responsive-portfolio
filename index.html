@@ -19,55 +19,84 @@
 			href="https://use.typekit.net/wmu4mlu.css"
 		/>
 		<link rel="stylesheet" href="/css/site-styles.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/src/icons/favicons/favicon-180.png"
+		/>
+		<link
+			rel="mask-icon"
+			href="/src/img/logo.svg"
+			color="#c881ff"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/src/icons/favicons/favicon-32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/src/icons/favicons/favicon-16.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="48x48"
+			href="/src/icons/favicons/favicon-48.png"
+		/>
+		<meta name="theme-color" content="#c881ff" />
 		<title>Sarah Ross: Web Designer & Developer</title>
 	</head>
-	<header>
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-				<a class="navbar-brand logo" href="#"
-					><img
-						width="50"
-						height="50"
-						alt="Sarah Ross"
-						src="/src/img/logo.svg"
-				/></a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div
-					class="collapse navbar-collapse justify-content-end"
-					id="navbarNav"
-				>
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="#featured-work"
-								>Featured Work</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#other-projects"
-								>Other Projects</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="btn btn-primary" href="#contact"
-								><span>Contact</span></a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
 	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand logo" href="#"
+						><img
+							width="50"
+							height="50"
+							alt="Sarah Ross"
+							src="/src/img/logo.svg"
+					/></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse navbar-collapse justify-content-end"
+						id="navbarNav"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#featured-work"
+									>Featured Work</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#other-projects"
+									>Other Projects</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="btn btn-primary" href="#contact"
+									><span>Contact</span></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 		<main class="container">
 			<div id="hero">
 				<div
@@ -332,13 +361,12 @@
 			<div id="other-projects" class="mb-4 mb-lg-5">
 				<h2 class="mb-3">Other Projects</h2>
 				<div
-					class="row align-items-stretch flex-column flex-lg-row my-5"
+					class="row g-4 align-items-stretch flex-column flex-lg-row my-5"
 				>
 					<div class="col">
-						<div class="card">
-							<div
-								class="glass d-flex flex-column justify-content-center px-3"
-							>
+						<div class="card justify-content-center">
+							<div class="card-border"></div>
+							<div class="px-3">
 								<h3 class="card-title px-3">
 									<a
 										href="https://rad-dodol-50fff9.netlify.app/"
@@ -358,10 +386,9 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card">
-							<div
-								class="glass d-flex flex-column justify-content-center px-3"
-							>
+						<div class="card justify-content-center">
+							<div class="card-border"></div>
+							<div class="px-3">
 								<h3 class="card-title px-3">
 									<a
 										href="https://aquamarine-madeleine-772b9a.netlify.app/"
@@ -382,10 +409,9 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card">
-							<div
-								class="glass d-flex flex-column justify-content-center px-3"
-							>
+						<div class="card justify-content-center">
+							<div class="card-border"></div>
+							<div class="px-3">
 								<h3 class="card-title px-3">
 									<a
 										href="https://friendly-hoover-121662.netlify.app/"
@@ -612,12 +638,12 @@
 				/>
 			</span>
 		</a>
+		<footer class="py-4 mt-5 text-center">
+			<p class="mb-0">
+				&copy; 2026 Sarah Ross. All rights reserved.
+			</p>
+		</footer>
+		<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+		<script src="/js/site-scripts.js"></script>
 	</body>
-	<footer class="py-4 mt-5 text-center">
-		<p class="mb-0">
-			&copy; 2026 Sarah Ross. All rights reserved.
-		</p>
-	</footer>
-	<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	<script src="/js/site-scripts.js"></script>
 </html>
