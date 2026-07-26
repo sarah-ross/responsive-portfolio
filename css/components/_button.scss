@@ -8,11 +8,16 @@
 	background-color: $button-background;
 	color: $button-color;
 	padding: 0;
+	margin: 1rem 0;
 	border: 1px solid $button-color;
 	border-radius: 2em;
 
 	@include breakpoint(small) {
 		width: auto;
+	}
+
+	@include breakpoint(large) {
+		margin: 0;
 	}
 
 	&.btn-primary {

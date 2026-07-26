@@ -18,126 +18,41 @@
 
 	.row {
 		.col:has(.project-name) {
-			&::before {
-				content: "";
-				width: 999em;
-				position: absolute;
-				z-index: -1;
-				border-radius: $border-radius;
-				top: -2em;
-				background: $base-background-darker;
-				overflow-x: hidden;
+			background: $base-background-darker;
+			padding: 2.5rem;
+			border-radius: $border-radius;
+
+			@include breakpoint(large) {
+				margin-right: -2em;
 			}
 		}
 
-		&:first-of-type {
-			.col:has(.project-name) {
-				&::before {
-					height: 42em;
-					box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
-					left: -965em;
+		.col:has(.images) {
+			z-index: 2;
 
-					@include breakpoint(small) {
-						height: 31em;
-						left: -954em;
-					}
-
-					@include breakpoint(large) {
-						height: 25em;
-						left: -948em;
-					}
-				}
+			@include breakpoint(large) {
+				margin-right: -2em;
 			}
 		}
 
-		&:nth-of-type(2) {
-			.col:has(.project-name) {
-				&::before {
-					height: 30em;
-					right: -965em;
-					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
-
-					@include breakpoint(small) {
-						right: -954em;
-					}
-
-					@include breakpoint(large) {
-						height: 21.5em;
-						right: -948em;
-					}
-				}
-			}
-		}
-
-		&:nth-of-type(3) {
-			.col:has(.project-name) {
-				&::before {
-					height: 15em;
-					left: -965em;
-					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
-
-					@include breakpoint(small) {
-						left: -954em;
-					}
-
-					@include breakpoint(large) {
-						left: -948em;
-					}
-				}
-			}
-		}
-
+		&:first-of-type,
 		&:nth-of-type(4) {
 			.col:has(.project-name) {
-				&::before {
-					height: 15em;
-					right: -965em;
-					box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
-
-					@include breakpoint(small) {
-						right: -954em;
-					}
-
-					@include breakpoint(large) {
-						right: -948em;
-					}
-				}
+				box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
 			}
 		}
 
+		&:nth-of-type(2),
 		&:nth-of-type(5) {
 			.col:has(.project-name) {
-				&::before {
-					height: 16em;
-					left: -965em;
-					box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
-
-					@include breakpoint(small) {
-						left: -954em;
-					}
-
-					@include breakpoint(large) {
-						left: -948em;
-					}
-				}
+				box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 			}
 		}
 
+		&:nth-of-type(3),
 		&:nth-of-type(6) {
 			.col:has(.project-name) {
-				&::before {
-					height: 17em;
-					right: -965em;
-					box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
-
-					@include breakpoint(small) {
-						right: -954em;
-					}
-
-					@include breakpoint(large) {
-						right: -948em;
-					}
-				}
+				box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
 			}
 		}
 

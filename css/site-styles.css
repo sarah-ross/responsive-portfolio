@@ -11988,10 +11988,10 @@ body {
   font-family: area-normal-light, sans-serif;
   background-color: #161517;
   /* Creates a subtle, CSS-only noise texture */
-  background-image: radial-gradient(rgba(200, 129, 255, 0.03) 1px, transparent 0);
+  background-image: radial-gradient(rgba(200, 129, 255, 0.2) 1px, transparent 0);
   background-size: 24px 24px;
   color: #fff;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 body * {
   transition: all 0.3s ease-in-out;
@@ -12161,12 +12161,18 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   background-color: #000;
   color: #e7c2f3;
   padding: 0;
+  margin: 1rem 0;
   border: 1px solid #e7c2f3;
   border-radius: 2em;
 }
 @media (min-width: 600px) {
   .btn {
     width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .btn {
+    margin: 0;
   }
 }
 .btn.btn-primary::before, .btn.btn-primary::after {
@@ -12284,108 +12290,32 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
     height: 32px !important;
   }
 }
-#featured-work .row .col:has(.project-name)::before {
-  content: "";
-  width: 999em;
-  position: absolute;
-  z-index: -1;
-  border-radius: 1.5rem;
-  top: -2em;
+#featured-work .row .col:has(.project-name) {
   background: rgb(16.9, 16.1318181818, 17.6681818182);
-  overflow-x: clip;
-}
-#featured-work .row:first-of-type .col:has(.project-name)::before {
-  height: 42em;
-  box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
-  left: -965em;
-}
-@media (min-width: 600px) {
-  #featured-work .row:first-of-type .col:has(.project-name)::before {
-    height: 31em;
-    left: -954em;
-  }
+  padding: 2.5rem;
+  border-radius: 1.5rem;
 }
 @media (min-width: 1200px) {
-  #featured-work .row:first-of-type .col:has(.project-name)::before {
-    height: 25em;
-    left: -948em;
+  #featured-work .row .col:has(.project-name) {
+    margin-right: -2em;
   }
 }
-#featured-work .row:nth-of-type(2) .col:has(.project-name)::before {
-  height: 30em;
-  right: -965em;
-  box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
-}
-@media (min-width: 600px) {
-  #featured-work .row:nth-of-type(2) .col:has(.project-name)::before {
-    right: -954em;
-  }
+#featured-work .row .col:has(.images) {
+  z-index: 2;
 }
 @media (min-width: 1200px) {
-  #featured-work .row:nth-of-type(2) .col:has(.project-name)::before {
-    height: 21.5em;
-    right: -948em;
+  #featured-work .row .col:has(.images) {
+    margin-right: -2em;
   }
 }
-#featured-work .row:nth-of-type(3) .col:has(.project-name)::before {
-  height: 15em;
-  left: -965em;
-  box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
-}
-@media (min-width: 600px) {
-  #featured-work .row:nth-of-type(3) .col:has(.project-name)::before {
-    left: -954em;
-  }
-}
-@media (min-width: 1200px) {
-  #featured-work .row:nth-of-type(3) .col:has(.project-name)::before {
-    left: -948em;
-  }
-}
-#featured-work .row:nth-of-type(4) .col:has(.project-name)::before {
-  height: 15em;
-  right: -965em;
+#featured-work .row:first-of-type .col:has(.project-name), #featured-work .row:nth-of-type(4) .col:has(.project-name) {
   box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
 }
-@media (min-width: 600px) {
-  #featured-work .row:nth-of-type(4) .col:has(.project-name)::before {
-    right: -954em;
-  }
-}
-@media (min-width: 1200px) {
-  #featured-work .row:nth-of-type(4) .col:has(.project-name)::before {
-    right: -948em;
-  }
-}
-#featured-work .row:nth-of-type(5) .col:has(.project-name)::before {
-  height: 16em;
-  left: -965em;
+#featured-work .row:nth-of-type(2) .col:has(.project-name), #featured-work .row:nth-of-type(5) .col:has(.project-name) {
   box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
 }
-@media (min-width: 600px) {
-  #featured-work .row:nth-of-type(5) .col:has(.project-name)::before {
-    left: -954em;
-  }
-}
-@media (min-width: 1200px) {
-  #featured-work .row:nth-of-type(5) .col:has(.project-name)::before {
-    left: -948em;
-  }
-}
-#featured-work .row:nth-of-type(6) .col:has(.project-name)::before {
-  height: 17em;
-  right: -965em;
+#featured-work .row:nth-of-type(3) .col:has(.project-name), #featured-work .row:nth-of-type(6) .col:has(.project-name) {
   box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
-}
-@media (min-width: 600px) {
-  #featured-work .row:nth-of-type(6) .col:has(.project-name)::before {
-    right: -954em;
-  }
-}
-@media (min-width: 1200px) {
-  #featured-work .row:nth-of-type(6) .col:has(.project-name)::before {
-    right: -948em;
-  }
 }
 #featured-work .row .images {
   width: 100%;
@@ -12567,8 +12497,12 @@ header .logo:hover img, header .logo:active img, header .logo:focus img {
   border-radius: 5px;
   box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
 }
-header .navbar-toggler-icon {
-  background-color: #fff;
+header .navbar-toggler .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105px" height="105px"><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M4.099,100.568 L3.410,99.883 L99.810,3.916 L100.499,4.602 L4.099,100.568 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.471,4.117 L4.159,3.432 L100.560,99.398 L99.871,100.084 L3.471,4.117 Z"/></svg>');
+  transition: all 0.3 ease-in-out;
+}
+header .navbar-toggler[aria-expanded=false] .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="149px" height="81px"><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.937,4.000 L3.937,2.1000 L143.938,2.1000 L143.938,4.000 L3.937,4.000 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M20.949,38.940 L20.949,38.060 L144.058,38.060 L144.058,38.940 L20.949,38.940 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.937,77.000 L3.937,75.1000 L143.938,75.1000 L143.938,77.000 L3.937,77.000 Z"/></svg>');
 }
 @media (min-width: 900px) {
   header .navbar-nav {
