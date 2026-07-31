@@ -11986,11 +11986,13 @@ textarea.form-control-lg {
 /* Breakpoint Mixins */
 body {
   font-family: area-normal-light, sans-serif;
+  color: #fff;
   background-color: #161517;
   /* Creates a subtle, CSS-only noise texture */
-  background-image: radial-gradient(rgba(200, 129, 255, 0.2) 1px, transparent 0);
+  background-image: radial-gradient(rgba(200, 129, 255, 0.12) 1px, transparent 0);
   background-size: 24px 24px;
-  color: #fff;
+  background-position: center;
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 body * {
@@ -12122,6 +12124,14 @@ h3, .h3 {
     transform: rotate(360deg);
   }
 }
+@keyframes parallax-shift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top):link, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):visited {
   width: -moz-fit-content;
   width: fit-content;
@@ -12141,7 +12151,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top) span::after {
   width: 20px;
   height: 20px;
   margin-left: 0.35rem;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):active, a:not(.btn, .navbar-brand, .nav-link, .back-to-top):focus {
   color: #c881ff;
@@ -12286,8 +12296,9 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 }
 @media (min-width: 1200px) {
   #featured-work .project-name span::after {
-    width: 32px !important;
-    height: 32px !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: 0.5rem;
   }
 }
 #featured-work .row .col:has(.project-name) {
@@ -12481,6 +12492,58 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   transform: translateX(200%) skewX(-20deg);
 }
 
+.scroll-progress {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  top: auto;
+  right: auto;
+  z-index: 1000;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: rgb(16.9, 16.1318181818, 17.6681818182);
+  box-shadow: 0 2px 12px rgba(200, 129, 255, 0.5);
+  pointer-events: none;
+}
+@media (min-width: 900px) {
+  .scroll-progress {
+    left: auto;
+    right: 1rem;
+    bottom: auto;
+    top: 4.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .scroll-progress {
+    left: auto;
+    top: 8rem;
+    right: 1.25rem;
+    bottom: auto;
+  }
+}
+
+.scroll-progress__track,
+.scroll-progress__fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.scroll-progress__track {
+  border: 0.2rem solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.scroll-progress__fill {
+  --progress: 0%;
+  background: conic-gradient(#85adff 0 var(--progress), transparent var(--progress) 100%);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 0.3rem), #000 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 0.3rem), #000 0);
+  box-shadow: 0 0 14px rgba(200, 129, 255, 0.35);
+  transition: background 0.15s ease-out;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -12525,11 +12588,11 @@ footer {
 
 /* Back to top floating button */
 .back-to-top {
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
+  right: 1.25rem;
+  bottom: 1rem;
   border-radius: 50%;
   background: #161517;
   color: #e7c2f3;

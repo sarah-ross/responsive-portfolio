@@ -1,13 +1,15 @@
 body {
 	font-family: $base-font;
-	background-color: #161517;
+	color: $body-color;
+	background-color: $base-background;
 	/* Creates a subtle, CSS-only noise texture */
 	background-image: radial-gradient(
-		rgba(200, 129, 255, 0.2) 1px,
+		rgba(200, 129, 255, 0.12) 1px,
 		transparent 0
 	);
 	background-size: 24px 24px;
-	color: $body-color;
+	background-position: center;
+	background-attachment: fixed;
 	overflow-x: hidden;
 
 	* {

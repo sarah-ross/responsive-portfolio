@@ -9,6 +9,9 @@ const submitMessage = document.getElementById(
 	"form-submit-message",
 );
 const emailInput = document.getElementById("email");
+const scrollProgressFill = document.querySelector(
+	".scroll-progress__fill",
+);
 
 const isValidEmail = (value) => {
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -52,6 +55,32 @@ if (backToTopButton) {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	});
 }
+
+const updateScrollProgress = () => {
+	if (!scrollProgressFill) {
+		return;
+	}
+
+	const scrollTop =
+		window.scrollY || document.documentElement.scrollTop;
+	const maxScroll =
+		document.documentElement.scrollHeight -
+		window.innerHeight;
+	const progress =
+		maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
+
+	scrollProgressFill.style.setProperty(
+		"--progress",
+		`${Math.min(100, Math.max(0, progress))}%`,
+	);
+};
+
+window.addEventListener("scroll", updateScrollProgress, {
+	passive: true,
+});
+window.addEventListener("resize", updateScrollProgress);
+window.addEventListener("load", updateScrollProgress);
+updateScrollProgress();
 
 if (contactForm && submitMessage && emailInput) {
 	contactForm.addEventListener("submit", async (event) => {

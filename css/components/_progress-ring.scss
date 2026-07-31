@@ -1,0 +1,60 @@
+.scroll-progress {
+	position: fixed;
+	left: 1rem;
+	bottom: 1rem;
+	top: auto;
+	right: auto;
+	z-index: 1000;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	background: $base-background-darker;
+	box-shadow: 0 2px 12px rgba(200, 129, 255, 0.5);
+	pointer-events: none;
+
+	@include breakpoint(medium) {
+		left: auto;
+		right: 1rem;
+		bottom: auto;
+		top: 4.5rem;
+	}
+
+	@include breakpoint(large) {
+		left: auto;
+		top: 8rem;
+		right: 1.25rem;
+		bottom: auto;
+	}
+}
+
+.scroll-progress__track,
+.scroll-progress__fill {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+}
+
+.scroll-progress__track {
+	border: 0.2rem solid rgba(255, 255, 255, 0.2);
+	box-sizing: border-box;
+}
+
+.scroll-progress__fill {
+	--progress: 0%;
+	background: conic-gradient(
+		$blue 0 var(--progress),
+		transparent var(--progress) 100%
+	);
+	mask: radial-gradient(
+		farthest-side,
+		transparent calc(100% - 0.3rem),
+		#000 0
+	);
+	-webkit-mask: radial-gradient(
+		farthest-side,
+		transparent calc(100% - 0.3rem),
+		#000 0
+	);
+	box-shadow: 0 0 14px rgba($purple, 0.35);
+	transition: background 0.15s ease-out;
+}

@@ -10,8 +10,9 @@
 	.project-name {
 		span::after {
 			@include breakpoint(large) {
-				width: 32px !important;
-				height: 32px !important;
+				width: 30px !important;
+				height: 30px !important;
+				margin-left: 0.5rem;
 			}
 		}
 	}
