@@ -1,9 +1,9 @@
 .scroll-progress {
 	position: fixed;
-	left: 1rem;
-	bottom: 1rem;
+	right: 1.25rem;
+	bottom: 4.5rem;
+	left: auto;
 	top: auto;
-	right: auto;
 	z-index: 1000;
 	width: 2.75rem;
 	height: 2.75rem;
@@ -42,7 +42,7 @@
 .scroll-progress__fill {
 	--progress: 0%;
 	background: conic-gradient(
-		$blue 0 var(--progress),
+		$purple 0 var(--progress),
 		transparent var(--progress) 100%
 	);
 	mask: radial-gradient(

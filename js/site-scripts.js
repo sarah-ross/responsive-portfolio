@@ -121,3 +121,35 @@ if (contactForm && submitMessage && emailInput) {
 		}
 	});
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const observerOptions = {
+		root: null,
+		rootMargin: "-8% 0px -8% 0px", // Creates a smooth trigger zone inside the viewport
+		threshold: 0.1,
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const rect = entry.boundingClientRect;
+
+			if (entry.isIntersecting) {
+				// Element enters viewport -> Active Zoom In
+				entry.target.classList.add("active");
+				entry.target.classList.remove("past");
+			} else if (rect.top < 0) {
+				// Element moves above viewport -> Dim & Fade up
+				entry.target.classList.remove("active");
+				entry.target.classList.add("past");
+			} else {
+				// Element drops below viewport -> Complete reset when scrolling up
+				entry.target.classList.remove("active", "past");
+			}
+		});
+	}, observerOptions);
+
+	// Dynamically target all items with your utility class
+	document
+		.querySelectorAll(".scroll-animate")
+		.forEach((item) => observer.observe(item));
+});

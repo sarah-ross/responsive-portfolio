@@ -81,3 +81,25 @@ h3 {
 		font-size: 2.25rem;
 	}
 }
+
+/* Baseline State: Add this class to your cards/containers */
+.scroll-animate {
+  transform: scale(0.85) translateY(40px);
+  opacity: 0;
+  will-change: transform, opacity; /* Optimizes browser rendering performance */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.8s ease;
+}
+
+/* State 1: Active Zoom In (Inside Viewport) */
+.scroll-animate.active {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* State 2: Fade Up & Dim (Scrolled Past / Above Viewport) */
+.scroll-animate.past {
+  transform: scale(0.92) translateY(-40px);
+  opacity: 0.15;
+}
+
