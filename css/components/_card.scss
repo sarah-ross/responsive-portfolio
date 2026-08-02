@@ -91,8 +91,10 @@
 			font-size: 1.6rem;
 		}
 		span::after {
-			width: 26px !important;
-			height: 26px !important;
+			@include breakpoint(medium) {
+				width: 25px !important;
+				height: 25px !important;
+			}
 		}
 	}
 }

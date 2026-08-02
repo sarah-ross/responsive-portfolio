@@ -12401,9 +12401,11 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
     font-size: 1.6rem;
   }
 }
-.card .card-title span::after {
-  width: 26px !important;
-  height: 26px !important;
+@media (min-width: 900px) {
+  .card .card-title span::after {
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 
 #contact form {
