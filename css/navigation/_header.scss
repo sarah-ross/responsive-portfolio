@@ -7,7 +7,7 @@ header {
 	z-index: 1000;
 	padding: 0.75em 0;
 	backdrop-filter: blur(14px);
-	box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+	box-shadow: 0 2px 14px rgba(200, 129, 255, 0.6);
 	animation: fadeDown 0.3s ease-in-out forwards;
 
 	.logo {
@@ -16,7 +16,7 @@ header {
 		&:focus {
 			img {
 				border-radius: 5px;
-				box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+				box-shadow: 0 2px 14px rgba(200, 129, 255, 0.6);
 			}
 		}
 	}

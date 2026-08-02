@@ -11989,7 +11989,7 @@ body {
   color: #fff;
   background-color: #161517;
   /* Creates a subtle, CSS-only noise texture */
-  background-image: radial-gradient(rgba(200, 129, 255, 0.12) 1px, transparent 0);
+  background-image: radial-gradient(rgba(200, 129, 255, 0.13) 1px, transparent 0);
   background-size: 24px 24px;
   background-position: center;
   background-attachment: fixed;
@@ -12332,13 +12332,13 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   }
 }
 #featured-work .row:first-of-type .col:has(.project-name), #featured-work .row:nth-of-type(4) .col:has(.project-name) {
-  box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 0 14px rgba(200, 129, 255, 0.6);
 }
 #featured-work .row:nth-of-type(2) .col:has(.project-name), #featured-work .row:nth-of-type(5) .col:has(.project-name) {
-  box-shadow: 0 0 14px rgba(255, 127, 98, 0.5);
+  box-shadow: 0 0 14px rgba(255, 127, 98, 0.6);
 }
 #featured-work .row:nth-of-type(3) .col:has(.project-name), #featured-work .row:nth-of-type(6) .col:has(.project-name) {
-  box-shadow: 0 0 14px rgba(133, 173, 255, 0.5);
+  box-shadow: 0 0 14px rgba(133, 173, 255, 0.6);
 }
 #featured-work .row .images {
   width: 100%;
@@ -12370,8 +12370,8 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
   background-image: linear-gradient(0deg, hsl(0, 0%, 100%) -50%, hsl(0, 0%, 40%) 100%);
   border-radius: 1.5rem;
 }
@@ -12414,7 +12414,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   border: 1px solid rgba(231, 194, 243, 0.5);
   border-radius: 1.5rem;
   background: linear-gradient(135deg, rgba(22, 21, 23, 0.98) 0%, rgba(10, 10, 12, 0.96) 100%);
-  box-shadow: 0 0 24px rgba(200, 129, 255, 0.12);
+  box-shadow: 0 0 24px rgba(200, 129, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -12437,7 +12437,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
 }
 #contact input:focus,
 #contact textarea:focus {
-  box-shadow: 0 0 14px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 0 14px rgba(200, 129, 255, 0.6);
   background: rgba(255, 255, 255, 0.02);
 }
 #contact textarea {
@@ -12461,7 +12461,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   padding: 0.4rem 0.7rem;
   border: 1px solid rgba(231, 194, 243, 0.5);
   border-radius: 999px;
-  box-shadow: 0 0 10px rgba(200, 129, 255, 0.4);
+  box-shadow: 0 0 10px rgba(200, 129, 255, 0.6);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12554,7 +12554,7 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top):hover span::after, a:not(.bt
   background: conic-gradient(#c881ff 0 var(--progress), transparent var(--progress) 100%);
   mask: radial-gradient(farthest-side, transparent calc(100% - 0.3rem), #000 0);
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 0.3rem), #000 0);
-  box-shadow: 0 0 14px rgba(200, 129, 255, 0.35);
+  box-shadow: 0 0 14px rgba(200, 129, 255, 0.6);
   transition: background 0.15s ease-out;
 }
 
@@ -12567,12 +12567,12 @@ header {
   z-index: 1000;
   padding: 0.75em 0;
   backdrop-filter: blur(14px);
-  box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 2px 14px rgba(200, 129, 255, 0.6);
   animation: fadeDown 0.3s ease-in-out forwards;
 }
 header .logo:hover img, header .logo:active img, header .logo:focus img {
   border-radius: 5px;
-  box-shadow: 0 2px 14px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 2px 14px rgba(200, 129, 255, 0.6);
 }
 header .navbar-toggler .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105px" height="105px"><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M4.099,100.568 L3.410,99.883 L99.810,3.916 L100.499,4.602 L4.099,100.568 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.471,4.117 L4.159,3.432 L100.560,99.398 L99.871,100.084 L3.471,4.117 Z"/></svg>');
@@ -12597,7 +12597,7 @@ header .navbar-nav .nav-item .nav-link:hover, header .navbar-nav .nav-item .nav-
 footer {
   color: #fff;
   background: #161517;
-  box-shadow: 0 -2px 14px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 -2px 14px rgba(200, 129, 255, 0.6);
 }
 
 /* Back to top floating button */
@@ -12614,7 +12614,7 @@ footer {
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
-  box-shadow: 0 2px 12px rgba(200, 129, 255, 0.5);
+  box-shadow: 0 2px 12px rgba(200, 129, 255, 0.6);
   transition: all 0.3 ease-in-out;
   z-index: 1000;
 }
@@ -12648,7 +12648,7 @@ footer {
 .back-to-top:hover, .back-to-top:active, .back-to-top:focus-visible {
   text-decoration: none;
   transform: translateY(-0.35rem);
-  box-shadow: 0 0 20px rgba(200, 129, 255, 0.4);
+  box-shadow: 0 0 20px rgba(200, 129, 255, 0.6);
 }
 .back-to-top:hover .back-to-top__icon::after, .back-to-top:active .back-to-top__icon::after, .back-to-top:focus-visible .back-to-top__icon::after {
   transform: translateX(200%) skewX(-20deg);
