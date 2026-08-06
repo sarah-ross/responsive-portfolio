@@ -58,3 +58,28 @@
 	box-shadow: 0 0 14px rgba($purple, 0.6);
 	transition: background 0.15s ease-out;
 }
+
+.light-mode .scroll-progress {
+	background: $lighter-base-background;
+	box-shadow: 0 2px 12px rgba(123, 6, 214, 0.6);
+}
+
+.light-mode .scroll-progress__fill {
+	--progress: 0%;
+	background: conic-gradient(
+		$dark-purple 0 var(--progress),
+		transparent var(--progress) 100%
+	);
+	mask: radial-gradient(
+		farthest-side,
+		transparent calc(100% - 0.3rem),
+		#000 0
+	);
+	-webkit-mask: radial-gradient(
+		farthest-side,
+		transparent calc(100% - 0.3rem),
+		#000 0
+	);
+	box-shadow: 0 0 14px rgba($dark-purple, 0.6);
+	transition: background 0.15s ease-out;
+}

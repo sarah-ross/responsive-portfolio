@@ -69,3 +69,34 @@
 		}
 	}
 }
+
+.light-mode {
+	#featured-work {
+		.row {
+			.col:has(.project-name) {
+				background: $lighter-base-background;
+			}
+
+			&:first-of-type,
+			&:nth-of-type(4) {
+				.col:has(.project-name) {
+					box-shadow: 0 0 14px rgba(101, 22, 212, 0.6);
+				}
+			}
+
+			&:nth-of-type(2),
+			&:nth-of-type(5) {
+				.col:has(.project-name) {
+					box-shadow: 0 0 14px rgba(255, 76, 42, 0.6);
+				}
+			}
+
+			&:nth-of-type(3),
+			&:nth-of-type(6) {
+				.col:has(.project-name) {
+					box-shadow: 0 0 14px rgba(63, 111, 255, 0.6);
+				}
+			}
+		}
+	}
+}

@@ -36,3 +36,44 @@ a:not(.btn, .navbar-brand, .nav-link, .back-to-top) {
 		}
 	}
 }
+
+.light-mode {
+	a:not(.btn, .navbar-brand, .nav-link, .back-to-top) {
+		&:link,
+		&:visited {
+			width: fit-content;
+			display: block;
+			text-decoration: none;
+			color: $light-link-color;
+		}
+
+		span {
+			position: relative;
+			display: inline;
+			line-height: 1.4;
+
+			&::after {
+				content: "";
+				display: inline-block;
+				background: url("/src/icons/arrow-link-light-bg.svg")
+					no-repeat center;
+				width: 20px;
+				height: 20px;
+				margin-left: 0.35rem;
+				vertical-align: middle;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $light-link-color-hover;
+
+			span::after {
+				background: url("/src/icons/arrow-link-hover-light-bg.svg")
+					no-repeat center;
+				animation: arrowLoop 0.45s ease forwards;
+			}
+		}
+	}
+}

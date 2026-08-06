@@ -1,0 +1,98 @@
+/* Theme toggle component */
+.theme-toggle {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1.25rem;
+	border-radius: $border-radius;
+	font-size: 0.95rem;
+	color: $button-color;
+	background: $base-background-darker;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	transition:
+		background-color 220ms ease,
+		color 220ms ease,
+		border-color 220ms ease;
+
+	@include breakpoint(large) {
+		width: auto;
+	}
+
+	.theme-toggle__icon {
+		width: 18px;
+		height: 18px;
+		display: inline-block;
+		color: currentColor;
+		fill: currentColor;
+		transition:
+			opacity 220ms ease,
+			transform 220ms ease;
+		vertical-align: middle;
+	}
+
+	stroke: currentColor;
+	transition:
+		opacity 220ms ease,
+		transform 220ms ease,
+		stroke 220ms ease,
+		fill 220ms ease;
+
+	.theme-toggle__icon--moon {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	.theme-toggle__icon--sun {
+		opacity: 0;
+		transform: rotate(10deg) scale(0.95);
+	}
+
+	&[aria-pressed="true"] {
+		background: rgba($light-purple, 0.06);
+		color: $purple;
+		border-color: rgba($purple, 0.12);
+
+		.theme-toggle__icon--sun {
+			opacity: 1;
+			transform: rotate(0deg) scale(1);
+		}
+
+		.theme-toggle__icon--moon {
+			opacity: 0;
+			transform: rotate(10deg) scale(0.95);
+		}
+	}
+}
+
+body.light-mode {
+	header {
+		background-color: $light-header-background;
+	}
+
+	.nav-link {
+		color: $light-link-color;
+
+		&:hover,
+		&:focus {
+			color: $light-link-color-hover;
+		}
+	}
+
+	footer {
+		color: $light-footer-color;
+		background: $light-footer-background;
+	}
+
+	.btn-primary {
+		background-color: $light-button-background;
+		color: $light-button-color;
+		border-color: $light-button-color;
+	}
+
+	.theme-toggle {
+		background-color: rgba(255, 255, 255, 0.8);
+		color: $dark-purple;
+		border-color: rgba(0, 0, 0, 0.08);
+	}
+}

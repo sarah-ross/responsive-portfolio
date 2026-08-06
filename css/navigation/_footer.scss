@@ -3,3 +3,11 @@ footer {
 	background: $footer-background;
 	box-shadow: 0 -2px 14px rgba(200, 129, 255, 0.6);
 }
+
+.light-mode {
+	footer {
+		color: $light-footer-color;
+		background: $light-footer-background;
+		box-shadow: 0 -2px 14px rgba(101, 22, 212, 0.6);
+	}
+}

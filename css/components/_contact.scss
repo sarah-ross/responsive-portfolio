@@ -123,3 +123,50 @@
 		}
 	}
 }
+
+.light-mode {
+	#contact {
+		form {
+			border: 1px solid rgba(123, 6, 214, 0.5);
+			background: linear-gradient(
+				135deg,
+				rgba(255, 255, 255, 0.98) 0%,
+				rgba(245, 245, 245, 0.96) 100%
+			);
+			box-shadow: 0 0 24px rgba(123, 6, 214, 0.2);
+		}
+
+		label {
+			color: $dark-purple;
+		}
+
+		input,
+		textarea {
+			border: 1px solid rgba(0, 0, 0, 0.16);
+			background: rgba(255, 255, 255, 0.04);
+			color: $dark-purple;
+
+			&:focus {
+				box-shadow: 0 0 14px rgba(123, 6, 214, 0.6);
+				background: rgba(255, 255, 255, 0.02);
+			}
+		}
+
+		#form-submit-message {
+			color: $light-link-color;
+		}
+
+		.socials {
+			li a {
+				color: $dark-purple;
+				border: 1px solid rgba(123, 6, 214, 0.5);
+				box-shadow: 0 0 10px rgba(123, 6, 214, 0.6);
+
+				svg path,
+				svg rect {
+					fill: $dark-purple;
+				}
+			}
+		}
+	}
+}

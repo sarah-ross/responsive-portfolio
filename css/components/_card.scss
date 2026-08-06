@@ -98,3 +98,50 @@
 		}
 	}
 }
+
+.light-mode .card {
+	color: $light-card-color;
+	background-color: hsla(240, 15%, 91%, 1);
+	background-image:
+		radial-gradient(
+			at 78% 40%,
+			hsla(240, 15%, 91%, 1) 0px,
+			transparent 85%
+		),
+		radial-gradient(
+			at 49% 30%,
+			hsla(240, 15%, 91%, 1) 0px,
+			transparent 85%
+		),
+		radial-gradient(
+			at 14% 26%,
+			hsla(240, 15%, 91%, 1) 0px,
+			transparent 85%
+		),
+		radial-gradient(
+			at 0% 64%,
+			$dark-purple 0px,
+			transparent 85%
+		),
+		radial-gradient(
+			at 41% 94%,
+			$dark-purple 0px,
+			transparent 85%
+		),
+		radial-gradient(
+			at 100% 99%,
+			$dark-orange 0px,
+			transparent 85%
+		);
+	box-shadow: none;
+	border: none;
+	border-radius: $border-radius;
+
+	.card-border {
+		background-image: linear-gradient(
+			0deg,
+			hsl(0, 0%, 100%) -50%,
+			hsl(0, 0%, 60%) 100%
+		);
+	}
+}

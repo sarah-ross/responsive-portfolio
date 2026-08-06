@@ -27,7 +27,7 @@ header {
 			transition: all 0.3 ease-in-out;
 		}
 
-		&[aria-expanded=false] {
+		&[aria-expanded="false"] {
 			.navbar-toggler-icon {
 				background-image: $navbar-toggler-icon;
 			}
@@ -50,6 +50,40 @@ header {
 				&:hover,
 				&:focus {
 					color: $link-color-hover;
+				}
+			}
+		}
+	}
+}
+
+.light-mode {
+	header {
+		background-color: $light-header-background;
+		box-shadow: 0 2px 14px rgba(101, 22, 212, 0.6);
+
+		.logo {
+			&:hover,
+			&:active,
+			&:focus {
+				img {
+					border-radius: 5px;
+					box-shadow: 0 2px 14px rgba(101, 22, 212, 0.6);
+				}
+			}
+		}
+
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					&:link,
+					&:visited {
+						color: $light-link-color;
+					}
+
+					&:hover,
+					&:focus {
+						color: $light-link-color-hover;
+					}
 				}
 			}
 		}

@@ -68,3 +68,17 @@
 		pointer-events: auto;
 	}
 }
+
+.light-mode {
+	.back-to-top {
+		background: $light-base-background;
+		color: $dark-purple;
+		border: 1px solid $dark-purple;
+
+		&:hover,
+		&:active,
+		&:focus-visible {
+			box-shadow: 0 0 20px rgba(200, 129, 255, 0.4);
+		}
+	}
+}

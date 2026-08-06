@@ -93,3 +93,99 @@
 		}
 	}
 }
+
+.light-mode .btn {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	color: $light-button-color;
+	padding: 0;
+	margin: 1rem 0;
+	background-color: $light-button-background;
+	border: 1px solid $light-button-color;
+	border-radius: 2em;
+
+	@include breakpoint(small) {
+		width: auto;
+	}
+
+	@include breakpoint(large) {
+		margin: 0;
+	}
+
+	&.btn-primary {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			border-radius: inherit;
+			background: conic-gradient(
+				from var(--angle),
+				$dark-orange,
+				$dark-purple,
+				$dark-blue,
+				$dark-blue,
+				$dark-purple,
+				$dark-orange
+			);
+			animation: rotate-glow 3s linear infinite;
+		}
+
+		&::after {
+			filter: blur(0.4rem);
+			transition: all 0.3s ease-in-out;
+		}
+
+		span {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			@include font-extra-black;
+			font-size: 1.1rem;
+			line-height: 1.5;
+			padding: 0.5rem 1.25rem;
+			border-radius: inherit;
+			overflow: hidden;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba(130, 0, 231, 0.3),
+					transparent
+				);
+				transition: transform 0.7s ease;
+				transform: skewX(
+					-20deg
+				); /* Angles the shine beam */
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $light-button-color-hover;
+				background: $light-button-background;
+				border: 1px solid $light-button-color;
+
+				&::after {
+					filter: blur(0.7rem);
+				}
+
+				span::after {
+					transform: translateX(200%) skewX(-20deg);
+				}
+			}
+		}
+	}
+}

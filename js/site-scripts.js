@@ -12,6 +12,100 @@ const emailInput = document.getElementById("email");
 const scrollProgressFill = document.querySelector(
 	".scroll-progress__fill",
 );
+const themeToggleButton = document.getElementById(
+	"theme-toggle-btn",
+);
+const themeToggleLabel = document.querySelector(
+	".theme-toggle__label",
+);
+const logoImage = document.querySelector(
+	".navbar-brand.logo img",
+);
+const backToTopIconImage = document.querySelector(
+	".back-to-top__icon img",
+);
+const logoDefaultSrc = "/src/img/logo.svg";
+const logoLightSrc = "/src/img/logo-light-bg.svg";
+const backToTopDefaultSrc =
+	"/src/icons/back-to-top-arrow.svg";
+const backToTopLightSrc =
+	"/src/icons/back-to-top-arrow-light-bg.svg";
+
+const getStoredTheme = () => localStorage.getItem("theme");
+const isLightMode = () =>
+	document.body.classList.contains("light-mode");
+const setTheme = (useLightMode) => {
+	document.body.classList.toggle(
+		"light-mode",
+		useLightMode,
+	);
+
+	if (themeToggleButton) {
+		themeToggleButton.setAttribute(
+			"aria-pressed",
+			useLightMode ? "true" : "false",
+		);
+		themeToggleButton.setAttribute(
+			"aria-label",
+			useLightMode
+				? "Toggle dark mode"
+				: "Toggle light mode",
+		);
+	}
+
+	if (themeToggleLabel) {
+		themeToggleLabel.textContent = useLightMode
+			? "Light mode"
+			: "Dark mode";
+	}
+
+	if (logoImage) {
+		logoImage.src = useLightMode
+			? logoLightSrc
+			: logoDefaultSrc;
+	}
+
+	if (backToTopIconImage) {
+		backToTopIconImage.src = useLightMode
+			? backToTopLightSrc
+			: backToTopDefaultSrc;
+	}
+
+	localStorage.setItem(
+		"theme",
+		useLightMode ? "light" : "dark",
+	);
+};
+
+const initializeTheme = () => {
+	const storedTheme = getStoredTheme();
+	const prefersLight = window.matchMedia(
+		"(prefers-color-scheme: light)",
+	).matches;
+	const useLightMode = storedTheme
+		? storedTheme === "light"
+		: prefersLight;
+
+	setTheme(useLightMode);
+};
+
+const toggleTheme = () => {
+	setTheme(!isLightMode());
+};
+
+if (themeToggleButton) {
+	themeToggleButton.addEventListener("click", toggleTheme);
+
+	window
+		.matchMedia("(prefers-color-scheme: light)")
+		.addEventListener("change", (event) => {
+			if (!getStoredTheme()) {
+				setTheme(event.matches);
+			}
+		});
+}
+
+initializeTheme();
 
 const isValidEmail = (value) => {
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
