@@ -86,7 +86,8 @@ const initializeTheme = () => {
 		? storedTheme === "light"
 		: prefersLight;
 
-	setTheme(useLightMode);
+	// Force dark mode on initial page load regardless of any stored preference
+	setTheme(false);
 };
 
 const toggleTheme = () => {
