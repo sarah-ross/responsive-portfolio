@@ -1,49 +1,58 @@
+/* Default Color Mode Variables */
+
 /* Color Palette */
 $light-purple: #e7c2f3;
 $purple: #c881ff;
-$dark-purple: darken($purple, 15%);
-$darker-purple: darken($dark-purple, 25%);
 $green: #00ffc8;
-$dark-green: darken($green, 10%);
 $blue: #85adff;
-$dark-blue: darken($blue, 10%);
 $orange: #ff7f62;
-$dark-orange: darken($orange, 10%);
 $base-background: #161517;
 $base-background-darker: darken($base-background, 2%);
-$light-base-background: #e2e2e2;
-$lighter-base-background: #fff;
 
 $base-font: area-normal-light, sans-serif;
 $h1-font: area-extended, sans-serif;
 $body-color: #fff;
-$light-body-color: #000;
 $body-background: $base-background;
-$light-body-background: $light-base-background;
 $border-radius: 1.5rem;
 $link-color: $light-purple;
 $link-color-hover: $purple;
-$light-link-color: darken($dark-purple, 15%);
-$light-link-color-hover: darken($darker-purple, 15%);
 $header-background: rgba(22, 21, 23, 0.75);
-$light-header-background: rgba(222, 222, 222, 0.75);
 $footer-color: $body-color;
-$light-footer-color: $light-body-color;
 $footer-background: $base-background;
-$light-footer-background: $light-base-background;
 $button-color: $light-purple;
 $button-color-hover: $light-purple;
 $button-background: #000;
-$light-button-color: darken($dark-purple, 15%);
-$light-button-color-hover: darken($darker-purple, 15%);
-$light-button-background: #fff;
 $card-color: $body-color;
-$light-card-color: $light-body-color;
 $card-background: $base-background-darker;
-$light-card-color: $light-body-color;
-$light-card-background: $lighter-base-background;
 $card-purple: darken($purple, 12%);
 $card-orange: darken($orange, 12%);
 $form-submit-color: #edfdba;
 $navbar-toggler-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="149px" height="81px"><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.937,4.000 L3.937,2.1000 L143.938,2.1000 L143.938,4.000 L3.937,4.000 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M20.949,38.940 L20.949,38.060 L144.058,38.060 L144.058,38.940 L20.949,38.940 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.937,77.000 L3.937,75.1000 L143.938,75.1000 L143.938,77.000 L3.937,77.000 Z"/></svg>');
 $navbar-toggler-close-x: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105px" height="105px"><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M4.099,100.568 L3.410,99.883 L99.810,3.916 L100.499,4.602 L4.099,100.568 Z"/><path fill-rule="evenodd" stroke="rgb(231, 194, 243)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(231, 194, 243)" d="M3.471,4.117 L4.159,3.432 L100.560,99.398 L99.871,100.084 L3.471,4.117 Z"/></svg>');
+
+/* Light Mode Variables */
+
+/* Color Palette */
+$dark-purple: darken($purple, 15%);
+$darker-purple: darken($dark-purple, 25%);
+$dark-green: darken($green, 10%);
+$dark-blue: darken($blue, 10%);
+$dark-orange: darken($orange, 10%);
+$light-base-background: #ececec;
+$lighter-base-background: #fff;
+
+$light-body-color: #000;
+$light-body-background: $light-base-background;
+$light-link-color: darken($dark-purple, 15%);
+$light-link-color-hover: darken($darker-purple, 15%);
+$light-header-background: rgba(222, 222, 222, 0.75);
+$light-footer-color: $light-body-color;
+$light-footer-background: $light-base-background;
+$light-button-color: darken($dark-purple, 15%);
+$light-button-color-hover: darken($darker-purple, 15%);
+$light-button-background: #fff;
+$light-card-color: $light-body-color;
+$light-card-background: $lighter-base-background;
+$light-form-submit-color: #4d5925;
+$light-navbar-toggler-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="149px" height="81px"><path fill-rule="evenodd" stroke="rgb(101, 22, 212)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(101, 22, 212)" d="M3.937,4.000 L3.937,2.1000 L143.938,2.1000 L143.938,4.000 L3.937,4.000 Z"/><path fill-rule="evenodd" stroke="rgb(101, 22, 212)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(101, 22, 212)" d="M20.949,38.940 L20.949,38.060 L144.058,38.060 L144.058,38.940 L20.949,38.940 Z"/><path fill-rule="evenodd" stroke="rgb(101, 22, 212)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(101, 22, 212)" d="M3.937,77.000 L3.937,75.1000 L143.938,75.1000 L143.938,77.000 L3.937,77.000 Z"/></svg>');
+$light-navbar-toggler-close-x: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105px" height="105px"><path fill-rule="evenodd" stroke="rgb(101, 22, 212)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(101, 22, 212)" d="M4.099,100.568 L3.410,99.883 L99.810,3.916 L100.499,4.602 L4.099,100.568 Z"/><path fill-rule="evenodd" stroke="rgb(101, 22, 212)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="rgb(101, 22, 212)" d="M3.471,4.117 L4.159,3.432 L100.560,99.398 L99.871,100.084 L3.471,4.117 Z"/></svg>');

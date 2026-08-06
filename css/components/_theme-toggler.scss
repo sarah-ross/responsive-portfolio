@@ -2,14 +2,15 @@
 .theme-toggle {
 	width: 100%;
 	display: inline-flex;
+	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0.5rem 1.25rem;
 	border-radius: $border-radius;
-	font-size: 0.95rem;
 	color: $button-color;
 	background: $base-background-darker;
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 0;
+	border: none;
+	box-shadow: 0 0 14px rgba(133, 173, 255, 0.6);
 	transition:
 		background-color 220ms ease,
 		color 220ms ease,
@@ -17,6 +18,41 @@
 
 	@include breakpoint(large) {
 		width: auto;
+	}
+
+	> span {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		line-height: 1.5;
+		padding: 0.5rem 1.25rem;
+		border-radius: inherit;
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				90deg,
+				transparent,
+				rgba(238, 206, 249, 0.3),
+				transparent
+			);
+			transition: transform 0.7s ease;
+			transform: skewX(-20deg); /* Angles the shine beam */
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		> span::after {
+			transform: translateX(200%) skewX(-20deg);
+		}
 	}
 
 	.theme-toggle__icon {
@@ -66,33 +102,35 @@
 }
 
 body.light-mode {
-	header {
-		background-color: $light-header-background;
-	}
-
-	.nav-link {
-		color: $light-link-color;
-
-		&:hover,
-		&:focus {
-			color: $light-link-color-hover;
-		}
-	}
-
-	footer {
-		color: $light-footer-color;
-		background: $light-footer-background;
-	}
-
-	.btn-primary {
-		background-color: $light-button-background;
-		color: $light-button-color;
-		border-color: $light-button-color;
-	}
-
 	.theme-toggle {
 		background-color: rgba(255, 255, 255, 0.8);
 		color: $dark-purple;
-		border-color: rgba(0, 0, 0, 0.08);
+		box-shadow: 0 0 14px rgba(63, 111, 255, 0.6);
+
+		> span {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					rgba(161, 48, 249, 0.3),
+					transparent
+				);
+				transition: transform 0.7s ease;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			> span::after {
+				transform: translateX(200%) skewX(-20deg);
+			}
+		}
 	}
 }

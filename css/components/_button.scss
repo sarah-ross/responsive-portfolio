@@ -162,7 +162,7 @@
 				background: linear-gradient(
 					90deg,
 					transparent,
-					rgba(130, 0, 231, 0.3),
+					rgba(161, 48, 249, 0.3),
 					transparent
 				);
 				transition: transform 0.7s ease;
@@ -170,21 +170,21 @@
 					-20deg
 				); /* Angles the shine beam */
 			}
+		}
 
-			&:hover,
-			&:active,
-			&:focus {
-				color: $light-button-color-hover;
-				background: $light-button-background;
-				border: 1px solid $light-button-color;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $light-button-color-hover;
+			background: $light-button-background;
+			border: 1px solid $light-button-color;
 
-				&::after {
-					filter: blur(0.7rem);
-				}
+			&::after {
+				filter: blur(0.7rem);
+			}
 
-				span::after {
-					transform: translateX(200%) skewX(-20deg);
-				}
+			span::after {
+				transform: translateX(200%) skewX(-20deg);
 			}
 		}
 	}

@@ -72,6 +72,19 @@ header {
 			}
 		}
 
+		.navbar-toggler {
+			.navbar-toggler-icon {
+				background-image: $light-navbar-toggler-close-x;
+				transition: all 0.3 ease-in-out;
+			}
+
+			&[aria-expanded="false"] {
+				.navbar-toggler-icon {
+					background-image: $light-navbar-toggler-icon;
+				}
+			}
+		}
+
 		.navbar-nav {
 			.nav-item {
 				.nav-link {
