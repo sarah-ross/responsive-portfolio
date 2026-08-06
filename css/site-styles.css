@@ -12886,7 +12886,7 @@ body.light-mode #hero #interactive-bg .mouse-glow-blob {
 
 body.light-mode .theme-toggle {
   background-color: rgba(255, 255, 255, 0.8);
-  color: rgb(166.6071428571, 52.5, 255);
+  color: rgb(130.1666666667, 0, 231);
   box-shadow: 0 0 14px rgba(63, 111, 255, 0.6);
 }
 body.light-mode .theme-toggle > span::after {
